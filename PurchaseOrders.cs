@@ -75,6 +75,12 @@ namespace LeaseToBuy
             checkBoxRecieved.Visible = true;
             checkBoxSent.Enabled = false;
             checkBoxRecieved.Enabled = false;
+
+        }
+
+        private void NormalMode_Click(object sender, EventArgs e)
+        {
+            NormalMode();
             vendorID.Text = "10389";
             vendorName.Text = "Haloware Inc.";
             vendorContactName.Text = "Jordan Myers";
@@ -86,11 +92,6 @@ namespace LeaseToBuy
             shipSt2.Text = "Docking Station C";
             shipState.Text = "Texas";
             shipZip.Text = "78704";
-        }
-
-        private void NormalMode_Click(object sender, EventArgs e)
-        {
-            NormalMode();
 
 
         }
@@ -127,20 +128,32 @@ namespace LeaseToBuy
 
         private void btnAddMode_Click(object sender, EventArgs e)
         {
-            AddMode();
-            btnAddMode.Text = "Save";
-            btnAddMode.ForeColor = Color.MidnightBlue;
-            cancelButton.ForeColor = Color.MidnightBlue; ;
-            cancelButton.Visible = true;
-            panel1.Enabled = false;
-            checkBoxSent.Visible = false;
-            checkBoxRecieved.Visible = false;
-            groupBoxTracking.Visible = false;
-            btnAddMode.Enabled = true;
-            btnEditMode.Enabled = true;
-            btnNormalMode.Enabled = true;
-            checkBoxSent.Enabled = true;
-            checkBoxRecieved.Enabled = true;
+            if (btnAddMode.Text == "Save")
+            {
+                btnAddMode.Text = "Add Order";
+                btnAddMode.ForeColor = Color.MidnightBlue;
+                cancelButton.Visible = false;
+                panel1.Enabled = true;
+                NormalMode();
+            }
+            else
+            {
+                AddMode();
+                btnAddMode.Text = "Save";
+                btnAddMode.ForeColor = Color.MidnightBlue;
+                cancelButton.ForeColor = Color.MidnightBlue; ;
+                cancelButton.Visible = true;
+                panel1.Enabled = false;
+                checkBoxSent.Visible = false;
+                checkBoxRecieved.Visible = false;
+                groupBoxTracking.Visible = false;
+                btnAddMode.Enabled = true;
+                btnEditMode.Enabled = true;
+                btnNormalMode.Enabled = true;
+                checkBoxSent.Enabled = true;
+                checkBoxRecieved.Enabled = true;
+            }
+
         }
 
         private void closeToolStripMenuItem_Click(object sender, EventArgs e)
