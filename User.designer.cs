@@ -97,6 +97,36 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.txtLast = new System.Windows.Forms.TextBox();
+            this.txtFirst = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtStreet1 = new System.Windows.Forms.TextBox();
+            this.txtStreet2 = new System.Windows.Forms.TextBox();
+            this.txtCity = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
             this.Purchases = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Item = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -123,50 +153,22 @@
             this.UndeleteUser = new System.Windows.Forms.DataGridViewButtonColumn();
             this.AddUser = new System.Windows.Forms.DataGridViewButtonColumn();
             this.PrimaryUser = new System.Windows.Forms.TabPage();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.txtLast = new System.Windows.Forms.TextBox();
-            this.txtFirst = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.label19 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtStreet1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtStreet2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtCity = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.PrimaryTabPanel = new System.Windows.Forms.TabControl();
             this.General = new System.Windows.Forms.TabPage();
             this.label44 = new System.Windows.Forms.Label();
@@ -190,8 +192,8 @@
             this.label21 = new System.Windows.Forms.Label();
             this.maskedTextGenAccessed = new System.Windows.Forms.MaskedTextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.cancelButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.Purchases.SuspendLayout();
@@ -206,6 +208,7 @@
             this.General.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -381,9 +384,9 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.btnAddMode);
             this.panel1.Controls.Add(this.btnEditMode);
             this.panel1.Controls.Add(this.btnNormalMode);
             this.panel1.Controls.Add(this.ZButton);
@@ -453,11 +456,11 @@
             // 
             // btnAddMode
             // 
-            this.btnAddMode.Location = new System.Drawing.Point(189, 13);
+            this.btnAddMode.Location = new System.Drawing.Point(0, 17);
             this.btnAddMode.Name = "btnAddMode";
             this.btnAddMode.Size = new System.Drawing.Size(129, 36);
             this.btnAddMode.TabIndex = 38;
-            this.btnAddMode.Text = "Add Mode";
+            this.btnAddMode.Text = "Add User";
             this.toolTip1.SetToolTip(this.btnAddMode, "Change to add mode.");
             this.btnAddMode.UseVisualStyleBackColor = true;
             this.btnAddMode.Click += new System.EventHandler(this.btnAddMode_Click);
@@ -922,6 +925,419 @@
         "r phone.");
             this.button7.UseVisualStyleBackColor = true;
             // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(483, 124);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(104, 26);
+            this.button9.TabIndex = 52;
+            this.button9.Text = "Credit Card";
+            this.toolTip1.SetToolTip(this.button9, "Credit card information.");
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(768, 69);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(104, 49);
+            this.button8.TabIndex = 51;
+            this.button8.Text = "Employee Information";
+            this.toolTip1.SetToolTip(this.button8, "Employee-only data.");
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(770, 39);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(104, 23);
+            this.checkBox1.TabIndex = 50;
+            this.checkBox1.Text = "Employee";
+            this.toolTip1.SetToolTip(this.checkBox1, "Is the user an employee?");
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // maskedTextBox3
+            // 
+            this.maskedTextBox3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBox3.Location = new System.Drawing.Point(120, 56);
+            this.maskedTextBox3.Mask = "(999) 000-0000";
+            this.maskedTextBox3.Name = "maskedTextBox3";
+            this.maskedTextBox3.Size = new System.Drawing.Size(117, 26);
+            this.maskedTextBox3.TabIndex = 11;
+            this.toolTip1.SetToolTip(this.maskedTextBox3, "The user\'s cell phone number.");
+            // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBox2.Location = new System.Drawing.Point(120, 25);
+            this.maskedTextBox2.Mask = "(999) 000-0000";
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(117, 26);
+            this.maskedTextBox2.TabIndex = 10;
+            this.toolTip1.SetToolTip(this.maskedTextBox2, "The user\'s home phone number.");
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(23, 111);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(214, 26);
+            this.textBox2.TabIndex = 9;
+            this.toolTip1.SetToolTip(this.textBox2, "The user\'s email address.");
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(1119, 19);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(54, 19);
+            this.label34.TabIndex = 49;
+            this.label34.Text = "10309";
+            this.toolTip1.SetToolTip(this.label34, "ID of the primary user.");
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(1049, 19);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(65, 19);
+            this.label40.TabIndex = 48;
+            this.label40.Text = "User ID";
+            this.toolTip1.SetToolTip(this.label40, "ID of the primary user.");
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(21, 84);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(74, 19);
+            this.label29.TabIndex = 42;
+            this.label29.Text = "DL State";
+            this.toolTip1.SetToolTip(this.label29, "State of issue for driver\'s license");
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(101, 80);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(121, 26);
+            this.comboBox4.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.comboBox4, "State of issue for driver\'s license");
+            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
+            // 
+            // textBox14
+            // 
+            this.textBox14.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox14.Location = new System.Drawing.Point(483, 80);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(202, 26);
+            this.textBox14.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.textBox14, "Driver\'s license number");
+            // 
+            // txtLast
+            // 
+            this.txtLast.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLast.Location = new System.Drawing.Point(483, 39);
+            this.txtLast.Name = "txtLast";
+            this.txtLast.Size = new System.Drawing.Size(251, 26);
+            this.txtLast.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.txtLast, "Last Name");
+            // 
+            // txtFirst
+            // 
+            this.txtFirst.BackColor = System.Drawing.Color.White;
+            this.txtFirst.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFirst.Location = new System.Drawing.Point(101, 39);
+            this.txtFirst.Name = "txtFirst";
+            this.txtFirst.Size = new System.Drawing.Size(185, 26);
+            this.txtFirst.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.txtFirst, "First Name");
+            this.txtFirst.TextChanged += new System.EventHandler(this.txtFirst_TextChanged);
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(345, 84);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(132, 19);
+            this.label28.TabIndex = 39;
+            this.label28.Text = "Driver\'s License";
+            this.toolTip1.SetToolTip(this.label28, "Driver\'s license number");
+            // 
+            // textBox6
+            // 
+            this.textBox6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Location = new System.Drawing.Point(94, 25);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(272, 26);
+            this.textBox6.TabIndex = 9;
+            this.toolTip1.SetToolTip(this.textBox6, "Street address for shipping.");
+            // 
+            // textBox7
+            // 
+            this.textBox7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.Location = new System.Drawing.Point(94, 57);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(272, 26);
+            this.textBox7.TabIndex = 5;
+            this.toolTip1.SetToolTip(this.textBox7, "Street address for shipping.");
+            // 
+            // textBox8
+            // 
+            this.textBox8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox8.Location = new System.Drawing.Point(94, 89);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(272, 26);
+            this.textBox8.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.textBox8, "City to ship to.");
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.DropDownHeight = 120;
+            this.comboBox3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.IntegralHeight = false;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Alabama",
+            "Alaska",
+            "Arizona",
+            "Arkansas",
+            "California",
+            "Colorado",
+            "Connecticut",
+            "Delaware",
+            "District Of Columbia",
+            "Florida",
+            "Georgia",
+            "Hawaii",
+            "Idaho",
+            "Illinois",
+            "Indiana",
+            "Iowa",
+            "Kansas",
+            "Kentucky",
+            "Louisiana",
+            "Maine",
+            "Maryland",
+            "Massachusetts",
+            "Michigan",
+            "Minnesota",
+            "Mississippi",
+            "Missouri",
+            "Montana",
+            "Nebraska",
+            "Nevada",
+            "New Hampshire",
+            "New Jersey",
+            "New Mexico",
+            "New York",
+            "North Carolina",
+            "North Dakota",
+            "Ohio",
+            "Oklahoma",
+            "Oregon",
+            "Pennsylvania",
+            "Rhode Island",
+            "South Carolina",
+            "South Dakota",
+            "Tennessee",
+            "Texas",
+            "Utah",
+            "Vermont",
+            "Virginia",
+            "Washington",
+            "West Virginia",
+            "Wisconsin",
+            "Wyoming"});
+            this.comboBox3.Location = new System.Drawing.Point(94, 121);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(121, 26);
+            this.comboBox3.TabIndex = 12;
+            this.toolTip1.SetToolTip(this.comboBox3, "State to ship to.");
+            // 
+            // textBox9
+            // 
+            this.textBox9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox9.Location = new System.Drawing.Point(266, 121);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(100, 26);
+            this.textBox9.TabIndex = 13;
+            this.toolTip1.SetToolTip(this.textBox9, "Zip code to ship to.");
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBox1.Location = new System.Drawing.Point(101, 124);
+            this.maskedTextBox1.Mask = "00/00/0000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(89, 26);
+            this.maskedTextBox1.TabIndex = 5;
+            this.toolTip1.SetToolTip(this.maskedTextBox1, "Birthday");
+            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(50, 128);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(45, 19);
+            this.label19.TabIndex = 33;
+            this.label19.Text = "DOB";
+            this.toolTip1.SetToolTip(this.label19, "Birthday");
+            // 
+            // txtStreet1
+            // 
+            this.txtStreet1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStreet1.Location = new System.Drawing.Point(94, 25);
+            this.txtStreet1.Name = "txtStreet1";
+            this.txtStreet1.Size = new System.Drawing.Size(272, 26);
+            this.txtStreet1.TabIndex = 6;
+            this.toolTip1.SetToolTip(this.txtStreet1, "Address at which the user lives.");
+            this.txtStreet1.TextChanged += new System.EventHandler(this.txtStreet1_TextChanged);
+            // 
+            // txtStreet2
+            // 
+            this.txtStreet2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStreet2.Location = new System.Drawing.Point(94, 57);
+            this.txtStreet2.Name = "txtStreet2";
+            this.txtStreet2.Size = new System.Drawing.Size(272, 26);
+            this.txtStreet2.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.txtStreet2, "Address at which the user lives.");
+            this.txtStreet2.TextChanged += new System.EventHandler(this.txtStreet2_TextChanged);
+            // 
+            // txtCity
+            // 
+            this.txtCity.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCity.Location = new System.Drawing.Point(94, 89);
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Size = new System.Drawing.Size(272, 26);
+            this.txtCity.TabIndex = 8;
+            this.toolTip1.SetToolTip(this.txtCity, "City in which the user lives.");
+            this.txtCity.TextChanged += new System.EventHandler(this.txtCity_TextChanged);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownHeight = 120;
+            this.comboBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.IntegralHeight = false;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Alabama",
+            "Alaska",
+            "Arizona",
+            "Arkansas",
+            "California",
+            "Colorado",
+            "Connecticut",
+            "Delaware",
+            "District Of Columbia",
+            "Florida",
+            "Georgia",
+            "Hawaii",
+            "Idaho",
+            "Illinois",
+            "Indiana",
+            "Iowa",
+            "Kansas",
+            "Kentucky",
+            "Louisiana",
+            "Maine",
+            "Maryland",
+            "Massachusetts",
+            "Michigan",
+            "Minnesota",
+            "Mississippi",
+            "Missouri",
+            "Montana",
+            "Nebraska",
+            "Nevada",
+            "New Hampshire",
+            "New Jersey",
+            "New Mexico",
+            "New York",
+            "North Carolina",
+            "North Dakota",
+            "Ohio",
+            "Oklahoma",
+            "Oregon",
+            "Pennsylvania",
+            "Rhode Island",
+            "South Carolina",
+            "South Dakota",
+            "Tennessee",
+            "Texas",
+            "Utah",
+            "Vermont",
+            "Virginia",
+            "Washington",
+            "West Virginia",
+            "Wisconsin",
+            "Wyoming"});
+            this.comboBox1.Location = new System.Drawing.Point(94, 121);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 26);
+            this.comboBox1.TabIndex = 12;
+            this.toolTip1.SetToolTip(this.comboBox1, "State in which the user lives.");
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(266, 121);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 26);
+            this.textBox1.TabIndex = 13;
+            this.toolTip1.SetToolTip(this.textBox1, "Zip code in which the user lives.");
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(435, 43);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(42, 19);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Last";
+            this.toolTip1.SetToolTip(this.label5, "Last Name");
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(52, 43);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 19);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "First";
+            this.toolTip1.SetToolTip(this.label1, "First Name");
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Location = new System.Drawing.Point(1009, 15);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(121, 24);
+            this.label45.TabIndex = 8;
+            this.label45.Text = "Account ID";
+            this.toolTip1.SetToolTip(this.label45, "ID of this account.");
+            this.label45.Click += new System.EventHandler(this.label45_Click);
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.Location = new System.Drawing.Point(1136, 15);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(58, 24);
+            this.label46.TabIndex = 9;
+            this.label46.Text = "3819";
+            this.toolTip1.SetToolTip(this.label46, "ID of this account");
+            // 
             // Purchases
             // 
             this.Purchases.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -1142,40 +1558,6 @@
             this.PrimaryUser.Text = "Primary User";
             this.PrimaryUser.Click += new System.EventHandler(this.GeneralInformation_Click);
             // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(483, 124);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(104, 26);
-            this.button9.TabIndex = 52;
-            this.button9.Text = "Credit Card";
-            this.toolTip1.SetToolTip(this.button9, "Credit card information.");
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(768, 69);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(104, 49);
-            this.button8.TabIndex = 51;
-            this.button8.Text = "Employee Information";
-            this.toolTip1.SetToolTip(this.button8, "Employee-only data.");
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(770, 39);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(104, 23);
-            this.checkBox1.TabIndex = 50;
-            this.checkBox1.Text = "Employee";
-            this.toolTip1.SetToolTip(this.checkBox1, "Is the user an employee?");
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.button6);
@@ -1194,35 +1576,6 @@
             this.groupBox5.TabIndex = 31;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Contact Info";
-            // 
-            // maskedTextBox3
-            // 
-            this.maskedTextBox3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox3.Location = new System.Drawing.Point(120, 56);
-            this.maskedTextBox3.Mask = "(999) 000-0000";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(117, 26);
-            this.maskedTextBox3.TabIndex = 11;
-            this.toolTip1.SetToolTip(this.maskedTextBox3, "The user\'s cell phone number.");
-            // 
-            // maskedTextBox2
-            // 
-            this.maskedTextBox2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox2.Location = new System.Drawing.Point(120, 25);
-            this.maskedTextBox2.Mask = "(999) 000-0000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(117, 26);
-            this.maskedTextBox2.TabIndex = 10;
-            this.toolTip1.SetToolTip(this.maskedTextBox2, "The user\'s home phone number.");
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(23, 111);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(214, 26);
-            this.textBox2.TabIndex = 9;
-            this.toolTip1.SetToolTip(this.textBox2, "The user\'s email address.");
             // 
             // label18
             // 
@@ -1252,86 +1605,6 @@
             this.label43.TabIndex = 6;
             this.label43.Text = "Cell Phone";
             // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(1119, 19);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(54, 19);
-            this.label34.TabIndex = 49;
-            this.label34.Text = "10309";
-            this.toolTip1.SetToolTip(this.label34, "ID of the primary user.");
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(1049, 19);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(65, 19);
-            this.label40.TabIndex = 48;
-            this.label40.Text = "User ID";
-            this.toolTip1.SetToolTip(this.label40, "ID of the primary user.");
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(21, 84);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(74, 19);
-            this.label29.TabIndex = 42;
-            this.label29.Text = "DL State";
-            this.toolTip1.SetToolTip(this.label29, "State of issue for driver\'s license");
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(101, 80);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 26);
-            this.comboBox4.TabIndex = 3;
-            this.toolTip1.SetToolTip(this.comboBox4, "State of issue for driver\'s license");
-            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
-            // 
-            // textBox14
-            // 
-            this.textBox14.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(483, 80);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(202, 26);
-            this.textBox14.TabIndex = 4;
-            this.toolTip1.SetToolTip(this.textBox14, "Driver\'s license number");
-            // 
-            // txtLast
-            // 
-            this.txtLast.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLast.Location = new System.Drawing.Point(483, 39);
-            this.txtLast.Name = "txtLast";
-            this.txtLast.Size = new System.Drawing.Size(251, 26);
-            this.txtLast.TabIndex = 2;
-            this.toolTip1.SetToolTip(this.txtLast, "Last Name");
-            // 
-            // txtFirst
-            // 
-            this.txtFirst.BackColor = System.Drawing.Color.White;
-            this.txtFirst.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirst.Location = new System.Drawing.Point(101, 39);
-            this.txtFirst.Name = "txtFirst";
-            this.txtFirst.Size = new System.Drawing.Size(185, 26);
-            this.txtFirst.TabIndex = 1;
-            this.toolTip1.SetToolTip(this.txtFirst, "First Name");
-            this.txtFirst.TextChanged += new System.EventHandler(this.txtFirst_TextChanged);
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(345, 84);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(132, 19);
-            this.label28.TabIndex = 39;
-            this.label28.Text = "Driver\'s License";
-            this.toolTip1.SetToolTip(this.label28, "Driver\'s license number");
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.textBox6);
@@ -1351,15 +1624,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Shipping Address";
             // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(94, 25);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(272, 26);
-            this.textBox6.TabIndex = 9;
-            this.toolTip1.SetToolTip(this.textBox6, "Street address for shipping.");
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -1378,15 +1642,6 @@
             this.label14.TabIndex = 4;
             this.label14.Text = "Street 2";
             // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(94, 57);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(272, 26);
-            this.textBox7.TabIndex = 5;
-            this.toolTip1.SetToolTip(this.textBox7, "Street address for shipping.");
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -1395,15 +1650,6 @@
             this.label15.Size = new System.Drawing.Size(39, 19);
             this.label15.TabIndex = 6;
             this.label15.Text = "City";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(94, 89);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(272, 26);
-            this.textBox8.TabIndex = 7;
-            this.toolTip1.SetToolTip(this.textBox8, "City to ship to.");
             // 
             // label16
             // 
@@ -1422,100 +1668,6 @@
             this.label17.Size = new System.Drawing.Size(32, 19);
             this.label17.TabIndex = 11;
             this.label17.Text = "Zip";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.DropDownHeight = 120;
-            this.comboBox3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.IntegralHeight = false;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Alabama",
-            "Alaska",
-            "Arizona",
-            "Arkansas",
-            "California",
-            "Colorado",
-            "Connecticut",
-            "Delaware",
-            "District Of Columbia",
-            "Florida",
-            "Georgia",
-            "Hawaii",
-            "Idaho",
-            "Illinois",
-            "Indiana",
-            "Iowa",
-            "Kansas",
-            "Kentucky",
-            "Louisiana",
-            "Maine",
-            "Maryland",
-            "Massachusetts",
-            "Michigan",
-            "Minnesota",
-            "Mississippi",
-            "Missouri",
-            "Montana",
-            "Nebraska",
-            "Nevada",
-            "New Hampshire",
-            "New Jersey",
-            "New Mexico",
-            "New York",
-            "North Carolina",
-            "North Dakota",
-            "Ohio",
-            "Oklahoma",
-            "Oregon",
-            "Pennsylvania",
-            "Rhode Island",
-            "South Carolina",
-            "South Dakota",
-            "Tennessee",
-            "Texas",
-            "Utah",
-            "Vermont",
-            "Virginia",
-            "Washington",
-            "West Virginia",
-            "Wisconsin",
-            "Wyoming"});
-            this.comboBox3.Location = new System.Drawing.Point(94, 121);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 26);
-            this.comboBox3.TabIndex = 12;
-            this.toolTip1.SetToolTip(this.comboBox3, "State to ship to.");
-            // 
-            // textBox9
-            // 
-            this.textBox9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(266, 121);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 26);
-            this.textBox9.TabIndex = 13;
-            this.toolTip1.SetToolTip(this.textBox9, "Zip code to ship to.");
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(101, 124);
-            this.maskedTextBox1.Mask = "00/00/0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(89, 26);
-            this.maskedTextBox1.TabIndex = 5;
-            this.toolTip1.SetToolTip(this.maskedTextBox1, "Birthday");
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(50, 128);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(45, 19);
-            this.label19.TabIndex = 33;
-            this.label19.Text = "DOB";
-            this.toolTip1.SetToolTip(this.label19, "Birthday");
             // 
             // groupBox1
             // 
@@ -1536,16 +1688,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Personal Address";
             // 
-            // txtStreet1
-            // 
-            this.txtStreet1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStreet1.Location = new System.Drawing.Point(94, 25);
-            this.txtStreet1.Name = "txtStreet1";
-            this.txtStreet1.Size = new System.Drawing.Size(272, 26);
-            this.txtStreet1.TabIndex = 6;
-            this.toolTip1.SetToolTip(this.txtStreet1, "Address at which the user lives.");
-            this.txtStreet1.TextChanged += new System.EventHandler(this.txtStreet1_TextChanged);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -1565,16 +1707,6 @@
             this.label3.Text = "Street 2";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // txtStreet2
-            // 
-            this.txtStreet2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStreet2.Location = new System.Drawing.Point(94, 57);
-            this.txtStreet2.Name = "txtStreet2";
-            this.txtStreet2.Size = new System.Drawing.Size(272, 26);
-            this.txtStreet2.TabIndex = 7;
-            this.toolTip1.SetToolTip(this.txtStreet2, "Address at which the user lives.");
-            this.txtStreet2.TextChanged += new System.EventHandler(this.txtStreet2_TextChanged);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -1584,16 +1716,6 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "City";
             this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // txtCity
-            // 
-            this.txtCity.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCity.Location = new System.Drawing.Point(94, 89);
-            this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(272, 26);
-            this.txtCity.TabIndex = 8;
-            this.toolTip1.SetToolTip(this.txtCity, "City in which the user lives.");
-            this.txtCity.TextChanged += new System.EventHandler(this.txtCity_TextChanged);
             // 
             // label6
             // 
@@ -1614,102 +1736,6 @@
             this.label7.TabIndex = 11;
             this.label7.Text = "Zip";
             this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownHeight = 120;
-            this.comboBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.IntegralHeight = false;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Alabama",
-            "Alaska",
-            "Arizona",
-            "Arkansas",
-            "California",
-            "Colorado",
-            "Connecticut",
-            "Delaware",
-            "District Of Columbia",
-            "Florida",
-            "Georgia",
-            "Hawaii",
-            "Idaho",
-            "Illinois",
-            "Indiana",
-            "Iowa",
-            "Kansas",
-            "Kentucky",
-            "Louisiana",
-            "Maine",
-            "Maryland",
-            "Massachusetts",
-            "Michigan",
-            "Minnesota",
-            "Mississippi",
-            "Missouri",
-            "Montana",
-            "Nebraska",
-            "Nevada",
-            "New Hampshire",
-            "New Jersey",
-            "New Mexico",
-            "New York",
-            "North Carolina",
-            "North Dakota",
-            "Ohio",
-            "Oklahoma",
-            "Oregon",
-            "Pennsylvania",
-            "Rhode Island",
-            "South Carolina",
-            "South Dakota",
-            "Tennessee",
-            "Texas",
-            "Utah",
-            "Vermont",
-            "Virginia",
-            "Washington",
-            "West Virginia",
-            "Wisconsin",
-            "Wyoming"});
-            this.comboBox1.Location = new System.Drawing.Point(94, 121);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 26);
-            this.comboBox1.TabIndex = 12;
-            this.toolTip1.SetToolTip(this.comboBox1, "State in which the user lives.");
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(266, 121);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 26);
-            this.textBox1.TabIndex = 13;
-            this.toolTip1.SetToolTip(this.textBox1, "Zip code in which the user lives.");
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(435, 43);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 19);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Last";
-            this.toolTip1.SetToolTip(this.label5, "Last Name");
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(52, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "First";
-            this.toolTip1.SetToolTip(this.label1, "First Name");
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // PrimaryTabPanel
             // 
@@ -2000,28 +2026,24 @@
             this.label20.Text = "Last Accessed";
             this.label20.Click += new System.EventHandler(this.label20_Click_1);
             // 
-            // label45
+            // panel2
             // 
-            this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.Location = new System.Drawing.Point(1009, 15);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(121, 24);
-            this.label45.TabIndex = 8;
-            this.label45.Text = "Account ID";
-            this.toolTip1.SetToolTip(this.label45, "ID of this account.");
-            this.label45.Click += new System.EventHandler(this.label45_Click);
+            this.panel2.Controls.Add(this.cancelButton);
+            this.panel2.Controls.Add(this.btnAddMode);
+            this.panel2.Location = new System.Drawing.Point(189, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(223, 53);
+            this.panel2.TabIndex = 41;
             // 
-            // label46
+            // cancelButton
             // 
-            this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.Location = new System.Drawing.Point(1136, 15);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(58, 24);
-            this.label46.TabIndex = 9;
-            this.label46.Text = "3819";
-            this.toolTip1.SetToolTip(this.label46, "ID of this account");
+            this.cancelButton.Location = new System.Drawing.Point(135, 17);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(78, 36);
+            this.cancelButton.TabIndex = 39;
+            this.cancelButton.Text = "Cancel";
+            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // User
             // 
@@ -2065,6 +2087,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2234,5 +2257,7 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button cancelButton;
     }
 }

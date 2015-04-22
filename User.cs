@@ -17,12 +17,14 @@ namespace LeaseToBuy
         EmployeeInfo employ = null;
         CreditCards credit = null;
 
+
         public User()
         {
             InitializeComponent();
             selectFilterBox.SelectedIndex = 2;
             orderByBox.SelectedIndex = 2;
             NormalMode();
+            cancelButton.Visible = false;
 
             if (checkBox1.Checked)
                 button8.Visible = true;
@@ -64,6 +66,12 @@ namespace LeaseToBuy
 
         void NormalMode()
         {
+            this.BackColor = Color.SeaGreen;
+        }
+
+        private void NormalMode_Click(object sender, EventArgs e)
+        {
+            NormalMode();
             txtFirst.Text = "Zane";
             txtLast.Text = "Foster";
             txtStreet1.Text = "1 Trinity Place";
@@ -78,12 +86,6 @@ namespace LeaseToBuy
             maskedTextGenAccessed.Text = "02/19/2015";
             maskedTextGenCreated.Text = "05/29/2010";
             textGeneralNotes.Text = "Zane is a valued customer.";
-            this.BackColor = Color.SeaGreen;
-        }
-
-        private void NormalMode_Click(object sender, EventArgs e)
-        {
-            NormalMode();
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -93,21 +95,37 @@ namespace LeaseToBuy
 
         void AddMode()
         {
-            txtFirst.Text = "";
-            txtLast.Text = "";
-            txtStreet1.Text = "";
-            txtStreet2.Text = "";
-            txtCity.Text = "";
-            textBillCity.Text = "";
-            textBillSt1.Text = "";
-            textBillSt2.Text = "";
-            textBillZip.Text = "";
-            textBillState.Text = "";
-            maskedTextGenAccessed.Text = "";
-            maskedTextGenCreated.Text = "";
-            comboGenAcctType.Text = "";
-            textGeneralNotes.Text = "";
-            this.BackColor = Color.SteelBlue;
+            if (btnAddMode.Text == "Save")
+            {
+                this.BackColor = Color.SeaGreen;
+                btnAddMode.Text = "Add User";
+                cancelButton.Visible = false;
+                btnAddMode.ForeColor = Color.Black;
+                cancelButton.ForeColor = Color.Black;
+            }
+            else
+            {
+                btnAddMode.Text = "Save";
+                cancelButton.Visible = true;
+                btnAddMode.ForeColor = Color.MidnightBlue;
+                cancelButton.ForeColor = Color.MidnightBlue;
+                txtFirst.Text = "";
+                txtLast.Text = "";
+                txtStreet1.Text = "";
+                txtStreet2.Text = "";
+                txtCity.Text = "";
+                textBillCity.Text = "";
+                textBillSt1.Text = "";
+                textBillSt2.Text = "";
+                textBillZip.Text = "";
+                textBillState.Text = "";
+                maskedTextGenAccessed.Text = "";
+                maskedTextGenCreated.Text = "";
+                comboGenAcctType.Text = "";
+                textGeneralNotes.Text = "";
+                this.BackColor = Color.SteelBlue;
+            }
+
         }
 
         private void btnAddMode_Click(object sender, EventArgs e)
@@ -137,21 +155,33 @@ namespace LeaseToBuy
 
         void EditMode()
         {
-            txtFirst.Text = "Zane";
-            txtLast.Text = "Foster";
-            txtStreet1.Text = "1 Trinity Place";
-            txtStreet2.Text = "#655";
-            txtCity.Text = "San Antonio";
-            textBillCity.Text = "San Antonio";
-            textBillSt1.Text = "1 Trinity Place";
-            textBillSt2.Text = "#655";
-            textBillZip.Text = "78212";
-            textBillState.Text = "Texas";
-            comboGenAcctType.Text = "Corporate";
-            maskedTextGenAccessed.Text = "02/19/2015";
-            maskedTextGenCreated.Text = "05/29/2010";
-            textGeneralNotes.Text = "Zane is a valued customer.";
-            this.BackColor = Color.Firebrick;
+
+            if (btnEditMode.Text == "Save")
+            {
+                btnEditMode.Text = "Edit Mode";
+                this.BackColor = Color.SeaGreen;
+
+            }
+            else
+            {
+                this.BackColor = Color.Firebrick;
+                btnEditMode.Text = "Save";
+                txtFirst.Text = "Zane";
+                txtLast.Text = "Foster";
+                txtStreet1.Text = "1 Trinity Place";
+                txtStreet2.Text = "#655";
+                txtCity.Text = "San Antonio";
+                textBillCity.Text = "San Antonio";
+                textBillSt1.Text = "1 Trinity Place";
+                textBillSt2.Text = "#655";
+                textBillZip.Text = "78212";
+                textBillState.Text = "Texas";
+                comboGenAcctType.Text = "Corporate";
+                maskedTextGenAccessed.Text = "02/19/2015";
+                maskedTextGenCreated.Text = "05/29/2010";
+                textGeneralNotes.Text = "Zane is a valued customer.";
+                this.BackColor = Color.Firebrick;
+            }
         }
 
         private void btnEditMode_Click(object sender, EventArgs e)
@@ -335,6 +365,16 @@ namespace LeaseToBuy
             else
                 button8.Visible = false;
 
+        }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            panel1.Enabled = true;
+            btnAddMode.Text = "Add User";
+            btnAddMode.ForeColor = Color.Black;
+            cancelButton.ForeColor = Color.Black;
+            cancelButton.Visible = false;
+            NormalMode();
         }
 
 
