@@ -74,5 +74,18 @@ namespace LeaseToBuy
             salesForm.MdiParent = this;
             salesForm.Show();
         }
+
+        private void userBar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loginForm = new Login();
+            loginForm.MdiParent = this;
+            loginForm.Show();
+            MainMenuStrip.Hide();
+        }
     }
 }

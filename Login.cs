@@ -26,6 +26,7 @@ namespace LeaseToBuy
         private void button3_Click(object sender, EventArgs e)
         {
             this.MdiParent.MainMenuStrip.Show();
+            //this.MdiParent.LoggedIn.Visible = true;
             this.Close();
         }
 
