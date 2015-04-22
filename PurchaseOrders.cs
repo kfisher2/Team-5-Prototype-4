@@ -178,20 +178,33 @@ namespace LeaseToBuy
 
         void EditMode()
         {
-            this.BackColor = Color.Firebrick;
-            checkBoxSent.Enabled = true;
-            checkBoxRecieved.Enabled = true;
-            vendorID.Text = "10389";
-            vendorName.Text = "Haloware Inc.";
-            vendorContactName.Text = "Jordan Myers";
-            vendorContactPhone.Text = "281-555-8278";
-            vendorURL.Text = "haloware.wordpress.com";
-            shipName.Text = "John Smith";
-            shipCity.Text = "Austin";
-            shipSt1.Text = "947 Rainbow Road Dr.";
-            shipSt2.Text = "Docking Station C";
-            shipState.Text = "Texas";
-            shipZip.Text = "78704";
+            if (btnEditMode.Text == "Save")
+            {
+                btnEditMode.Text = "Edit Mode";
+                this.BackColor = Color.SeaGreen;
+                checkBoxSent.Enabled = false;
+                checkBoxRecieved.Enabled = false;
+
+            }
+            else
+            {
+                this.BackColor = Color.Firebrick;
+                btnEditMode.Text = "Save";
+                checkBoxSent.Enabled = true;
+                checkBoxRecieved.Enabled = true;
+                vendorID.Text = "10389";
+                vendorName.Text = "Haloware Inc.";
+                vendorContactName.Text = "Jordan Myers";
+                vendorContactPhone.Text = "281-555-8278";
+                vendorURL.Text = "haloware.wordpress.com";
+                shipName.Text = "John Smith";
+                shipCity.Text = "Austin";
+                shipSt1.Text = "947 Rainbow Road Dr.";
+                shipSt2.Text = "Docking Station C";
+                shipState.Text = "Texas";
+                shipZip.Text = "78704";
+            }
+
         }
 
         private void btnEditMode_Click(object sender, EventArgs e)
