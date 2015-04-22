@@ -118,6 +118,7 @@ namespace LeaseToBuy
         {
             if (btnAddMode.Text == "Save")
             {
+                this.BackColor = Color.SeaGreen;
                 btnAddMode.Text = "Add Vendor";
                 btnAddMode.ForeColor = Color.Black;
                 cancelButton.Visible = false;

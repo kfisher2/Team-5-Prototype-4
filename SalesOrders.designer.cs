@@ -109,8 +109,12 @@
             this.JumpToItem = new System.Windows.Forms.DataGridViewButtonColumn();
             this.PrimaryTabPanel = new System.Windows.Forms.TabControl();
             this.CustomerInfo = new System.Windows.Forms.TabPage();
-            this.button3 = new System.Windows.Forms.Button();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.btnJumpToUser = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnGenerateReceipt = new System.Windows.Forms.Button();
             this.comboBoxStatus = new System.Windows.Forms.ComboBox();
@@ -138,17 +142,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtBillingStreet1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtBillingStreet2 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtBillingCity = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.comboBoxBillingState = new System.Windows.Forms.ComboBox();
-            this.txtBillingZip = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtShippingStreet1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -160,6 +153,17 @@
             this.label6 = new System.Windows.Forms.Label();
             this.comboBoxShippingState = new System.Windows.Forms.ComboBox();
             this.txtShippingZip = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtBillingStreet1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtBillingStreet2 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtBillingCity = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.comboBoxBillingState = new System.Windows.Forms.ComboBox();
+            this.txtBillingZip = new System.Windows.Forms.TextBox();
             this.CardInfo = new System.Windows.Forms.TabPage();
             this.lblNameCard = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
@@ -176,10 +180,8 @@
             this.label31 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.cancelButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.Items.SuspendLayout();
@@ -187,12 +189,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.PrimaryTabPanel.SuspendLayout();
             this.CustomerInfo.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.CardInfo.SuspendLayout();
-            this.groupBox5.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -360,7 +363,6 @@
             // 
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.btnAddMode);
             this.panel1.Controls.Add(this.btnEditMode);
             this.panel1.Controls.Add(this.btnNormalMode);
             this.panel1.Controls.Add(this.ZButton);
@@ -428,11 +430,11 @@
             // 
             // btnAddMode
             // 
-            this.btnAddMode.Location = new System.Drawing.Point(189, 13);
+            this.btnAddMode.Location = new System.Drawing.Point(-1, 21);
             this.btnAddMode.Name = "btnAddMode";
             this.btnAddMode.Size = new System.Drawing.Size(129, 36);
             this.btnAddMode.TabIndex = 38;
-            this.btnAddMode.Text = "Add Mode";
+            this.btnAddMode.Text = "Add Order";
             this.btnAddMode.UseVisualStyleBackColor = true;
             this.btnAddMode.Click += new System.EventHandler(this.btnAddMode_Click);
             // 
@@ -1014,14 +1016,18 @@
             this.CustomerInfo.Text = "General";
             this.CustomerInfo.Click += new System.EventHandler(this.CustomerInfo_Click);
             // 
-            // button3
+            // groupBox5
             // 
-            this.button3.Location = new System.Drawing.Point(616, 68);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(157, 25);
-            this.button3.TabIndex = 90;
-            this.button3.Text = "View Salesman";
-            this.button3.UseVisualStyleBackColor = true;
+            this.groupBox5.Controls.Add(this.btnJumpToUser);
+            this.groupBox5.Controls.Add(this.button4);
+            this.groupBox5.Controls.Add(this.button5);
+            this.groupBox5.Location = new System.Drawing.Point(410, 17);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(151, 136);
+            this.groupBox5.TabIndex = 94;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "User";
+            this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
             // 
             // btnJumpToUser
             // 
@@ -1032,6 +1038,42 @@
             this.btnJumpToUser.Text = "View user";
             this.btnJumpToUser.UseVisualStyleBackColor = true;
             this.btnJumpToUser.Click += new System.EventHandler(this.btnJumpToUser_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(8, 94);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(129, 25);
+            this.button4.TabIndex = 91;
+            this.button4.Text = "Add user";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(8, 55);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(129, 25);
+            this.button5.TabIndex = 92;
+            this.button5.Text = "Select user";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(616, 96);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(157, 25);
+            this.button6.TabIndex = 93;
+            this.button6.Text = "Select Salesman";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(616, 68);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(157, 25);
+            this.button3.TabIndex = 90;
+            this.button3.Text = "View Salesman";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -1297,162 +1339,6 @@
             this.label11.Text = "User Name";
             this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.txtBillingStreet1);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.txtBillingStreet2);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.txtBillingCity);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.comboBoxBillingState);
-            this.groupBox2.Controls.Add(this.txtBillingZip);
-            this.groupBox2.Location = new System.Drawing.Point(25, 188);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(376, 244);
-            this.groupBox2.TabIndex = 76;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Billing To";
-            // 
-            // txtBillingStreet1
-            // 
-            this.txtBillingStreet1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBillingStreet1.Location = new System.Drawing.Point(98, 25);
-            this.txtBillingStreet1.Name = "txtBillingStreet1";
-            this.txtBillingStreet1.Size = new System.Drawing.Size(272, 26);
-            this.txtBillingStreet1.TabIndex = 9;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 19);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Street 1";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(25, 93);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 19);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Street 2";
-            // 
-            // txtBillingStreet2
-            // 
-            this.txtBillingStreet2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBillingStreet2.Location = new System.Drawing.Point(98, 83);
-            this.txtBillingStreet2.Name = "txtBillingStreet2";
-            this.txtBillingStreet2.Size = new System.Drawing.Size(272, 26);
-            this.txtBillingStreet2.TabIndex = 5;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(53, 153);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(39, 19);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "City";
-            // 
-            // txtBillingCity
-            // 
-            this.txtBillingCity.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBillingCity.Location = new System.Drawing.Point(98, 141);
-            this.txtBillingCity.Name = "txtBillingCity";
-            this.txtBillingCity.Size = new System.Drawing.Size(272, 26);
-            this.txtBillingCity.TabIndex = 7;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(45, 202);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(48, 19);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "State";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(232, 203);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(32, 19);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "Zip";
-            // 
-            // comboBoxBillingState
-            // 
-            this.comboBoxBillingState.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxBillingState.FormattingEnabled = true;
-            this.comboBoxBillingState.Items.AddRange(new object[] {
-            "AL",
-            "AK",
-            "AZ",
-            "AR",
-            "CA",
-            "CO",
-            "CT",
-            "DE",
-            "FL",
-            "GA",
-            "HI",
-            "ID",
-            "IL",
-            "IN",
-            "IA",
-            "KS",
-            "KY",
-            "LA",
-            "ME",
-            "MD",
-            "MA",
-            "MI",
-            "MN",
-            "MS",
-            "MO",
-            "MT",
-            "NE",
-            "NV",
-            "NH",
-            "NJ",
-            "NM",
-            "NY",
-            "NC",
-            "ND",
-            "OH",
-            "OK",
-            "OR",
-            "PA",
-            "RI",
-            "SC",
-            "SD",
-            "TN",
-            "TX",
-            "UT",
-            "VT",
-            "VA",
-            "WA",
-            "WV",
-            "WI",
-            "WY"});
-            this.comboBoxBillingState.Location = new System.Drawing.Point(98, 199);
-            this.comboBoxBillingState.Name = "comboBoxBillingState";
-            this.comboBoxBillingState.Size = new System.Drawing.Size(121, 26);
-            this.comboBoxBillingState.TabIndex = 12;
-            // 
-            // txtBillingZip
-            // 
-            this.txtBillingZip.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBillingZip.Location = new System.Drawing.Point(270, 199);
-            this.txtBillingZip.Name = "txtBillingZip";
-            this.txtBillingZip.Size = new System.Drawing.Size(100, 26);
-            this.txtBillingZip.TabIndex = 13;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtShippingStreet1);
@@ -1609,6 +1495,162 @@
             this.txtShippingZip.Name = "txtShippingZip";
             this.txtShippingZip.Size = new System.Drawing.Size(100, 26);
             this.txtShippingZip.TabIndex = 13;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.txtBillingStreet1);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.txtBillingStreet2);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.txtBillingCity);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.comboBoxBillingState);
+            this.groupBox2.Controls.Add(this.txtBillingZip);
+            this.groupBox2.Location = new System.Drawing.Point(25, 188);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(376, 244);
+            this.groupBox2.TabIndex = 76;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Billing To";
+            // 
+            // txtBillingStreet1
+            // 
+            this.txtBillingStreet1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBillingStreet1.Location = new System.Drawing.Point(98, 25);
+            this.txtBillingStreet1.Name = "txtBillingStreet1";
+            this.txtBillingStreet1.Size = new System.Drawing.Size(272, 26);
+            this.txtBillingStreet1.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(16, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 19);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Street 1";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(25, 93);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(67, 19);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Street 2";
+            // 
+            // txtBillingStreet2
+            // 
+            this.txtBillingStreet2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBillingStreet2.Location = new System.Drawing.Point(98, 83);
+            this.txtBillingStreet2.Name = "txtBillingStreet2";
+            this.txtBillingStreet2.Size = new System.Drawing.Size(272, 26);
+            this.txtBillingStreet2.TabIndex = 5;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(53, 153);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(39, 19);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "City";
+            // 
+            // txtBillingCity
+            // 
+            this.txtBillingCity.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBillingCity.Location = new System.Drawing.Point(98, 141);
+            this.txtBillingCity.Name = "txtBillingCity";
+            this.txtBillingCity.Size = new System.Drawing.Size(272, 26);
+            this.txtBillingCity.TabIndex = 7;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(45, 202);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(48, 19);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "State";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(232, 203);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(32, 19);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Zip";
+            // 
+            // comboBoxBillingState
+            // 
+            this.comboBoxBillingState.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxBillingState.FormattingEnabled = true;
+            this.comboBoxBillingState.Items.AddRange(new object[] {
+            "AL",
+            "AK",
+            "AZ",
+            "AR",
+            "CA",
+            "CO",
+            "CT",
+            "DE",
+            "FL",
+            "GA",
+            "HI",
+            "ID",
+            "IL",
+            "IN",
+            "IA",
+            "KS",
+            "KY",
+            "LA",
+            "ME",
+            "MD",
+            "MA",
+            "MI",
+            "MN",
+            "MS",
+            "MO",
+            "MT",
+            "NE",
+            "NV",
+            "NH",
+            "NJ",
+            "NM",
+            "NY",
+            "NC",
+            "ND",
+            "OH",
+            "OK",
+            "OR",
+            "PA",
+            "RI",
+            "SC",
+            "SD",
+            "TN",
+            "TX",
+            "UT",
+            "VT",
+            "VA",
+            "WA",
+            "WV",
+            "WI",
+            "WY"});
+            this.comboBoxBillingState.Location = new System.Drawing.Point(98, 199);
+            this.comboBoxBillingState.Name = "comboBoxBillingState";
+            this.comboBoxBillingState.Size = new System.Drawing.Size(121, 26);
+            this.comboBoxBillingState.TabIndex = 12;
+            // 
+            // txtBillingZip
+            // 
+            this.txtBillingZip.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBillingZip.Location = new System.Drawing.Point(270, 199);
+            this.txtBillingZip.Name = "txtBillingZip";
+            this.txtBillingZip.Size = new System.Drawing.Size(100, 26);
+            this.txtBillingZip.TabIndex = 13;
             // 
             // CardInfo
             // 
@@ -1767,45 +1809,24 @@
             this.label28.TabIndex = 9;
             this.label28.Text = "28379";
             // 
-            // button4
+            // panel2
             // 
-            this.button4.Location = new System.Drawing.Point(8, 94);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(129, 25);
-            this.button4.TabIndex = 91;
-            this.button4.Text = "Add user";
-            this.button4.UseVisualStyleBackColor = true;
+            this.panel2.Controls.Add(this.cancelButton);
+            this.panel2.Controls.Add(this.btnAddMode);
+            this.panel2.Location = new System.Drawing.Point(204, 484);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(222, 57);
+            this.panel2.TabIndex = 10;
             // 
-            // button5
+            // cancelButton
             // 
-            this.button5.Location = new System.Drawing.Point(8, 55);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(129, 25);
-            this.button5.TabIndex = 92;
-            this.button5.Text = "Select user";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(616, 96);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(157, 25);
-            this.button6.TabIndex = 93;
-            this.button6.Text = "Select Salesman";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.btnJumpToUser);
-            this.groupBox5.Controls.Add(this.button4);
-            this.groupBox5.Controls.Add(this.button5);
-            this.groupBox5.Location = new System.Drawing.Point(410, 17);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(151, 136);
-            this.groupBox5.TabIndex = 94;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "User";
-            this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
+            this.cancelButton.Location = new System.Drawing.Point(141, 21);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(78, 36);
+            this.cancelButton.TabIndex = 42;
+            this.cancelButton.Text = "Cancel";
+            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // SalesOrders
             // 
@@ -1814,11 +1835,12 @@
             this.BackColor = System.Drawing.Color.SeaGreen;
             this.ClientSize = new System.Drawing.Size(1236, 658);
             this.ControlBox = false;
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.label28);
             this.Controls.Add(this.label22);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.PrimaryTabPanel);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.MainMenuStrip = this.menuStrip1;
@@ -1838,17 +1860,18 @@
             this.PrimaryTabPanel.ResumeLayout(false);
             this.CustomerInfo.ResumeLayout(false);
             this.CustomerInfo.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.CardInfo.ResumeLayout(false);
             this.CardInfo.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2006,5 +2029,7 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button cancelButton;
     }
 }

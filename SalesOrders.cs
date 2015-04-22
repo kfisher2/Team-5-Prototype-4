@@ -21,6 +21,7 @@ namespace LeaseToBuy
             selectFilterBox.SelectedIndex = 2;
             orderByBox.SelectedIndex = 2;
             NormalMode();
+            cancelButton.Visible = false;
 
             if (!Testing)
             {
@@ -98,37 +99,53 @@ namespace LeaseToBuy
 
         void AddMode()
         {
-            this.BackColor = Color.SteelBlue;
-            txtuserName.Text = "";
-            txtuserID.Text = "";
-            txtBillingStreet1.Text = "";
-            txtBillingCity.Text = "";
-            comboBoxBillingState.SelectedIndex = 0;
-            txtBillingZip.Text = "";
-            txtShippingStreet1.Text = "";
-            txtShippingCity.Text = "";
-            comboBoxShippingState.SelectedIndex = 0;
-            txtShippingZip.Text = "";
+            if (btnAddMode.Text == "Save")
+            {
+                btnAddMode.Text = "Add Order";
+                btnAddMode.ForeColor = Color.Black;
+                cancelButton.Visible = false;
+                panel1.Enabled = true;
+                this.BackColor = Color.SeaGreen;
+            }
+            else
+            {
+                btnAddMode.Text = "Save";
+                cancelButton.Visible = true;
+                panel1.Enabled = false;
+                btnAddMode.ForeColor = Color.MidnightBlue;
+                cancelButton.ForeColor = Color.MidnightBlue;
+                this.BackColor = Color.SteelBlue;
+                txtuserName.Text = "";
+                txtuserID.Text = "";
+                txtBillingStreet1.Text = "";
+                txtBillingCity.Text = "";
+                comboBoxBillingState.SelectedIndex = 0;
+                txtBillingZip.Text = "";
+                txtShippingStreet1.Text = "";
+                txtShippingCity.Text = "";
+                comboBoxShippingState.SelectedIndex = 0;
+                txtShippingZip.Text = "";
 
-            txtOrderNum.Text = "";
-            txtDateOrdered.Text = "";
-            txtSalesperson.Text = "";
-            comboBoxStatus.SelectedIndex = 0;
-            txtSubtotal.Text = "";
-            txtDiscount.Text = "";
-            txtTax.Text = "";
-            txtCharges.Text = "";
-            txtTotal.Text = "";
+                txtOrderNum.Text = "";
+                txtDateOrdered.Text = "";
+                txtSalesperson.Text = "";
+                comboBoxStatus.SelectedIndex = 0;
+                txtSubtotal.Text = "";
+                txtDiscount.Text = "";
+                txtTax.Text = "";
+                txtCharges.Text = "";
+                txtTotal.Text = "";
 
-            lblName.Text = "";
-            comboBoxItemsCategory.SelectedIndex = 0;
+                lblName.Text = "";
+                comboBoxItemsCategory.SelectedIndex = 0;
 
-            lblNameCard.Text = "";
-            maskedTxtCardNum.Text = "";
-            maskedTxtEprDate.Text = "";
-            txtPin.Text = "";
-            txtCardType.Text = "";
-            txtCardHolderName.Text = "";
+                lblNameCard.Text = "";
+                maskedTxtCardNum.Text = "";
+                maskedTxtEprDate.Text = "";
+                txtPin.Text = "";
+                txtCardType.Text = "";
+                txtCardHolderName.Text = "";
+            }
 
         }
 
@@ -159,37 +176,47 @@ namespace LeaseToBuy
 
         void EditMode()
         {
-            this.BackColor = Color.Firebrick;
-            txtuserName.Text = "Caulan Peake";
-            txtuserID.Text = "12354";
-            txtBillingStreet1.Text = "1 Trinity Place";
-            txtBillingCity.Text = "San Antonio";
-            comboBoxBillingState.SelectedIndex = 42;
-            txtBillingZip.Text = "78212";
-            txtShippingStreet1.Text = "1 Trinity Place";
-            txtShippingCity.Text = "San Antonio";
-            comboBoxShippingState.SelectedIndex = 42;
-            txtShippingZip.Text = "78212";
+            if (btnEditMode.Text == "Save")
+            {
+                btnEditMode.Text = "Edit Mode";
+                this.BackColor = Color.SeaGreen;
 
-            txtOrderNum.Text = "10309";
-            txtDateOrdered.Text = "4/2/2015";
-            txtSalesperson.Text = "Hicksies, T";
-            comboBoxStatus.SelectedIndex = 1;
-            txtSubtotal.Text = "0.00";
-            txtDiscount.Text = "0.00";
-            txtTax.Text = "0.00";
-            txtCharges.Text = "1.00";
-            txtTotal.Text = "1.00";
+            }
+            else
+            {
+                btnEditMode.Text = "Save";
+                this.BackColor = Color.Firebrick;
+                txtuserName.Text = "Caulan Peake";
+                txtuserID.Text = "12354";
+                txtBillingStreet1.Text = "1 Trinity Place";
+                txtBillingCity.Text = "San Antonio";
+                comboBoxBillingState.SelectedIndex = 42;
+                txtBillingZip.Text = "78212";
+                txtShippingStreet1.Text = "1 Trinity Place";
+                txtShippingCity.Text = "San Antonio";
+                comboBoxShippingState.SelectedIndex = 42;
+                txtShippingZip.Text = "78212";
 
-            lblName.Text = "Caulan Peake";
-            comboBoxItemsCategory.SelectedIndex = 0;
+                txtOrderNum.Text = "10309";
+                txtDateOrdered.Text = "4/2/2015";
+                txtSalesperson.Text = "Hicksies, T";
+                comboBoxStatus.SelectedIndex = 1;
+                txtSubtotal.Text = "0.00";
+                txtDiscount.Text = "0.00";
+                txtTax.Text = "0.00";
+                txtCharges.Text = "1.00";
+                txtTotal.Text = "1.00";
 
-            lblNameCard.Text = "Caulan Peake";
-            maskedTxtCardNum.Text = "000000000000000000";
-            maskedTxtEprDate.Text = "12/16";
-            txtPin.Text = "0000";
-            txtCardType.Text = "Visa";
-            txtCardHolderName.Text = "Caulan Peake";
+                lblName.Text = "Caulan Peake";
+                comboBoxItemsCategory.SelectedIndex = 0;
+
+                lblNameCard.Text = "Caulan Peake";
+                maskedTxtCardNum.Text = "000000000000000000";
+                maskedTxtEprDate.Text = "12/16";
+                txtPin.Text = "0000";
+                txtCardType.Text = "Visa";
+                txtCardHolderName.Text = "Caulan Peake";
+            }
 
         }
 
@@ -368,6 +395,15 @@ namespace LeaseToBuy
         private void label5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            btnAddMode.Text = "Add Item";
+            btnAddMode.ForeColor = Color.Black;
+            cancelButton.Visible = false;
+            panel1.Enabled = true;
+            NormalMode();
         }
     }
 }

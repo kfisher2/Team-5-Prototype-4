@@ -97,6 +97,7 @@ namespace LeaseToBuy
                 btnAddMode.ForeColor = Color.Black;
                 cancelButton.Visible = false;
                 panel1.Enabled = true;
+                this.BackColor = Color.SeaGreen;
             }
             else
             {
