@@ -405,5 +405,25 @@ namespace LeaseToBuy
             panel1.Enabled = true;
             NormalMode();
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                txtShippingStreet1.Text = txtBillingStreet1.Text;
+                txtShippingStreet2.Text = txtBillingStreet2.Text;
+                txtShippingCity.Text = txtBillingCity.Text;
+                txtShippingZip.Text = txtBillingZip.Text;
+                comboBoxShippingState.Text = comboBoxBillingState.Text;
+            }
+            else
+            {
+                txtShippingStreet1.Text = "";
+                txtShippingStreet2.Text = "";
+                txtShippingCity.Text = "";
+                txtShippingZip.Text = "";
+                comboBoxShippingState.Text = "";
+            }
+        }
     }
 }
