@@ -138,6 +138,8 @@
             this.notes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label12 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.cancelButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.General.SuspendLayout();
@@ -148,6 +150,7 @@
             this.PrimaryTabPanel.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridItems)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -314,7 +317,6 @@
             // 
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.btnAddMode);
             this.panel1.Controls.Add(this.btnEditMode);
             this.panel1.Controls.Add(this.btnNormalMode);
             this.panel1.Controls.Add(this.ZButton);
@@ -382,11 +384,11 @@
             // 
             // btnAddMode
             // 
-            this.btnAddMode.Location = new System.Drawing.Point(189, 13);
+            this.btnAddMode.Location = new System.Drawing.Point(0, 22);
             this.btnAddMode.Name = "btnAddMode";
             this.btnAddMode.Size = new System.Drawing.Size(129, 36);
             this.btnAddMode.TabIndex = 38;
-            this.btnAddMode.Text = "Add Mode";
+            this.btnAddMode.Text = "Add Item";
             this.btnAddMode.UseVisualStyleBackColor = true;
             this.btnAddMode.Click += new System.EventHandler(this.btnAddMode_Click);
             // 
@@ -1248,6 +1250,25 @@
             this.label16.TabIndex = 9;
             this.label16.Text = "29371";
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.cancelButton);
+            this.panel2.Controls.Add(this.btnAddMode);
+            this.panel2.Location = new System.Drawing.Point(204, 484);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(222, 58);
+            this.panel2.TabIndex = 41;
+            // 
+            // cancelButton
+            // 
+            this.cancelButton.Location = new System.Drawing.Point(135, 22);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(78, 36);
+            this.cancelButton.TabIndex = 41;
+            this.cancelButton.Text = "Cancel";
+            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
+            // 
             // Inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
@@ -1255,6 +1276,7 @@
             this.BackColor = System.Drawing.Color.SeaGreen;
             this.ClientSize = new System.Drawing.Size(1236, 658);
             this.ControlBox = false;
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.panel1);
@@ -1284,6 +1306,7 @@
             this.PrimaryTabPanel.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridItems)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1399,5 +1422,7 @@
         private System.Windows.Forms.ToolStripMenuItem salesToolStripMenuItem;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button cancelButton;
     }
 }

@@ -20,6 +20,7 @@ namespace LeaseToBuy
             selectFilterBox.SelectedIndex = 2;
             orderByBox.SelectedIndex = 2;
             NormalMode();
+            cancelButton.Visible = false;
 
             if (!Testing)
             {
@@ -90,26 +91,41 @@ namespace LeaseToBuy
 
         void AddMode()
         {
-            txtItemName.Text = "";
-            comboCategory.Text = "Furniture";
-            textSKU.Text = "";
-            textModelNo.Text = "";
-            textVendorID.Text = "";
-            textWidth.Text = "";
-            textLength.Text = "";
-            textHeight.Text = "";
-            textWeight.Text = "";
-            comboPriority.Text = "High";
-            textUnitsInStock.Text = "";
-            textUnitsOnOrder.Text = "";
-            textminUnits.Text = "";
-            textqtyPerUnit.Text = "";
-            textUnitPrice.Text = "";
-            textBoxDescription.Text = "";
-            textBoxNotes.Text = "";
-            orderByBox.Text = "Name";
-            selectFilterBox.Text = "All";
-            this.BackColor = Color.SteelBlue;
+            if (btnAddMode.Text == "Save")
+            {
+                btnAddMode.Text = "Add Vendor";
+                btnAddMode.ForeColor = Color.Black;
+                cancelButton.Visible = false;
+                panel1.Enabled = true;
+            }
+            else
+            {
+                btnAddMode.Text = "Save";
+                cancelButton.Visible = true;
+                panel1.Enabled = false;
+                btnAddMode.ForeColor = Color.MidnightBlue;
+                cancelButton.ForeColor = Color.MidnightBlue;
+                txtItemName.Text = "";
+                comboCategory.Text = "Furniture";
+                textSKU.Text = "";
+                textModelNo.Text = "";
+                textVendorID.Text = "";
+                textWidth.Text = "";
+                textLength.Text = "";
+                textHeight.Text = "";
+                textWeight.Text = "";
+                comboPriority.Text = "High";
+                textUnitsInStock.Text = "";
+                textUnitsOnOrder.Text = "";
+                textminUnits.Text = "";
+                textqtyPerUnit.Text = "";
+                textUnitPrice.Text = "";
+                textBoxDescription.Text = "";
+                textBoxNotes.Text = "";
+                orderByBox.Text = "Name";
+                selectFilterBox.Text = "All";
+                this.BackColor = Color.SteelBlue;
+            } 
         }
 
         private void btnAddMode_Click(object sender, EventArgs e)
@@ -139,26 +155,36 @@ namespace LeaseToBuy
 
         void EditMode()
         {
-            txtItemName.Text = "iPhoney 68s";
-            comboCategory.Text = "Electronics";
-            textSKU.Text = "123456780";
-            textModelNo.Text = "987-65-4320";
-            textVendorID.Text = "2";
-            textWidth.Text = ".3\"";
-            textLength.Text = "2\"";
-            textHeight.Text = "4\"";
-            textWeight.Text = "Over 9000!";
-            comboPriority.Text = "As Needed";
-            textUnitsInStock.Text = "5";
-            textUnitsOnOrder.Text = "10";
-            textminUnits.Text = "5";
-            textqtyPerUnit.Text = "1";
-            textUnitPrice.Text = "$400.01";
-            textBoxDescription.Text = "Made of cheap plastic, costs as much as a ticket to Disney Land";
-            textBoxNotes.Text = "";
-            orderByBox.Text = "Name";
-            selectFilterBox.Text = "All";
-            this.BackColor = Color.Firebrick;
+            if (btnEditMode.Text == "Save")
+            {
+                btnEditMode.Text = "Edit Mode";
+                this.BackColor = Color.SeaGreen;
+
+            }
+            else
+            {
+                btnEditMode.Text = "Save";
+                txtItemName.Text = "iPhoney 68s";
+                comboCategory.Text = "Electronics";
+                textSKU.Text = "123456780";
+                textModelNo.Text = "987-65-4320";
+                textVendorID.Text = "2";
+                textWidth.Text = ".3\"";
+                textLength.Text = "2\"";
+                textHeight.Text = "4\"";
+                textWeight.Text = "Over 9000!";
+                comboPriority.Text = "As Needed";
+                textUnitsInStock.Text = "5";
+                textUnitsOnOrder.Text = "10";
+                textminUnits.Text = "5";
+                textqtyPerUnit.Text = "1";
+                textUnitPrice.Text = "$400.01";
+                textBoxDescription.Text = "Made of cheap plastic, costs as much as a ticket to Disney Land";
+                textBoxNotes.Text = "";
+                orderByBox.Text = "Name";
+                selectFilterBox.Text = "All";
+                this.BackColor = Color.Firebrick;
+            }
         }
 
         private void btnEditMode_Click(object sender, EventArgs e)
@@ -279,6 +305,15 @@ namespace LeaseToBuy
         private void comboCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            btnAddMode.Text = "Add Item";
+            btnAddMode.ForeColor = Color.Black;
+            cancelButton.Visible = false;
+            panel1.Enabled = true;
+            NormalMode();
         }
     }
 }
