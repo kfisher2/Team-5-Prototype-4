@@ -52,7 +52,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnAddMode = new System.Windows.Forms.Button();
             this.btnEditMode = new System.Windows.Forms.Button();
             this.btnNormalMode = new System.Windows.Forms.Button();
             this.ZButton = new System.Windows.Forms.Button();
@@ -89,6 +88,7 @@
             this.downButtonLeft = new System.Windows.Forms.Button();
             this.upButtonLeft = new System.Windows.Forms.Button();
             this.rightButtonLeft = new System.Windows.Forms.Button();
+            this.btnAddMode = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.label12 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -110,6 +110,7 @@
             this.label24 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.General = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.shipName = new System.Windows.Forms.TextBox();
@@ -127,6 +128,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnFindVendor = new System.Windows.Forms.Button();
             this.vendorLogo = new System.Windows.Forms.PictureBox();
             this.btnOpenVendor = new System.Windows.Forms.Button();
             this.vendorContactName = new System.Windows.Forms.Label();
@@ -154,8 +156,6 @@
             this.PrimaryTabPanel = new System.Windows.Forms.TabControl();
             this.cancelButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnFindVendor = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.Items.SuspendLayout();
@@ -400,17 +400,6 @@
             this.button1.TabIndex = 39;
             this.button1.Text = "Undo";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // btnAddMode
-            // 
-            this.btnAddMode.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAddMode.Location = new System.Drawing.Point(8, 22);
-            this.btnAddMode.Name = "btnAddMode";
-            this.btnAddMode.Size = new System.Drawing.Size(129, 36);
-            this.btnAddMode.TabIndex = 38;
-            this.btnAddMode.Text = "Add Order";
-            this.btnAddMode.UseVisualStyleBackColor = true;
-            this.btnAddMode.Click += new System.EventHandler(this.btnAddMode_Click);
             // 
             // btnEditMode
             // 
@@ -798,6 +787,17 @@
             this.toolTip1.SetToolTip(this.rightButtonLeft, "Next Logical Record");
             this.rightButtonLeft.UseVisualStyleBackColor = true;
             // 
+            // btnAddMode
+            // 
+            this.btnAddMode.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAddMode.Location = new System.Drawing.Point(8, 22);
+            this.btnAddMode.Name = "btnAddMode";
+            this.btnAddMode.Size = new System.Drawing.Size(129, 36);
+            this.btnAddMode.TabIndex = 38;
+            this.btnAddMode.Text = "Add Order";
+            this.btnAddMode.UseVisualStyleBackColor = true;
+            this.btnAddMode.Click += new System.EventHandler(this.btnAddMode_Click);
+            // 
             // toolTip1
             // 
             this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
@@ -982,6 +982,15 @@
             this.General.Size = new System.Drawing.Size(1204, 423);
             this.General.TabIndex = 7;
             this.General.Text = "General";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(927, 387);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 75;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // webBrowser1
             // 
@@ -1262,6 +1271,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Vendor Info";
             // 
+            // btnFindVendor
+            // 
+            this.btnFindVendor.Location = new System.Drawing.Point(164, 49);
+            this.btnFindVendor.Name = "btnFindVendor";
+            this.btnFindVendor.Size = new System.Drawing.Size(126, 31);
+            this.btnFindVendor.TabIndex = 75;
+            this.btnFindVendor.Text = "Find Vendor";
+            this.btnFindVendor.UseVisualStyleBackColor = true;
+            // 
             // vendorLogo
             // 
             this.vendorLogo.Image = ((System.Drawing.Image)(resources.GetObject("vendorLogo.Image")));
@@ -1525,24 +1543,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(220, 63);
             this.panel2.TabIndex = 41;
-            // 
-            // btnFindVendor
-            // 
-            this.btnFindVendor.Location = new System.Drawing.Point(164, 49);
-            this.btnFindVendor.Name = "btnFindVendor";
-            this.btnFindVendor.Size = new System.Drawing.Size(126, 31);
-            this.btnFindVendor.TabIndex = 75;
-            this.btnFindVendor.Text = "Find Vendor";
-            this.btnFindVendor.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(927, 387);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 75;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // PurchaseOrders
             // 

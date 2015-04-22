@@ -21,6 +21,7 @@ namespace LeaseToBuy
             selectFilterBox.SelectedIndex = 2;
             orderByBox.SelectedIndex = 2;
             NormalMode();
+            cancelButton.Visible = false;
 
             if (!Testing)
             {
@@ -72,12 +73,14 @@ namespace LeaseToBuy
             txtContactPhone1.Text = "281-555-8278";
             txtContactPhone2.Text = "281-555-7000";
             txtContactFax.Text = "281-555-7770";
+            textVendorURL.Text = "haloware.wordpress.com";
             this.BackColor = Color.SeaGreen;
         }
 
         private void NormalMode_Click(object sender, EventArgs e)
         {
             NormalMode();
+
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -85,7 +88,7 @@ namespace LeaseToBuy
 
         }
 
-        void AddMode()
+        void clearText()
         {
             textShipStreet1.Text = "";
             textShipStreet2.Text = "";
@@ -107,7 +110,30 @@ namespace LeaseToBuy
             txtContactPhone1.Text = "";
             txtContactPhone2.Text = "";
             txtContactFax.Text = "";
-            this.BackColor = Color.SteelBlue;
+            textVendorURL.Text = "";
+
+        }
+
+        void AddMode()
+        {
+            if (btnAddMode.Text == "Save")
+            {
+                btnAddMode.Text = "Add Vendor";
+                btnAddMode.ForeColor = Color.Black;
+                cancelButton.Visible = false;
+                panel1.Enabled = true;
+            }
+            else
+            {
+                btnAddMode.Text = "Save";
+                cancelButton.Visible = true;
+                panel1.Enabled = false;
+                btnAddMode.ForeColor = Color.MidnightBlue;
+                cancelButton.ForeColor = Color.MidnightBlue;
+                clearText();
+                this.BackColor = Color.SteelBlue;
+            }
+
         }
 
         private void btnAddMode_Click(object sender, EventArgs e)
@@ -137,27 +163,41 @@ namespace LeaseToBuy
 
         void EditMode()
         {
-            textShipStreet1.Text = "123 Midnight Dr";
-            textShipStreet2.Text = "Suite 102";
-            textShipState.Text = "Texas";
-            textShipCity.Text = "San Antonio";
-            textShipZip.Text = "78212";
-            txtFirst.Text = "HaloWare Inc";
-            textBillCity.Text = "San Antonio";
-            textBillSt1.Text = "1 Semicolon Place";
-            textBillSt2.Text = "#655";
-            textBillZip.Text = "78212";
-            textBillState.Text = "Texas";
-            maskedTextGenAccessed.Text = "02/19/2015";
-            textContactNotes.Text = "Jordan has been our contact for HaloWare since 2013. Very friendly, good over the phone but slow to respond to e-mail. Previous Contact: Joe Hammerschmidt, retired 2013";
-            txtContactFirst.Text = "Jordan";
-            txtContactLast.Text = "Myers";
-            txtContactPosition.Text = "NAM Sales Director";
-            txtContactEmail.Text = "jmyers352@haloware.com";
-            txtContactPhone1.Text = "281-555-8278";
-            txtContactPhone2.Text = "281-555-7000";
-            txtContactFax.Text = "281-555-7770";
-            this.BackColor = Color.Firebrick;
+            if (btnEditMode.Text == "Save")
+            {
+                btnEditMode.Text = "Edit Mode";
+                this.BackColor = Color.SeaGreen;
+
+            }
+            else
+            {
+                this.BackColor = Color.Firebrick;
+                btnEditMode.Text = "Save";
+                textShipStreet1.Text = "123 Midnight Dr";
+                textShipStreet2.Text = "Suite 102";
+                textShipState.Text = "Texas";
+                textShipCity.Text = "San Antonio";
+                textShipZip.Text = "78212";
+                txtFirst.Text = "HaloWare Inc";
+                textBillCity.Text = "San Antonio";
+                textBillSt1.Text = "1 Semicolon Place";
+                textBillSt2.Text = "#655";
+                textBillZip.Text = "78212";
+                textBillState.Text = "Texas";
+                maskedTextGenAccessed.Text = "02/19/2015";
+                textContactNotes.Text = "Jordan has been our contact for HaloWare since 2013. Very friendly, good over the phone but slow to respond to e-mail. Previous Contact: Joe Hammerschmidt, retired 2013";
+                txtContactFirst.Text = "Jordan";
+                txtContactLast.Text = "Myers";
+                txtContactPosition.Text = "NAM Sales Director";
+                txtContactEmail.Text = "jmyers352@haloware.com";
+                txtContactPhone1.Text = "281-555-8278";
+                txtContactPhone2.Text = "281-555-7000";
+                txtContactFax.Text = "281-555-7770";
+                textVendorURL.Text = "haloware.wordpress.com";
+                this.BackColor = Color.Firebrick;
+            }
+                
+
         }
 
         private void btnEditMode_Click(object sender, EventArgs e)
@@ -286,6 +326,15 @@ namespace LeaseToBuy
         private void label24_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            btnAddMode.Text = "Add Vendor";
+            btnAddMode.ForeColor = Color.Black;
+            cancelButton.Visible = false;
+            panel1.Enabled = true;
+            NormalMode();
         }
     }
 }

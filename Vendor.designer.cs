@@ -124,6 +124,7 @@
             this.txtContactPhone2 = new System.Windows.Forms.TextBox();
             this.PrimaryTabPanel = new System.Windows.Forms.TabControl();
             this.General = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
@@ -161,7 +162,8 @@
             this.textBillZip = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.cancelButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.Purchases.SuspendLayout();
@@ -172,10 +174,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxContact)).BeginInit();
             this.PrimaryTabPanel.SuspendLayout();
             this.General.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -343,7 +346,6 @@
             // 
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.btnAddMode);
             this.panel1.Controls.Add(this.btnEditMode);
             this.panel1.Controls.Add(this.btnNormalMode);
             this.panel1.Controls.Add(this.ZButton);
@@ -411,11 +413,11 @@
             // 
             // btnAddMode
             // 
-            this.btnAddMode.Location = new System.Drawing.Point(189, 13);
+            this.btnAddMode.Location = new System.Drawing.Point(0, 22);
             this.btnAddMode.Name = "btnAddMode";
             this.btnAddMode.Size = new System.Drawing.Size(129, 36);
             this.btnAddMode.TabIndex = 38;
-            this.btnAddMode.Text = "Add Mode";
+            this.btnAddMode.Text = "Add Vendor";
             this.btnAddMode.UseVisualStyleBackColor = true;
             this.btnAddMode.Click += new System.EventHandler(this.btnAddMode_Click);
             // 
@@ -1161,6 +1163,15 @@
             this.General.TabIndex = 7;
             this.General.Text = "General";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(32, 20);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(212, 66);
+            this.pictureBox1.TabIndex = 75;
+            this.pictureBox1.TabStop = false;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label1);
@@ -1641,14 +1652,24 @@
             this.label23.TabIndex = 9;
             this.label23.Text = "10389";
             // 
-            // pictureBox1
+            // panel2
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(32, 20);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(212, 66);
-            this.pictureBox1.TabIndex = 75;
-            this.pictureBox1.TabStop = false;
+            this.panel2.Controls.Add(this.cancelButton);
+            this.panel2.Controls.Add(this.btnAddMode);
+            this.panel2.Location = new System.Drawing.Point(204, 484);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(223, 58);
+            this.panel2.TabIndex = 76;
+            // 
+            // cancelButton
+            // 
+            this.cancelButton.Location = new System.Drawing.Point(142, 22);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(78, 36);
+            this.cancelButton.TabIndex = 40;
+            this.cancelButton.Text = "Cancel";
+            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // Vendor
             // 
@@ -1657,10 +1678,11 @@
             this.BackColor = System.Drawing.Color.SeaGreen;
             this.ClientSize = new System.Drawing.Size(1236, 658);
             this.ControlBox = false;
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.label22);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.PrimaryTabPanel);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -1683,13 +1705,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxContact)).EndInit();
             this.PrimaryTabPanel.ResumeLayout(false);
             this.General.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1829,5 +1852,7 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn Category;
         private System.Windows.Forms.DataGridViewComboBoxColumn Style;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button cancelButton;
     }
 }
