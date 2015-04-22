@@ -16,7 +16,7 @@ namespace LeaseToBuy
         Undelete undeleteForm = null;
         EmployeeInfo employ = null;
         CreditCards credit = null;
-
+        String stuff = "";
 
         public User()
         {
@@ -102,6 +102,7 @@ namespace LeaseToBuy
                 cancelButton.Visible = false;
                 btnAddMode.ForeColor = Color.Black;
                 cancelButton.ForeColor = Color.Black;
+                MessageBox.Show("Saved!");
             }
             else
             {
@@ -160,6 +161,7 @@ namespace LeaseToBuy
             {
                 btnEditMode.Text = "Edit Mode";
                 this.BackColor = Color.SeaGreen;
+                MessageBox.Show("Saved!");
 
             }
             else
@@ -192,11 +194,6 @@ namespace LeaseToBuy
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
             EditMode();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void txtStreet2_TextChanged(object sender, EventArgs e)
@@ -375,6 +372,42 @@ namespace LeaseToBuy
             cancelButton.ForeColor = Color.Black;
             cancelButton.Visible = false;
             NormalMode();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            PrimaryTabPanel.SelectTab(0);
+            NormalMode();
+            txtFirst.Text = "Zane";
+            txtLast.Text = "Foster";
+            txtStreet1.Text = "1 Trinity Place";
+            txtStreet2.Text = "#655";
+            txtCity.Text = "San Antonio";
+            textBillCity.Text = "San Antonio";
+            textBillSt1.Text = "1 Trinity Place";
+            textBillSt2.Text = "#655";
+            textBillZip.Text = "78212";
+            textBillState.Text = "Texas";
+            comboGenAcctType.Text = "Corporate";
+            maskedTextGenAccessed.Text = "02/19/2015";
+            maskedTextGenCreated.Text = "05/29/2010";
+            textGeneralNotes.Text = "Zane is a valued customer.";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            stuff = txtStreet1.Text;
+            txtStreet1.Text = "";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            txtStreet1.Text = stuff;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Opening Skype...");
         }
 
 

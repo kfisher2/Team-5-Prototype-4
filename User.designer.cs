@@ -51,9 +51,11 @@
             this.rightButtonRight = new System.Windows.Forms.Button();
             this.downButtonRight = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.cancelButton = new System.Windows.Forms.Button();
+            this.btnAddMode = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnAddMode = new System.Windows.Forms.Button();
             this.btnEditMode = new System.Windows.Forms.Button();
             this.btnNormalMode = new System.Windows.Forms.Button();
             this.ZButton = new System.Windows.Forms.Button();
@@ -192,10 +194,11 @@
             this.label21 = new System.Windows.Forms.Label();
             this.maskedTextGenAccessed = new System.Windows.Forms.MaskedTextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.cancelButton = new System.Windows.Forms.Button();
+            this.Split = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.button12 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.Purchases.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.ExtendedContacts.SuspendLayout();
@@ -208,7 +211,6 @@
             this.General.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -433,6 +435,36 @@
             this.panel1.TabIndex = 7;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.cancelButton);
+            this.panel2.Controls.Add(this.btnAddMode);
+            this.panel2.Location = new System.Drawing.Point(189, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(223, 53);
+            this.panel2.TabIndex = 41;
+            // 
+            // cancelButton
+            // 
+            this.cancelButton.Location = new System.Drawing.Point(135, 17);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(78, 36);
+            this.cancelButton.TabIndex = 39;
+            this.cancelButton.Text = "Cancel";
+            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
+            // 
+            // btnAddMode
+            // 
+            this.btnAddMode.Location = new System.Drawing.Point(0, 17);
+            this.btnAddMode.Name = "btnAddMode";
+            this.btnAddMode.Size = new System.Drawing.Size(129, 36);
+            this.btnAddMode.TabIndex = 38;
+            this.btnAddMode.Text = "Add User";
+            this.toolTip1.SetToolTip(this.btnAddMode, "Change to add mode.");
+            this.btnAddMode.UseVisualStyleBackColor = true;
+            this.btnAddMode.Click += new System.EventHandler(this.btnAddMode_Click);
+            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(927, 33);
@@ -453,17 +485,7 @@
             this.button1.Text = "Undo";
             this.toolTip1.SetToolTip(this.button1, "Undo last action.");
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // btnAddMode
-            // 
-            this.btnAddMode.Location = new System.Drawing.Point(0, 17);
-            this.btnAddMode.Name = "btnAddMode";
-            this.btnAddMode.Size = new System.Drawing.Size(129, 36);
-            this.btnAddMode.TabIndex = 38;
-            this.btnAddMode.Text = "Add User";
-            this.toolTip1.SetToolTip(this.btnAddMode, "Change to add mode.");
-            this.btnAddMode.UseVisualStyleBackColor = true;
-            this.btnAddMode.Click += new System.EventHandler(this.btnAddMode_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnEditMode
             // 
@@ -882,6 +904,7 @@
             this.toolTip1.SetToolTip(this.button3, "Calls the user\'s home phone using your computer\'s default VOIP (e.g. Skype) progr" +
         "am.");
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -1389,6 +1412,7 @@
             // ExtendedContacts
             // 
             this.ExtendedContacts.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ExtendedContacts.Controls.Add(this.button12);
             this.ExtendedContacts.Controls.Add(this.button11);
             this.ExtendedContacts.Controls.Add(this.button10);
             this.ExtendedContacts.Controls.Add(this.dataGridView2);
@@ -1402,20 +1426,22 @@
             // button11
             // 
             this.button11.BackColor = System.Drawing.Color.Transparent;
-            this.button11.Location = new System.Drawing.Point(507, 71);
+            this.button11.Location = new System.Drawing.Point(480, 71);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(78, 22);
+            this.button11.Size = new System.Drawing.Size(72, 22);
             this.button11.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.button11, "If the user is an employee, their employee information.");
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button10
             // 
             this.button10.BackColor = System.Drawing.Color.Transparent;
-            this.button10.Location = new System.Drawing.Point(584, 71);
+            this.button10.Location = new System.Drawing.Point(552, 71);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(78, 22);
+            this.button10.Size = new System.Drawing.Size(70, 22);
             this.button10.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.button10, "This user\'s credit cards.");
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
@@ -1438,7 +1464,8 @@
             this.SendText,
             this.DeleteUser,
             this.UndeleteUser,
-            this.AddUser});
+            this.AddUser,
+            this.Split});
             this.dataGridView2.Location = new System.Drawing.Point(7, 6);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(1192, 411);
@@ -2026,24 +2053,21 @@
             this.label20.Text = "Last Accessed";
             this.label20.Click += new System.EventHandler(this.label20_Click_1);
             // 
-            // panel2
+            // Split
             // 
-            this.panel2.Controls.Add(this.cancelButton);
-            this.panel2.Controls.Add(this.btnAddMode);
-            this.panel2.Location = new System.Drawing.Point(189, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(223, 53);
-            this.panel2.TabIndex = 41;
+            this.Split.HeaderText = "Split";
+            this.Split.Name = "Split";
             // 
-            // cancelButton
+            // button12
             // 
-            this.cancelButton.Location = new System.Drawing.Point(135, 17);
-            this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(78, 36);
-            this.cancelButton.TabIndex = 39;
-            this.cancelButton.Text = "Cancel";
-            this.cancelButton.UseVisualStyleBackColor = true;
-            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
+            this.button12.BackColor = System.Drawing.Color.Transparent;
+            this.button12.Location = new System.Drawing.Point(1126, 71);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(70, 22);
+            this.button12.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.button12, "Creates a new account for this user.");
+            this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // User
             // 
@@ -2068,6 +2092,7 @@
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.Purchases.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ExtendedContacts.ResumeLayout(false);
@@ -2087,7 +2112,6 @@
             this.groupBox2.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2259,5 +2283,7 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button cancelButton;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.DataGridViewButtonColumn Split;
     }
 }
