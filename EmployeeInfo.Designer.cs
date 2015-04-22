@@ -41,6 +41,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxContact)).BeginInit();
             this.SuspendLayout();
             // 
@@ -139,7 +140,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(32, 129);
+            this.button1.Location = new System.Drawing.Point(2, 131);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 24);
             this.button1.TabIndex = 25;
@@ -149,9 +150,9 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(240, 130);
+            this.button2.Location = new System.Drawing.Point(83, 131);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(75, 24);
             this.button2.TabIndex = 26;
             this.button2.Text = "Save";
             this.button2.UseVisualStyleBackColor = true;
@@ -159,20 +160,31 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(138, 130);
+            this.button3.Location = new System.Drawing.Point(267, 132);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 27;
             this.button3.Text = "Close";
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(164, 131);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(97, 24);
+            this.button4.TabIndex = 28;
+            this.button4.Text = "Login Info";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
             // EmployeeInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaGreen;
-            this.ClientSize = new System.Drawing.Size(342, 161);
+            this.ClientSize = new System.Drawing.Size(342, 158);
             this.ControlBox = false;
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -207,5 +219,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }

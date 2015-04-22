@@ -24,6 +24,11 @@ namespace LeaseToBuy
             orderByBox.SelectedIndex = 2;
             NormalMode();
 
+            if (checkBox1.Checked)
+                button8.Visible = true;
+            else
+                button8.Visible = false;
+
             if (!Testing)
             {
                 //btnAddMode.Visible = false;
@@ -316,6 +321,20 @@ namespace LeaseToBuy
             employ = new EmployeeInfo();
             employ.MdiParent = this.MdiParent;
             employ.Show();
+        }
+
+        private void label45_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+                button8.Visible = true;
+            else
+                button8.Visible = false;
+
         }
 
 
