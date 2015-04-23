@@ -52,7 +52,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnAddMode = new System.Windows.Forms.Button();
             this.btnEditMode = new System.Windows.Forms.Button();
             this.btnNormalMode = new System.Windows.Forms.Button();
             this.ZButton = new System.Windows.Forms.Button();
@@ -89,6 +88,7 @@
             this.downButtonLeft = new System.Windows.Forms.Button();
             this.upButtonLeft = new System.Windows.Forms.Button();
             this.rightButtonLeft = new System.Windows.Forms.Button();
+            this.btnAddMode = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.General = new System.Windows.Forms.TabPage();
             this.btnGoToVendor = new System.Windows.Forms.Button();
@@ -210,6 +210,7 @@
             this.undeleteToolStripMenuItem.Name = "undeleteToolStripMenuItem";
             this.undeleteToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.undeleteToolStripMenuItem.Text = "Undelete";
+            this.undeleteToolStripMenuItem.Click += new System.EventHandler(this.undeleteToolStripMenuItem_Click);
             // 
             // searchToolStripMenuItem
             // 
@@ -381,16 +382,6 @@
             this.button1.TabIndex = 39;
             this.button1.Text = "Undo";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // btnAddMode
-            // 
-            this.btnAddMode.Location = new System.Drawing.Point(0, 22);
-            this.btnAddMode.Name = "btnAddMode";
-            this.btnAddMode.Size = new System.Drawing.Size(129, 36);
-            this.btnAddMode.TabIndex = 38;
-            this.btnAddMode.Text = "Add Item";
-            this.btnAddMode.UseVisualStyleBackColor = true;
-            this.btnAddMode.Click += new System.EventHandler(this.btnAddMode_Click);
             // 
             // btnEditMode
             // 
@@ -773,6 +764,16 @@
             this.rightButtonLeft.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.toolTip1.SetToolTip(this.rightButtonLeft, "Next Logical Record");
             this.rightButtonLeft.UseVisualStyleBackColor = true;
+            // 
+            // btnAddMode
+            // 
+            this.btnAddMode.Location = new System.Drawing.Point(0, 22);
+            this.btnAddMode.Name = "btnAddMode";
+            this.btnAddMode.Size = new System.Drawing.Size(129, 36);
+            this.btnAddMode.TabIndex = 38;
+            this.btnAddMode.Text = "Add Item";
+            this.btnAddMode.UseVisualStyleBackColor = true;
+            this.btnAddMode.Click += new System.EventHandler(this.btnAddMode_Click);
             // 
             // toolTip1
             // 

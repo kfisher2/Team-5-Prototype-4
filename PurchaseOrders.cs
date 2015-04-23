@@ -14,7 +14,7 @@ namespace LeaseToBuy
     {
         bool Testing = false;
         Vendor vendorForm = null;
-        Undelete undeleteForm = null;
+        UndeletePurchase undeleteForm = null;
         SearchVendor svForm = null;
         
 
@@ -460,7 +460,7 @@ namespace LeaseToBuy
 
         private void undeleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            undeleteForm = new Undelete();
+            undeleteForm = new UndeletePurchase();
             undeleteForm.Show();
         }
 
