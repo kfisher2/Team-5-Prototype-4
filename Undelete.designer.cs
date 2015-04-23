@@ -37,12 +37,17 @@
             this.UndeleteFName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UndeleteUID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UndeleteEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UndeleteDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "All",
+            "Recent(< 90 Days)",
+            "Old(> 90 Days)"});
             this.comboBox1.Location = new System.Drawing.Point(13, 185);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(133, 21);
@@ -52,6 +57,12 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Last Name",
+            "First name",
+            "User ID",
+            "Email",
+            "Date Deleted"});
             this.comboBox2.Location = new System.Drawing.Point(152, 185);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(124, 21);
@@ -78,12 +89,14 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.UndeleteLName,
             this.UndeleteFName,
             this.UndeleteUID,
-            this.UndeleteEmail});
+            this.UndeleteEmail,
+            this.UndeleteDate});
             this.dataGridView1.Location = new System.Drawing.Point(12, 13);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(402, 166);
@@ -108,6 +121,11 @@
             // 
             this.UndeleteEmail.HeaderText = "E-mail";
             this.UndeleteEmail.Name = "UndeleteEmail";
+            // 
+            // UndeleteDate
+            // 
+            this.UndeleteDate.HeaderText = "Date Deleted";
+            this.UndeleteDate.Name = "UndeleteDate";
             // 
             // Undelete
             // 
@@ -139,5 +157,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn UndeleteFName;
         private System.Windows.Forms.DataGridViewTextBoxColumn UndeleteUID;
         private System.Windows.Forms.DataGridViewTextBoxColumn UndeleteEmail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UndeleteDate;
     }
 }

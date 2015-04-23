@@ -14,7 +14,7 @@ namespace LeaseToBuy
     {
         bool Testing = false;
         Email emailForm = null;
-        Undelete undeleteForm = null;
+        UndeleteVendor undeleteForm = null;
         PurchaseOrders purchaseForm = null;
 
         public Vendor()
@@ -375,7 +375,7 @@ namespace LeaseToBuy
 
         private void undeleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            undeleteForm = new Undelete();
+            undeleteForm = new UndeleteVendor();
             undeleteForm.Show();
         }
 

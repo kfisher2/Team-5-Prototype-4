@@ -14,6 +14,7 @@ namespace LeaseToBuy
     {
         bool Testing = false;
         User userForm = null;
+        UndeleteSale undeleteForm = null;
 
         public SalesOrders()
         {
@@ -424,6 +425,17 @@ namespace LeaseToBuy
                 txtShippingZip.Text = "";
                 comboBoxShippingState.Text = "";
             }
+        }
+
+        private void txtuserName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void undeleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            undeleteForm = new UndeleteSale();
+            undeleteForm.Show();
         }
     }
 }

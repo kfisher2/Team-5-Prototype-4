@@ -13,6 +13,7 @@ namespace LeaseToBuy
     public partial class Inventory : Form
     {
         bool Testing = false;
+        UndeleteInventory undeleteForm = null;
 
         public Inventory()
         {
@@ -315,6 +316,12 @@ namespace LeaseToBuy
             cancelButton.Visible = false;
             panel1.Enabled = true;
             NormalMode();
+        }
+
+        private void undeleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            undeleteForm = new UndeleteInventory();
+            undeleteForm.Show();
         }
     }
 }

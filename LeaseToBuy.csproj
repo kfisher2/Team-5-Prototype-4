@@ -107,6 +107,30 @@
     <Compile Include="Undelete.designer.cs">
       <DependentUpon>Undelete.cs</DependentUpon>
     </Compile>
+    <Compile Include="UndeleteInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UndeleteInventory.Designer.cs">
+      <DependentUpon>UndeleteInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UndeletePurchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UndeletePurchase.Designer.cs">
+      <DependentUpon>UndeletePurchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UndeleteSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UndeleteSale.Designer.cs">
+      <DependentUpon>UndeleteSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UndeleteVendor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UndeleteVendor.Designer.cs">
+      <DependentUpon>UndeleteVendor.cs</DependentUpon>
+    </Compile>
     <Compile Include="User.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +187,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Undelete.resx">
       <DependentUpon>Undelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UndeleteInventory.resx">
+      <DependentUpon>UndeleteInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UndeletePurchase.resx">
+      <DependentUpon>UndeletePurchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UndeleteSale.resx">
+      <DependentUpon>UndeleteSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UndeleteVendor.resx">
+      <DependentUpon>UndeleteVendor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User.resx">
       <DependentUpon>User.cs</DependentUpon>
