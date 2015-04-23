@@ -97,13 +97,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.Purchases = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.addtoorder = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Item = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ItemDescrip = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UnitCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Category = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Style = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.BusinessContact = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.textContactNotes = new System.Windows.Forms.TextBox();
@@ -174,6 +167,14 @@
             this.txtContactPhone2 = new System.Windows.Forms.MaskedTextBox();
             this.txtContactFax = new System.Windows.Forms.MaskedTextBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.addtoorder = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Item = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemDescrip = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UnitCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Category = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Style = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.Purchases.SuspendLayout();
@@ -897,6 +898,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.addtoorder,
+            this.Qty,
             this.Item,
             this.ItemName,
             this.ItemDescrip,
@@ -908,68 +910,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1192, 353);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // addtoorder
-            // 
-            this.addtoorder.FillWeight = 8F;
-            this.addtoorder.HeaderText = "Add";
-            this.addtoorder.Name = "addtoorder";
-            // 
-            // Item
-            // 
-            this.Item.FillWeight = 20.72758F;
-            this.Item.HeaderText = "ItemID";
-            this.Item.Name = "Item";
-            // 
-            // ItemName
-            // 
-            this.ItemName.FillWeight = 20.72758F;
-            this.ItemName.HeaderText = "Name";
-            this.ItemName.Name = "ItemName";
-            // 
-            // ItemDescrip
-            // 
-            this.ItemDescrip.FillWeight = 20.72758F;
-            this.ItemDescrip.HeaderText = "Description";
-            this.ItemDescrip.Name = "ItemDescrip";
-            // 
-            // UnitCost
-            // 
-            this.UnitCost.FillWeight = 20.72758F;
-            this.UnitCost.HeaderText = "Price";
-            this.UnitCost.Name = "UnitCost";
-            // 
-            // Category
-            // 
-            this.Category.FillWeight = 20.72758F;
-            this.Category.HeaderText = "Category";
-            this.Category.Items.AddRange(new object[] {
-            "Automotive",
-            "Books",
-            "Electronics",
-            "Furniture",
-            "Kitchen",
-            "Luggage & Travel",
-            "Movies & TV",
-            "Office Supplies"});
-            this.Category.Name = "Category";
-            this.Category.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Category.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Style
-            // 
-            this.Style.FillWeight = 20.72758F;
-            this.Style.HeaderText = "Style";
-            this.Style.Items.AddRange(new object[] {
-            "Jacobean",
-            "Early American",
-            "Georgian",
-            "Victorian",
-            "Contemporary",
-            "Modern"});
-            this.Style.Name = "Style";
-            this.Style.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Style.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // BusinessContact
             // 
@@ -1815,6 +1755,75 @@
             this.toolTip1.SetToolTip(this.button4, "Opens your computer\'s default email program to send the user an email.");
             this.button4.UseVisualStyleBackColor = true;
             // 
+            // addtoorder
+            // 
+            this.addtoorder.FillWeight = 8F;
+            this.addtoorder.HeaderText = "Add";
+            this.addtoorder.Name = "addtoorder";
+            // 
+            // Qty
+            // 
+            this.Qty.FillWeight = 8F;
+            this.Qty.HeaderText = "Qty";
+            this.Qty.Name = "Qty";
+            // 
+            // Item
+            // 
+            this.Item.FillWeight = 12F;
+            this.Item.HeaderText = "ItemID";
+            this.Item.Name = "Item";
+            // 
+            // ItemName
+            // 
+            this.ItemName.FillWeight = 20.72758F;
+            this.ItemName.HeaderText = "Name";
+            this.ItemName.Name = "ItemName";
+            // 
+            // ItemDescrip
+            // 
+            this.ItemDescrip.FillWeight = 20.72758F;
+            this.ItemDescrip.HeaderText = "Description";
+            this.ItemDescrip.Name = "ItemDescrip";
+            // 
+            // UnitCost
+            // 
+            this.UnitCost.FillWeight = 15F;
+            this.UnitCost.HeaderText = "Price";
+            this.UnitCost.Name = "UnitCost";
+            // 
+            // Category
+            // 
+            this.Category.FillWeight = 17F;
+            this.Category.HeaderText = "Category";
+            this.Category.Items.AddRange(new object[] {
+            "Automotive",
+            "Books",
+            "Electronics",
+            "Furniture",
+            "Kitchen",
+            "Luggage & Travel",
+            "Movies & TV",
+            "Office Supplies"});
+            this.Category.Name = "Category";
+            this.Category.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Category.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // Style
+            // 
+            this.Style.FillWeight = 17F;
+            this.Style.HeaderText = "Style";
+            this.Style.Items.AddRange(new object[] {
+            "Headphones",
+            "Keyboard",
+            "Mouse",
+            "Laptop",
+            "Desktop",
+            "Graphics Card",
+            "Processor"});
+            this.Style.Name = "Style";
+            this.Style.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Style.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
             // Vendor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
@@ -1988,13 +1997,6 @@
         private System.Windows.Forms.Label txtVendorID;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label txtCreatedDate;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn addtoorder;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Item;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ItemName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ItemDescrip;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UnitCost;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Category;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Style;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button cancelButton;
@@ -2011,5 +2013,13 @@
         private System.Windows.Forms.MaskedTextBox txtContactPhone2;
         private System.Windows.Forms.MaskedTextBox txtContactFax;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn addtoorder;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Qty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Item;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemDescrip;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UnitCost;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Category;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Style;
     }
 }

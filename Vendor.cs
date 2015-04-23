@@ -303,9 +303,10 @@ namespace LeaseToBuy
         private void User_Load(object sender, EventArgs e)
         {
             labelCompanyName.Text = textCompanyName.Text;
-            dataGridView1.Rows.Add(false, "10920", "Jade A706", "2.5GHz","$349.99","Electronics","Processor");
-            dataGridView1.Rows.Add(false, "10817", "Halo Backflip D700", "Designer Andre Reitza", "$1,249.00", "Electronics", "Laptop");
-            dataGridView1.Rows.Add(false, "10882", "RazeFlame LED Mouse", "Rainbow lights", "$76.99", "Electronics", "Mouse");
+            dataGridView1.Rows.Add(false, "", "10920", "Jade A706", "2.5GHz","$349.99","Electronics","Processor");
+            dataGridView1.Rows.Add(false, "", "10817", "Halo Backflip D700", "Designer Andre Reitza", "$1,249.00", "Electronics", "Laptop");
+            dataGridView1.Rows.Add(false, "", "10882", "RazeFlame LED Mouse", "Rainbow lights", "$76.99", "Electronics", "Mouse");
+            dataGridView1.Rows.Add(false, "", "0821", "AiGuru SV1", "Sleek Black", "$679.85", "Electronics", "Laptop");
 
         }
 

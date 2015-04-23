@@ -15,6 +15,8 @@ namespace LeaseToBuy
         bool Testing = false;
         Vendor vendorForm = null;
         Undelete undeleteForm = null;
+        SearchVendor svForm = null;
+        
 
         public PurchaseOrders()
         {
@@ -86,7 +88,7 @@ namespace LeaseToBuy
             vendorContactName.Text = "Jordan Myers";
             vendorContactPhone.Text = "281-555-8278";
             vendorURL.Text = "haloware.wordpress.com";
-            shipName.Text = "John Smith";
+            shipName.Text = "LeaseToBuy LLC";
             shipCity.Text = "Austin";
             shipSt1.Text = "947 Rainbow Road Dr.";
             shipSt2.Text = "Docking Station C";
@@ -117,6 +119,19 @@ namespace LeaseToBuy
                 cancelButton.Visible = false;
                 panel1.Enabled = true;
                 NormalMode();
+                vendorID.Text = "10389";
+                vendorName.Text = "Haloware Inc.";
+                vendorContactName.Text = "Jordan Myers";
+                vendorContactPhone.Text = "281-555-8278";
+                vendorURL.Text = "haloware.wordpress.com";
+                lbVendorContactName.Visible = true;
+                vendorLogo.Visible = true;
+                vendorContactPhone.Visible = true;
+                btnOpenVendor.Visible = true;
+
+
+
+
             }
             else
             {
@@ -126,18 +141,18 @@ namespace LeaseToBuy
                 vendorContactName.Text = "";
                 vendorContactPhone.Text = "";
                 vendorURL.Text = "";
-                shipName.Text = "";
-                shipCity.Text = "";
-                shipSt1.Text = "";
-                shipSt2.Text = "";
-                shipState.Text = "";
-                shipZip.Text = "";
+                shipName.Text = "LeaseToBuy LLC";
+                shipCity.Text = "Austin";
+                shipSt1.Text = "947 Rainbow Road Dr.";
+                shipSt2.Text = "Docking Station C";
+                shipState.Text = "Texas";
+                shipZip.Text = "78704";
                 btnOpenVendor.Visible = false;
                 vendorLogo.Visible = false;
                 lbVendorContactName.Visible = false;
-                lbVendorContactPhone.Visible = false;
-                lbVendorName.Visible = false;
-                lbVendorURL.Visible = false;
+                //lbVendorContactPhone.Visible = false;
+                //lbVendorName.Visible = false;
+                //lbVendorURL.Visible = false;
                 vendorContactPhone.Visible = false;
                 btnFindVendor.Visible = true;
                 btnAddMode.Text = "Save";
@@ -204,7 +219,7 @@ namespace LeaseToBuy
                 vendorContactName.Text = "Jordan Myers";
                 vendorContactPhone.Text = "281-555-8278";
                 vendorURL.Text = "haloware.wordpress.com";
-                shipName.Text = "John Smith";
+                shipName.Text = "LeaseToBuy LLC";
                 shipCity.Text = "Austin";
                 shipSt1.Text = "947 Rainbow Road Dr.";
                 shipSt2.Text = "Docking Station C";
@@ -291,7 +306,9 @@ namespace LeaseToBuy
 
         private void User_Load(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Add("0821", "AiGuru SV1", "Laptop", "$679.85", "100", "-", "$679.85", "$679.85", "4/22/15","Electronics","Laptop");
+            dataGridView1.Rows.Add("20","", "10817", "Halo Backflip D700", "Designer Andre Reitza", "$1,249.00", "$1,249.00", "$0.00", "4/30/15", "Electronics", "Laptop");
+            dataGridView1.Rows.Add("30","","10882", "RazeFlame LED Mouse", "Rainbow lights", "$76.99","$1325.99","$0.00","4/30/15", "Electronics", "Mouse");
+            dataGridView1.Rows.Add("40","","0821", "AiGuru SV1", "Laptop", "$679.85", "$2005.84", "$0.00", "4/22/15","Electronics","Laptop");
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -314,6 +331,8 @@ namespace LeaseToBuy
             if (checkBoxSent.Checked)
             {
                 groupBoxTracking.Show();
+                shippedBox.Text = "4/30/15";
+                expectedBox.Text = "5/7/15";
 
             }
             else
@@ -332,6 +351,7 @@ namespace LeaseToBuy
         {
             if(checkBoxRecieved.Checked) {
                 recievedBox.Show();
+                recievedBox.Text = "4/30/15";
                 recievedLabel.Show();
                 timeLabel.Show();
                 timeCalcLabel.Show();
@@ -452,6 +472,24 @@ namespace LeaseToBuy
         private void General_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnFindVendor_Click(object sender, EventArgs e)
+        {
+            vendorID.Text = "10389";
+            lbVendorContactName.Visible = true;
+            btnFindVendor.Visible = false;
+            svForm = new SearchVendor();
+            svForm.MdiParent = this.MdiParent;
+            svForm.Show();
+        }
+
+        private void btnPlaceOrder_Click(object sender, EventArgs e)
+        {
+            btnPlaceOrder.Visible = false;
+            btnAddItems.Visible = false;
+            MessageBox.Show("Your order has been placed with Haloware Inc. The expected shipping time from this vendor is 5-7 business days.");
+            checkBoxSent.Checked = true;
         }
     }
 }

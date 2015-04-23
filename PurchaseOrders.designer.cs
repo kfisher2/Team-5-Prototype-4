@@ -95,24 +95,11 @@
             this.label18 = new System.Windows.Forms.Label();
             this.Items = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Item = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ItemDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QtyOrdered = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QtyRecieved = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AmountPaid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Categorty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Style = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBoxSelect = new System.Windows.Forms.GroupBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label24 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.General = new System.Windows.Forms.TabPage();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.shipName = new System.Windows.Forms.TextBox();
@@ -144,7 +131,6 @@
             this.vendorName = new System.Windows.Forms.Label();
             this.vendorID = new System.Windows.Forms.TextBox();
             this.groupBoxTracking = new System.Windows.Forms.GroupBox();
-            this.timeCalcLabel = new System.Windows.Forms.Label();
             this.recievedBox = new System.Windows.Forms.TextBox();
             this.recievedLabel = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -161,6 +147,24 @@
             this.label28 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.btnAddItems = new System.Windows.Forms.Button();
+            this.btnPlaceOrder = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.QtyOrdered = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QtyRecieved = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Item = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AmountPaid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Categorty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Style = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeCalcLabel = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.Items.SuspendLayout();
@@ -848,6 +852,12 @@
             // 
             this.Items.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Items.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Items.Controls.Add(this.button4);
+            this.Items.Controls.Add(this.label4);
+            this.Items.Controls.Add(this.label3);
+            this.Items.Controls.Add(this.label2);
+            this.Items.Controls.Add(this.label1);
+            this.Items.Controls.Add(this.btnPlaceOrder);
             this.Items.Controls.Add(this.btnAddItems);
             this.Items.Controls.Add(this.dataGridView1);
             this.Items.Controls.Add(this.groupBoxSelect);
@@ -864,12 +874,12 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.QtyOrdered,
+            this.QtyRecieved,
             this.Item,
             this.ItemName,
             this.ItemDescription,
             this.UnitPrice,
-            this.QtyOrdered,
-            this.QtyRecieved,
             this.Subtotal,
             this.AmountPaid,
             this.Date,
@@ -877,64 +887,9 @@
             this.Style});
             this.dataGridView1.Location = new System.Drawing.Point(5, 28);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1193, 331);
+            this.dataGridView1.Size = new System.Drawing.Size(1193, 288);
             this.dataGridView1.TabIndex = 74;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
-            // 
-            // Item
-            // 
-            this.Item.HeaderText = "ItemID";
-            this.Item.Name = "Item";
-            // 
-            // ItemName
-            // 
-            this.ItemName.HeaderText = "Item Name";
-            this.ItemName.Name = "ItemName";
-            // 
-            // ItemDescription
-            // 
-            this.ItemDescription.HeaderText = "Item Description";
-            this.ItemDescription.Name = "ItemDescription";
-            // 
-            // UnitPrice
-            // 
-            this.UnitPrice.HeaderText = "Unit Price";
-            this.UnitPrice.Name = "UnitPrice";
-            // 
-            // QtyOrdered
-            // 
-            this.QtyOrdered.HeaderText = "Qty Ordered";
-            this.QtyOrdered.Name = "QtyOrdered";
-            // 
-            // QtyRecieved
-            // 
-            this.QtyRecieved.HeaderText = "Qty Recieved";
-            this.QtyRecieved.Name = "QtyRecieved";
-            // 
-            // Subtotal
-            // 
-            this.Subtotal.HeaderText = "Order Subtotal";
-            this.Subtotal.Name = "Subtotal";
-            // 
-            // AmountPaid
-            // 
-            this.AmountPaid.HeaderText = "Amount Paid";
-            this.AmountPaid.Name = "AmountPaid";
-            // 
-            // Date
-            // 
-            this.Date.HeaderText = "Date Purchased";
-            this.Date.Name = "Date";
-            // 
-            // Categorty
-            // 
-            this.Categorty.HeaderText = "Category";
-            this.Categorty.Name = "Categorty";
-            // 
-            // Style
-            // 
-            this.Style.HeaderText = "Style";
-            this.Style.Name = "Style";
             // 
             // groupBoxSelect
             // 
@@ -943,7 +898,7 @@
             this.groupBoxSelect.Controls.Add(this.checkBox1);
             this.groupBoxSelect.Controls.Add(this.label24);
             this.groupBoxSelect.Controls.Add(this.comboBox1);
-            this.groupBoxSelect.Location = new System.Drawing.Point(248, 365);
+            this.groupBoxSelect.Location = new System.Drawing.Point(8, 368);
             this.groupBoxSelect.Name = "groupBoxSelect";
             this.groupBoxSelect.Size = new System.Drawing.Size(944, 52);
             this.groupBoxSelect.TabIndex = 1;
@@ -992,8 +947,6 @@
             // General
             // 
             this.General.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.General.Controls.Add(this.button4);
-            this.General.Controls.Add(this.button3);
             this.General.Controls.Add(this.webBrowser1);
             this.General.Controls.Add(this.groupBox3);
             this.General.Controls.Add(this.label9);
@@ -1008,24 +961,6 @@
             this.General.TabIndex = 7;
             this.General.Text = "General";
             this.General.Click += new System.EventHandler(this.General_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(1008, 387);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(128, 23);
-            this.button4.TabIndex = 76;
-            this.button4.Text = "make paymen";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(927, 387);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 75;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // webBrowser1
             // 
@@ -1314,6 +1249,7 @@
             this.btnFindVendor.TabIndex = 75;
             this.btnFindVendor.Text = "Find Vendor";
             this.btnFindVendor.UseVisualStyleBackColor = true;
+            this.btnFindVendor.Click += new System.EventHandler(this.btnFindVendor_Click);
             // 
             // vendorLogo
             // 
@@ -1448,16 +1384,6 @@
             this.groupBoxTracking.TabStop = false;
             this.groupBoxTracking.Text = "Order Tracking";
             // 
-            // timeCalcLabel
-            // 
-            this.timeCalcLabel.AutoSize = true;
-            this.timeCalcLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeCalcLabel.Location = new System.Drawing.Point(139, 132);
-            this.timeCalcLabel.Name = "timeCalcLabel";
-            this.timeCalcLabel.Size = new System.Drawing.Size(54, 18);
-            this.timeCalcLabel.TabIndex = 68;
-            this.timeCalcLabel.Text = "5 days";
-            // 
             // recievedBox
             // 
             this.recievedBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1495,7 +1421,7 @@
             // expectedLabel
             // 
             this.expectedLabel.AutoSize = true;
-            this.expectedLabel.Location = new System.Drawing.Point(18, 66);
+            this.expectedLabel.Location = new System.Drawing.Point(15, 66);
             this.expectedLabel.Name = "expectedLabel";
             this.expectedLabel.Size = new System.Drawing.Size(120, 19);
             this.expectedLabel.TabIndex = 62;
@@ -1513,11 +1439,11 @@
             // shippedLabel
             // 
             this.shippedLabel.AutoSize = true;
-            this.shippedLabel.Location = new System.Drawing.Point(18, 31);
+            this.shippedLabel.Location = new System.Drawing.Point(25, 31);
             this.shippedLabel.Name = "shippedLabel";
-            this.shippedLabel.Size = new System.Drawing.Size(112, 19);
+            this.shippedLabel.Size = new System.Drawing.Size(110, 19);
             this.shippedLabel.TabIndex = 60;
-            this.shippedLabel.Text = "Shipped Date";
+            this.shippedLabel.Text = "Ordered Date";
             // 
             // shippedBox
             // 
@@ -1592,12 +1518,13 @@
             // 
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
-            "Jacobean",
-            "Early American",
-            "Georgian",
-            "Victorian",
-            "Contemporary",
-            "Modern"});
+            "Headphones",
+            "Keyboard",
+            "Mouse",
+            "Laptop",
+            "Desktop",
+            "Graphics Card",
+            "Processor"});
             this.comboBox2.Location = new System.Drawing.Point(366, 19);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(188, 27);
@@ -1605,12 +1532,141 @@
             // 
             // btnAddItems
             // 
-            this.btnAddItems.Location = new System.Drawing.Point(22, 374);
+            this.btnAddItems.Location = new System.Drawing.Point(6, 326);
             this.btnAddItems.Name = "btnAddItems";
-            this.btnAddItems.Size = new System.Drawing.Size(173, 37);
+            this.btnAddItems.Size = new System.Drawing.Size(101, 37);
             this.btnAddItems.TabIndex = 75;
             this.btnAddItems.Text = "Add Items";
             this.btnAddItems.UseVisualStyleBackColor = true;
+            // 
+            // btnPlaceOrder
+            // 
+            this.btnPlaceOrder.Location = new System.Drawing.Point(115, 326);
+            this.btnPlaceOrder.Name = "btnPlaceOrder";
+            this.btnPlaceOrder.Size = new System.Drawing.Size(119, 37);
+            this.btnPlaceOrder.TabIndex = 76;
+            this.btnPlaceOrder.Text = "Place Order";
+            this.btnPlaceOrder.UseVisualStyleBackColor = true;
+            this.btnPlaceOrder.Click += new System.EventHandler(this.btnPlaceOrder_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(973, 324);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(104, 19);
+            this.label1.TabIndex = 77;
+            this.label1.Text = "Amount Due";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(970, 355);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(107, 19);
+            this.label2.TabIndex = 78;
+            this.label2.Text = "Amount Paid";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(1083, 324);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(80, 19);
+            this.label3.TabIndex = 79;
+            this.label3.Text = "$2,005.84";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(1083, 355);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 19);
+            this.label4.TabIndex = 80;
+            this.label4.Text = "$0.00";
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(1019, 381);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(143, 36);
+            this.button4.TabIndex = 81;
+            this.button4.Text = "Make Payment";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // QtyOrdered
+            // 
+            this.QtyOrdered.FillWeight = 40F;
+            this.QtyOrdered.HeaderText = "Qty";
+            this.QtyOrdered.Name = "QtyOrdered";
+            // 
+            // QtyRecieved
+            // 
+            this.QtyRecieved.FillWeight = 60F;
+            this.QtyRecieved.HeaderText = "Qty Received";
+            this.QtyRecieved.Name = "QtyRecieved";
+            // 
+            // Item
+            // 
+            this.Item.FillWeight = 60F;
+            this.Item.HeaderText = "ItemID";
+            this.Item.Name = "Item";
+            // 
+            // ItemName
+            // 
+            this.ItemName.HeaderText = "Item Name";
+            this.ItemName.Name = "ItemName";
+            // 
+            // ItemDescription
+            // 
+            this.ItemDescription.HeaderText = "Item Description";
+            this.ItemDescription.Name = "ItemDescription";
+            // 
+            // UnitPrice
+            // 
+            this.UnitPrice.FillWeight = 60F;
+            this.UnitPrice.HeaderText = "Unit Price";
+            this.UnitPrice.Name = "UnitPrice";
+            // 
+            // Subtotal
+            // 
+            this.Subtotal.FillWeight = 60F;
+            this.Subtotal.HeaderText = "Order Subtotal";
+            this.Subtotal.Name = "Subtotal";
+            // 
+            // AmountPaid
+            // 
+            this.AmountPaid.FillWeight = 60F;
+            this.AmountPaid.HeaderText = "Amount Paid";
+            this.AmountPaid.Name = "AmountPaid";
+            // 
+            // Date
+            // 
+            this.Date.FillWeight = 64F;
+            this.Date.HeaderText = "Date Purchased";
+            this.Date.Name = "Date";
+            // 
+            // Categorty
+            // 
+            this.Categorty.FillWeight = 80F;
+            this.Categorty.HeaderText = "Category";
+            this.Categorty.Name = "Categorty";
+            // 
+            // Style
+            // 
+            this.Style.FillWeight = 80F;
+            this.Style.HeaderText = "Style";
+            this.Style.Name = "Style";
+            // 
+            // timeCalcLabel
+            // 
+            this.timeCalcLabel.AutoSize = true;
+            this.timeCalcLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeCalcLabel.Location = new System.Drawing.Point(139, 132);
+            this.timeCalcLabel.Name = "timeCalcLabel";
+            this.timeCalcLabel.Size = new System.Drawing.Size(54, 18);
+            this.timeCalcLabel.TabIndex = 68;
+            this.timeCalcLabel.Text = "0 days";
             // 
             // PurchaseOrders
             // 
@@ -1637,6 +1693,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.Items.ResumeLayout(false);
+            this.Items.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBoxSelect.ResumeLayout(false);
             this.groupBoxSelect.PerformLayout();
@@ -1722,17 +1779,6 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TabPage Items;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Item;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ItemName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ItemDescription;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UnitPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn QtyOrdered;
-        private System.Windows.Forms.DataGridViewTextBoxColumn QtyRecieved;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AmountPaid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Categorty;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Style;
         private System.Windows.Forms.GroupBox groupBoxSelect;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label24;
@@ -1766,7 +1812,6 @@
         private System.Windows.Forms.Label vendorName;
         private System.Windows.Forms.TextBox vendorID;
         private System.Windows.Forms.GroupBox groupBoxTracking;
-        private System.Windows.Forms.Label timeCalcLabel;
         private System.Windows.Forms.TextBox recievedBox;
         private System.Windows.Forms.Label recievedLabel;
         private System.Windows.Forms.Label label11;
@@ -1783,11 +1828,27 @@
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnFindVendor;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnAddItems;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button btnPlaceOrder;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn QtyOrdered;
+        private System.Windows.Forms.DataGridViewTextBoxColumn QtyRecieved;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Item;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemDescription;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UnitPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AmountPaid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Categorty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Style;
+        private System.Windows.Forms.Label timeCalcLabel;
     }
 }

@@ -232,3 +232,4 @@ C:\Users\kfisher2\Desktop\Team-5-Prototype-4\obj\Debug\LeaseToBuy.User.resources
 C:\Users\kfisher2\Desktop\Team-5-Prototype-4\obj\Debug\LeaseToBuy.Vendor.resources
 C:\Users\kfisher2\Desktop\Team-5-Prototype-4\obj\Debug\LeaseToBuy.PurchaseOrders.resources
 C:\Users\kfisher2\Desktop\Team-5-Prototype-4\obj\Debug\LeaseToBuy.csproj.GenerateResource.Cache
+C:\Users\kfisher2\Desktop\Team-5-Prototype-4\obj\Debug\LeaseToBuy.SearchVendor.resources

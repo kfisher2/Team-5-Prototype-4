@@ -95,6 +95,12 @@
     <Compile Include="SalesOrders.designer.cs">
       <DependentUpon>SalesOrders.cs</DependentUpon>
     </Compile>
+    <Compile Include="SearchVendor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchVendor.Designer.cs">
+      <DependentUpon>SearchVendor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Undelete.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SalesOrders.resx">
       <DependentUpon>SalesOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchVendor.resx">
+      <DependentUpon>SearchVendor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Undelete.resx">
       <DependentUpon>Undelete.cs</DependentUpon>
