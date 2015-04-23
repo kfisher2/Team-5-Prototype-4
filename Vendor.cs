@@ -15,6 +15,7 @@ namespace LeaseToBuy
         bool Testing = false;
         Email emailForm = null;
         Undelete undeleteForm = null;
+        PurchaseOrders purchaseForm = null;
 
         public Vendor()
         {
@@ -59,7 +60,7 @@ namespace LeaseToBuy
             textShipState.Text = "Texas";
             textShipCity.Text = "San Antonio";
             textShipZip.Text = "78212";
-            txtFirst.Text = "HaloWare Inc";
+            textCompanyName.Text = "HaloWare Inc";
             textBillCity.Text = "San Antonio";
             textBillSt1.Text = "1 Semicolon Place";
             textBillSt2.Text = "#655";
@@ -96,12 +97,14 @@ namespace LeaseToBuy
 
         void clearText()
         {
+            txtCreatedDate.Text = "4/30/2015";
+            txtVendorID.Text = "10392";
             textShipStreet1.Text = "";
             textShipStreet2.Text = "";
             textShipState.Text = "";
             textShipCity.Text = "";
             textShipZip.Text = "";
-            txtFirst.Text = "";
+            textCompanyName.Text = "";
             textBillCity.Text = "";
             textBillSt1.Text = "";
             textBillSt2.Text = "";
@@ -124,14 +127,25 @@ namespace LeaseToBuy
         {
             if (btnAddMode.Text == "Save")
             {
-                this.BackColor = Color.SeaGreen;
-                btnAddMode.Text = "Add Vendor";
-                btnAddMode.ForeColor = Color.Black;
-                cancelButton.Visible = false;
-                panel1.Enabled = true;
+                if (textCompanyName.Text == "") MessageBox.Show("Error: Vendor Name required");
+                else
+                {
+                    this.BackColor = Color.SeaGreen;
+                    btnAddMode.Text = "Add Vendor";
+                    btnAddMode.ForeColor = Color.Black;
+                    cancelButton.Visible = false;
+                    panel1.Enabled = true;
+                    labelCompanyName.Text = textCompanyName.Text;
+                    labelCompanyName.Visible = true;
+                    //pictureBox1.Visible = true;
+                }
+
+
             }
             else
             {
+                labelCompanyName.Visible = false;
+                pictureBox1.Visible = false;
                 btnAddMode.Text = "Save";
                 cancelButton.Visible = true;
                 panel1.Enabled = false;
@@ -172,12 +186,16 @@ namespace LeaseToBuy
         {
             if (btnEditMode.Text == "Save")
             {
+                labelCompanyName.Text = textCompanyName.Text;
+                labelCompanyName.Visible = true;
                 btnEditMode.Text = "Edit Mode";
                 this.BackColor = Color.SeaGreen;
 
             }
             else
             {
+                labelCompanyName.Visible = false;
+
                 this.BackColor = Color.Firebrick;
                 btnEditMode.Text = "Save";
                 textShipStreet1.Text = "123 Midnight Dr";
@@ -185,7 +203,7 @@ namespace LeaseToBuy
                 textShipState.Text = "Texas";
                 textShipCity.Text = "San Antonio";
                 textShipZip.Text = "78212";
-                txtFirst.Text = "HaloWare Inc";
+                textCompanyName.Text = "HaloWare Inc";
                 textBillCity.Text = "San Antonio";
                 textBillSt1.Text = "1 Semicolon Place";
                 textBillSt2.Text = "#655";
@@ -284,7 +302,11 @@ namespace LeaseToBuy
 
         private void User_Load(object sender, EventArgs e)
         {
-  
+            labelCompanyName.Text = textCompanyName.Text;
+            dataGridView1.Rows.Add(false, "10920", "Jade A706", "2.5GHz","$349.99","Electronics","Processor");
+            dataGridView1.Rows.Add(false, "10817", "Halo Backflip D700", "Designer Andre Reitza", "$1,249.00", "Electronics", "Laptop");
+            dataGridView1.Rows.Add(false, "10882", "RazeFlame LED Mouse", "Rainbow lights", "$76.99", "Electronics", "Mouse");
+
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -342,6 +364,12 @@ namespace LeaseToBuy
             cancelButton.Visible = false;
             panel1.Enabled = true;
             NormalMode();
+            labelCompanyName.Visible = true;
+            txtVendorID.Visible = true;
+            txtCreatedDate.Visible = true;
+            pictureBox1.Visible = true;
+            txtCreatedDate.Text = "4/19/2015";
+            txtVendorID.Text = "10389";
         }
 
         private void undeleteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -364,6 +392,7 @@ namespace LeaseToBuy
             btnAddMode.ForeColor = Color.Black;
             cancelButton.Visible = false;
             panel1.Enabled = true;
+
             NormalMode();
         }
 
@@ -376,11 +405,84 @@ namespace LeaseToBuy
             cancelButton.Visible = false;
             panel1.Enabled = true;
             this.BackColor = Color.SeaGreen;
+            labelCompanyName.Text = textCompanyName.Text;
+            labelCompanyName.Visible = true;
+            pictureBox1.Visible = true;
+            txtVendorID.Visible = true;
+            txtCreatedDate.Visible = true;
+
         }
 
         private void addToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AddMode();
+        }
+
+        private void label28_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label26_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label20_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label25_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void maskedTextGenAccessed_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void txtFirst_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textVendorURL_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelCompanyName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label24_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            purchaseForm = new PurchaseOrders();
+            purchaseForm.MdiParent = this.MdiParent;
+            purchaseForm.Show();
         }
     }
 }

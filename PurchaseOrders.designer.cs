@@ -42,6 +42,7 @@
             this.salesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.locationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.minimizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -110,6 +111,7 @@
             this.label24 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.General = new System.Windows.Forms.TabPage();
+            this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -156,8 +158,9 @@
             this.PrimaryTabPanel = new System.Windows.Forms.TabControl();
             this.cancelButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.button4 = new System.Windows.Forms.Button();
+            this.label28 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.btnAddItems = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.Items.SuspendLayout();
@@ -269,9 +272,15 @@
             // locationToolStripMenuItem
             // 
             this.locationToolStripMenuItem.Name = "locationToolStripMenuItem";
-            this.locationToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.locationToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
             this.locationToolStripMenuItem.Text = "Location";
             this.locationToolStripMenuItem.Click += new System.EventHandler(this.locationToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(204, 22);
+            this.toolStripMenuItem2.Text = "Vendor Associated Items";
             // 
             // toolStripMenuItem1
             // 
@@ -839,6 +848,7 @@
             // 
             this.Items.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Items.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Items.Controls.Add(this.btnAddItems);
             this.Items.Controls.Add(this.dataGridView1);
             this.Items.Controls.Add(this.groupBoxSelect);
             this.Items.Location = new System.Drawing.Point(4, 28);
@@ -928,12 +938,14 @@
             // 
             // groupBoxSelect
             // 
+            this.groupBoxSelect.Controls.Add(this.label28);
+            this.groupBoxSelect.Controls.Add(this.comboBox2);
             this.groupBoxSelect.Controls.Add(this.checkBox1);
             this.groupBoxSelect.Controls.Add(this.label24);
             this.groupBoxSelect.Controls.Add(this.comboBox1);
-            this.groupBoxSelect.Location = new System.Drawing.Point(6, 365);
+            this.groupBoxSelect.Location = new System.Drawing.Point(248, 365);
             this.groupBoxSelect.Name = "groupBoxSelect";
-            this.groupBoxSelect.Size = new System.Drawing.Size(1176, 52);
+            this.groupBoxSelect.Size = new System.Drawing.Size(944, 52);
             this.groupBoxSelect.TabIndex = 1;
             this.groupBoxSelect.TabStop = false;
             this.groupBoxSelect.Text = "Select";
@@ -951,7 +963,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(247, 22);
+            this.label24.Location = new System.Drawing.Point(15, 22);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(79, 19);
             this.label24.TabIndex = 1;
@@ -971,7 +983,7 @@
             "Linens",
             "Music",
             "Office"});
-            this.comboBox1.Location = new System.Drawing.Point(332, 19);
+            this.comboBox1.Location = new System.Drawing.Point(100, 19);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(188, 27);
             this.comboBox1.TabIndex = 0;
@@ -995,6 +1007,16 @@
             this.General.Size = new System.Drawing.Size(1204, 423);
             this.General.TabIndex = 7;
             this.General.Text = "General";
+            this.General.Click += new System.EventHandler(this.General_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(1008, 387);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(128, 23);
+            this.button4.TabIndex = 76;
+            this.button4.Text = "make paymen";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
@@ -1249,9 +1271,9 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(1042, 54);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(44, 19);
+            this.label9.Size = new System.Drawing.Size(71, 19);
             this.label9.TabIndex = 72;
-            this.label9.Text = "Date";
+            this.label9.Text = "04/30/15";
             // 
             // label8
             // 
@@ -1557,20 +1579,38 @@
             this.panel2.Size = new System.Drawing.Size(220, 63);
             this.panel2.TabIndex = 41;
             // 
-            // toolStripMenuItem2
+            // label28
             // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(204, 22);
-            this.toolStripMenuItem2.Text = "Vendor Associated Items";
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(314, 22);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(47, 19);
+            this.label28.TabIndex = 5;
+            this.label28.Text = "Style";
             // 
-            // button4
+            // comboBox2
             // 
-            this.button4.Location = new System.Drawing.Point(971, 343);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(128, 23);
-            this.button4.TabIndex = 76;
-            this.button4.Text = "make paymen";
-            this.button4.UseVisualStyleBackColor = true;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Jacobean",
+            "Early American",
+            "Georgian",
+            "Victorian",
+            "Contemporary",
+            "Modern"});
+            this.comboBox2.Location = new System.Drawing.Point(366, 19);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(188, 27);
+            this.comboBox2.TabIndex = 4;
+            // 
+            // btnAddItems
+            // 
+            this.btnAddItems.Location = new System.Drawing.Point(22, 374);
+            this.btnAddItems.Name = "btnAddItems";
+            this.btnAddItems.Size = new System.Drawing.Size(173, 37);
+            this.btnAddItems.TabIndex = 75;
+            this.btnAddItems.Text = "Add Items";
+            this.btnAddItems.UseVisualStyleBackColor = true;
             // 
             // PurchaseOrders
             // 
@@ -1746,5 +1786,8 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnAddItems;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }

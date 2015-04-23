@@ -291,7 +291,7 @@ namespace LeaseToBuy
 
         private void User_Load(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Add("1","2","3","4","5","6","7","8","9");
+            dataGridView1.Rows.Add("0821", "AiGuru SV1", "Laptop", "$679.85", "100", "-", "$679.85", "$679.85", "4/22/15","Electronics","Laptop");
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -447,6 +447,11 @@ namespace LeaseToBuy
         private void addToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AddMode();
+        }
+
+        private void General_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

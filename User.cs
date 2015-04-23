@@ -331,6 +331,8 @@ namespace LeaseToBuy
 
             dataGridView2.Rows.Add("15846", "Alice", "Box", "alicethegreat@gmail.com","8325875241", "8329752145");
             dataGridView2.Rows.Add("17322", "Lil' Nathan", "Cox", "", "", "");
+            dataGridView1.Rows.Add("0928", "04/18/14", "$99.99");
+            dataGridView1.Rows.Add("0718", "04/18/14", "$24.99");
         }
 
         private void label18_Click(object sender, EventArgs e)

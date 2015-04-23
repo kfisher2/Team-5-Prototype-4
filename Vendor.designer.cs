@@ -42,6 +42,7 @@
             this.salesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.locationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.minimizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -113,26 +114,23 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtContactFax = new System.Windows.Forms.TextBox();
             this.txtContactFirst = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.txtContactLast = new System.Windows.Forms.TextBox();
             this.txtContactEmail = new System.Windows.Forms.TextBox();
-            this.txtContactPhone1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtContactPhone2 = new System.Windows.Forms.TextBox();
             this.PrimaryTabPanel = new System.Windows.Forms.TabControl();
             this.General = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
+            this.txtVendorID = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
+            this.txtCreatedDate = new System.Windows.Forms.Label();
             this.maskedTextGenAccessed = new System.Windows.Forms.MaskedTextBox();
-            this.txtFirst = new System.Windows.Forms.TextBox();
+            this.textCompanyName = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
             this.textVendorURL = new System.Windows.Forms.TextBox();
@@ -164,7 +162,18 @@
             this.label23 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cancelButton = new System.Windows.Forms.Button();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBoxSelect = new System.Windows.Forms.GroupBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.labelCompanyName = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtContactPhone1 = new System.Windows.Forms.MaskedTextBox();
+            this.txtContactPhone2 = new System.Windows.Forms.MaskedTextBox();
+            this.txtContactFax = new System.Windows.Forms.MaskedTextBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.Purchases.SuspendLayout();
@@ -180,6 +189,7 @@
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.groupBoxSelect.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -278,8 +288,14 @@
             // locationToolStripMenuItem
             // 
             this.locationToolStripMenuItem.Name = "locationToolStripMenuItem";
-            this.locationToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.locationToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.locationToolStripMenuItem.Text = "Location";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(163, 22);
+            this.toolStripMenuItem2.Text = "Associated Items";
             // 
             // toolStripMenuItem1
             // 
@@ -818,9 +834,9 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(443, 283);
+            this.button6.Location = new System.Drawing.Point(502, 283);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(107, 26);
+            this.button6.Size = new System.Drawing.Size(67, 26);
             this.button6.TabIndex = 26;
             this.button6.Text = "E-mail";
             this.toolTip1.SetToolTip(this.button6, "Opens your computer\'s default email program to send the user an email.");
@@ -850,19 +866,22 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(511, 394);
+            this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button3.Location = new System.Drawing.Point(877, 374);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(262, 23);
+            this.button3.Size = new System.Drawing.Size(262, 40);
             this.button3.TabIndex = 2;
             this.button3.Text = "Create New Purchase Order";
             this.toolTip1.SetToolTip(this.button3, "Create a purchase order that includes all items with \"Add To Purhcase Order\" chec" +
         "ked");
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Purchases
             // 
             this.Purchases.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Purchases.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Purchases.Controls.Add(this.groupBoxSelect);
             this.Purchases.Controls.Add(this.button3);
             this.Purchases.Controls.Add(this.dataGridView1);
             this.Purchases.Location = new System.Drawing.Point(4, 28);
@@ -886,7 +905,7 @@
             this.Style});
             this.dataGridView1.Location = new System.Drawing.Point(6, 6);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1192, 382);
+            this.dataGridView1.Size = new System.Drawing.Size(1192, 353);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -985,6 +1004,10 @@
             // groupBox5
             // 
             this.groupBox5.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox5.Controls.Add(this.button4);
+            this.groupBox5.Controls.Add(this.txtContactFax);
+            this.groupBox5.Controls.Add(this.txtContactPhone2);
+            this.groupBox5.Controls.Add(this.txtContactPhone1);
             this.groupBox5.Controls.Add(this.button6);
             this.groupBox5.Controls.Add(this.button7);
             this.groupBox5.Controls.Add(this.button8);
@@ -994,15 +1017,12 @@
             this.groupBox5.Controls.Add(this.label3);
             this.groupBox5.Controls.Add(this.label19);
             this.groupBox5.Controls.Add(this.label5);
-            this.groupBox5.Controls.Add(this.txtContactFax);
             this.groupBox5.Controls.Add(this.txtContactFirst);
             this.groupBox5.Controls.Add(this.label18);
             this.groupBox5.Controls.Add(this.txtContactLast);
             this.groupBox5.Controls.Add(this.txtContactEmail);
-            this.groupBox5.Controls.Add(this.txtContactPhone1);
             this.groupBox5.Controls.Add(this.label7);
             this.groupBox5.Controls.Add(this.label6);
-            this.groupBox5.Controls.Add(this.txtContactPhone2);
             this.groupBox5.Location = new System.Drawing.Point(24, 28);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(627, 372);
@@ -1065,15 +1085,6 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "Last Name";
             // 
-            // txtContactFax
-            // 
-            this.txtContactFax.BackColor = System.Drawing.Color.White;
-            this.txtContactFax.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContactFax.Location = new System.Drawing.Point(119, 313);
-            this.txtContactFax.Name = "txtContactFax";
-            this.txtContactFax.Size = new System.Drawing.Size(197, 26);
-            this.txtContactFax.TabIndex = 23;
-            // 
             // txtContactFirst
             // 
             this.txtContactFirst.BackColor = System.Drawing.Color.White;
@@ -1109,15 +1120,6 @@
             this.txtContactEmail.Size = new System.Drawing.Size(242, 26);
             this.txtContactEmail.TabIndex = 20;
             // 
-            // txtContactPhone1
-            // 
-            this.txtContactPhone1.BackColor = System.Drawing.Color.White;
-            this.txtContactPhone1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContactPhone1.Location = new System.Drawing.Point(119, 223);
-            this.txtContactPhone1.Name = "txtContactPhone1";
-            this.txtContactPhone1.Size = new System.Drawing.Size(197, 26);
-            this.txtContactPhone1.TabIndex = 21;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -1136,15 +1138,6 @@
             this.label6.TabIndex = 15;
             this.label6.Text = "Phone 2";
             // 
-            // txtContactPhone2
-            // 
-            this.txtContactPhone2.BackColor = System.Drawing.Color.White;
-            this.txtContactPhone2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContactPhone2.Location = new System.Drawing.Point(119, 268);
-            this.txtContactPhone2.Name = "txtContactPhone2";
-            this.txtContactPhone2.Size = new System.Drawing.Size(197, 26);
-            this.txtContactPhone2.TabIndex = 22;
-            // 
             // PrimaryTabPanel
             // 
             this.PrimaryTabPanel.Controls.Add(this.General);
@@ -1159,6 +1152,7 @@
             // General
             // 
             this.General.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.General.Controls.Add(this.labelCompanyName);
             this.General.Controls.Add(this.pictureBox1);
             this.General.Controls.Add(this.groupBox1);
             this.General.Controls.Add(this.groupBox3);
@@ -1172,26 +1166,27 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(32, 20);
+            this.pictureBox1.Location = new System.Drawing.Point(35, 16);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(212, 66);
             this.pictureBox1.TabIndex = 75;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.label26);
+            this.groupBox1.Controls.Add(this.txtVendorID);
             this.groupBox1.Controls.Add(this.label20);
             this.groupBox1.Controls.Add(this.label25);
-            this.groupBox1.Controls.Add(this.label24);
+            this.groupBox1.Controls.Add(this.txtCreatedDate);
             this.groupBox1.Controls.Add(this.maskedTextGenAccessed);
-            this.groupBox1.Controls.Add(this.txtFirst);
+            this.groupBox1.Controls.Add(this.textCompanyName);
             this.groupBox1.Controls.Add(this.button5);
             this.groupBox1.Controls.Add(this.label21);
             this.groupBox1.Controls.Add(this.textVendorURL);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(21, 92);
+            this.groupBox1.Location = new System.Drawing.Point(27, 95);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(370, 295);
             this.groupBox1.TabIndex = 59;
@@ -1201,76 +1196,82 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 120);
+            this.label1.Location = new System.Drawing.Point(10, 132);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 19);
             this.label1.TabIndex = 52;
             this.label1.Text = "Vendor Name";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label26
+            // txtVendorID
             // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label26.Location = new System.Drawing.Point(135, 36);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(53, 18);
-            this.label26.TabIndex = 58;
-            this.label26.Text = "10389";
+            this.txtVendorID.AutoSize = true;
+            this.txtVendorID.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVendorID.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.txtVendorID.Location = new System.Drawing.Point(138, 48);
+            this.txtVendorID.Name = "txtVendorID";
+            this.txtVendorID.Size = new System.Drawing.Size(53, 18);
+            this.txtVendorID.TabIndex = 58;
+            this.txtVendorID.Text = "10389";
+            this.txtVendorID.Click += new System.EventHandler(this.label26_Click);
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(30, 236);
+            this.label20.Location = new System.Drawing.Point(33, 248);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(89, 19);
             this.label20.TabIndex = 39;
             this.label20.Text = "Last Order";
+            this.label20.Click += new System.EventHandler(this.label20_Click_1);
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(35, 36);
+            this.label25.Location = new System.Drawing.Point(38, 48);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(84, 19);
             this.label25.TabIndex = 57;
             this.label25.Text = "Vendor ID";
+            this.label25.Click += new System.EventHandler(this.label25_Click);
             // 
-            // label24
+            // txtCreatedDate
             // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label24.Location = new System.Drawing.Point(135, 72);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(70, 18);
-            this.label24.TabIndex = 56;
-            this.label24.Text = "04/19/15";
-            this.label24.Click += new System.EventHandler(this.label24_Click);
+            this.txtCreatedDate.AutoSize = true;
+            this.txtCreatedDate.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCreatedDate.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.txtCreatedDate.Location = new System.Drawing.Point(138, 84);
+            this.txtCreatedDate.Name = "txtCreatedDate";
+            this.txtCreatedDate.Size = new System.Drawing.Size(70, 18);
+            this.txtCreatedDate.TabIndex = 56;
+            this.txtCreatedDate.Text = "04/19/15";
+            this.txtCreatedDate.Click += new System.EventHandler(this.label24_Click);
             // 
             // maskedTextGenAccessed
             // 
             this.maskedTextGenAccessed.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextGenAccessed.Location = new System.Drawing.Point(135, 232);
+            this.maskedTextGenAccessed.Location = new System.Drawing.Point(138, 244);
             this.maskedTextGenAccessed.Mask = "00/00/0000";
             this.maskedTextGenAccessed.Name = "maskedTextGenAccessed";
             this.maskedTextGenAccessed.Size = new System.Drawing.Size(105, 26);
             this.maskedTextGenAccessed.TabIndex = 3;
             this.maskedTextGenAccessed.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.maskedTextGenAccessed.ValidatingType = typeof(System.DateTime);
+            this.maskedTextGenAccessed.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextGenAccessed_MaskInputRejected);
             // 
-            // txtFirst
+            // textCompanyName
             // 
-            this.txtFirst.BackColor = System.Drawing.Color.White;
-            this.txtFirst.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirst.Location = new System.Drawing.Point(135, 116);
-            this.txtFirst.Name = "txtFirst";
-            this.txtFirst.Size = new System.Drawing.Size(216, 26);
-            this.txtFirst.TabIndex = 1;
+            this.textCompanyName.BackColor = System.Drawing.Color.White;
+            this.textCompanyName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textCompanyName.Location = new System.Drawing.Point(138, 128);
+            this.textCompanyName.Name = "textCompanyName";
+            this.textCompanyName.Size = new System.Drawing.Size(216, 26);
+            this.textCompanyName.TabIndex = 1;
+            this.textCompanyName.TextChanged += new System.EventHandler(this.txtFirst_TextChanged_1);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(246, 231);
+            this.button5.Location = new System.Drawing.Point(249, 243);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(106, 28);
             this.button5.TabIndex = 4;
@@ -1281,7 +1282,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(50, 72);
+            this.label21.Location = new System.Drawing.Point(53, 84);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(69, 19);
             this.label21.TabIndex = 41;
@@ -1292,19 +1293,21 @@
             // 
             this.textVendorURL.BackColor = System.Drawing.Color.White;
             this.textVendorURL.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textVendorURL.Location = new System.Drawing.Point(135, 174);
+            this.textVendorURL.Location = new System.Drawing.Point(138, 186);
             this.textVendorURL.Name = "textVendorURL";
             this.textVendorURL.Size = new System.Drawing.Size(216, 26);
             this.textVendorURL.TabIndex = 2;
+            this.textVendorURL.TextChanged += new System.EventHandler(this.textVendorURL_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 178);
+            this.label2.Location = new System.Drawing.Point(20, 190);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 19);
             this.label2.TabIndex = 55;
             this.label2.Text = "Vendor URL";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // groupBox3
             // 
@@ -1319,7 +1322,7 @@
             this.groupBox3.Controls.Add(this.label17);
             this.groupBox3.Controls.Add(this.textShipState);
             this.groupBox3.Controls.Add(this.textShipZip);
-            this.groupBox3.Location = new System.Drawing.Point(804, 92);
+            this.groupBox3.Location = new System.Drawing.Point(796, 95);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(376, 295);
             this.groupBox3.TabIndex = 51;
@@ -1490,7 +1493,7 @@
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.textBillState);
             this.groupBox2.Controls.Add(this.textBillZip);
-            this.groupBox2.Location = new System.Drawing.Point(408, 92);
+            this.groupBox2.Location = new System.Drawing.Point(414, 95);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(376, 295);
             this.groupBox2.TabIndex = 48;
@@ -1677,11 +1680,140 @@
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
-            // toolStripMenuItem2
+            // groupBoxSelect
             // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(163, 22);
-            this.toolStripMenuItem2.Text = "Associated Items";
+            this.groupBoxSelect.Controls.Add(this.textBox1);
+            this.groupBoxSelect.Controls.Add(this.label24);
+            this.groupBoxSelect.Controls.Add(this.label28);
+            this.groupBoxSelect.Controls.Add(this.comboBox2);
+            this.groupBoxSelect.Controls.Add(this.label27);
+            this.groupBoxSelect.Controls.Add(this.comboBox1);
+            this.groupBoxSelect.Location = new System.Drawing.Point(39, 365);
+            this.groupBoxSelect.Name = "groupBoxSelect";
+            this.groupBoxSelect.Size = new System.Drawing.Size(789, 52);
+            this.groupBoxSelect.TabIndex = 3;
+            this.groupBoxSelect.TabStop = false;
+            this.groupBoxSelect.Text = "Select";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(16, 22);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(79, 19);
+            this.label27.TabIndex = 1;
+            this.label27.Text = "Category";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Automotive",
+            "Books",
+            "Electronics",
+            "Furniture",
+            "Kitchen",
+            "Luggage & Travel",
+            "Movies & TV",
+            "Office Supplies"});
+            this.comboBox1.Location = new System.Drawing.Point(101, 18);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(188, 27);
+            this.comboBox1.TabIndex = 0;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(314, 22);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(47, 19);
+            this.label28.TabIndex = 3;
+            this.label28.Text = "Style";
+            this.label28.Click += new System.EventHandler(this.label28_Click);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Headphones",
+            "Keyboard",
+            "Mouse",
+            "Laptop",
+            "Desktop",
+            "Graphics Card",
+            "Processor"});
+            this.comboBox2.Location = new System.Drawing.Point(366, 19);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(188, 27);
+            this.comboBox2.TabIndex = 2;
+            // 
+            // labelCompanyName
+            // 
+            this.labelCompanyName.AutoSize = true;
+            this.labelCompanyName.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCompanyName.Location = new System.Drawing.Point(270, 33);
+            this.labelCompanyName.Name = "labelCompanyName";
+            this.labelCompanyName.Size = new System.Drawing.Size(193, 32);
+            this.labelCompanyName.TabIndex = 76;
+            this.labelCompanyName.Text = "Haloware Inc.";
+            this.labelCompanyName.Click += new System.EventHandler(this.labelCompanyName_Click);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(574, 22);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(61, 19);
+            this.label24.TabIndex = 4;
+            this.label24.Text = "Price <";
+            this.label24.Click += new System.EventHandler(this.label24_Click_1);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(641, 18);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(126, 26);
+            this.textBox1.TabIndex = 5;
+            // 
+            // txtContactPhone1
+            // 
+            this.txtContactPhone1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContactPhone1.Location = new System.Drawing.Point(119, 223);
+            this.txtContactPhone1.Mask = "(999) 000-0000";
+            this.txtContactPhone1.Name = "txtContactPhone1";
+            this.txtContactPhone1.Size = new System.Drawing.Size(140, 26);
+            this.txtContactPhone1.TabIndex = 27;
+            this.txtContactPhone1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtContactPhone2
+            // 
+            this.txtContactPhone2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContactPhone2.Location = new System.Drawing.Point(119, 271);
+            this.txtContactPhone2.Mask = "(999) 000-0000";
+            this.txtContactPhone2.Name = "txtContactPhone2";
+            this.txtContactPhone2.Size = new System.Drawing.Size(140, 26);
+            this.txtContactPhone2.TabIndex = 28;
+            this.txtContactPhone2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtContactFax
+            // 
+            this.txtContactFax.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContactFax.Location = new System.Drawing.Point(119, 313);
+            this.txtContactFax.Mask = "(999) 000-0000";
+            this.txtContactFax.Name = "txtContactFax";
+            this.txtContactFax.Size = new System.Drawing.Size(140, 26);
+            this.txtContactFax.TabIndex = 29;
+            this.txtContactFax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(425, 283);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(67, 26);
+            this.button4.TabIndex = 30;
+            this.button4.Text = "Fax";
+            this.toolTip1.SetToolTip(this.button4, "Opens your computer\'s default email program to send the user an email.");
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // Vendor
             // 
@@ -1717,6 +1849,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxContact)).EndInit();
             this.PrimaryTabPanel.ResumeLayout(false);
             this.General.ResumeLayout(false);
+            this.General.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -1725,6 +1858,8 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.groupBoxSelect.ResumeLayout(false);
+            this.groupBoxSelect.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1811,7 +1946,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox textBillState;
         private System.Windows.Forms.TextBox textBillZip;
-        private System.Windows.Forms.TextBox txtFirst;
+        private System.Windows.Forms.TextBox textCompanyName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox textShipStreet1;
@@ -1833,14 +1968,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtContactFax;
         private System.Windows.Forms.TextBox txtContactFirst;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txtContactLast;
         private System.Windows.Forms.TextBox txtContactEmail;
-        private System.Windows.Forms.TextBox txtContactPhone1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtContactPhone2;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.PictureBox pictureBoxContact;
         private System.Windows.Forms.Button button6;
@@ -1853,9 +1985,9 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label txtVendorID;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label txtCreatedDate;
         private System.Windows.Forms.DataGridViewCheckBoxColumn addtoorder;
         private System.Windows.Forms.DataGridViewTextBoxColumn Item;
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemName;
@@ -1867,5 +1999,17 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.GroupBox groupBoxSelect;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label labelCompanyName;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.MaskedTextBox txtContactPhone1;
+        private System.Windows.Forms.MaskedTextBox txtContactPhone2;
+        private System.Windows.Forms.MaskedTextBox txtContactFax;
+        private System.Windows.Forms.Button button4;
     }
 }
