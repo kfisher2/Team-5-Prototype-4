@@ -86,6 +86,16 @@ namespace LeaseToBuy
             loginForm.MdiParent = this;
             loginForm.Show();
             MainMenuStrip.Hide();
+            if (inventoryForm != null)
+                inventoryForm.Close();
+            if (userForm != null)
+                userForm.Close();
+            if (vendorForm != null)
+                vendorForm.Close();
+            if (purchaseForm != null)
+                purchaseForm.Close();
+            if (salesForm != null)
+                salesForm.Close();
         }
     }
 }
