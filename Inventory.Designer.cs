@@ -276,7 +276,7 @@
             this.upButtonRight.Location = new System.Drawing.Point(1104, 3);
             this.upButtonRight.Name = "upButtonRight";
             this.upButtonRight.Size = new System.Drawing.Size(49, 46);
-            this.upButtonRight.TabIndex = 3;
+            this.upButtonRight.TabIndex = 58;
             this.upButtonRight.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.toolTip1.SetToolTip(this.upButtonRight, "First Logical Record");
             this.upButtonRight.UseVisualStyleBackColor = true;
@@ -288,7 +288,7 @@
             this.leftButtonRight.Location = new System.Drawing.Point(1050, 55);
             this.leftButtonRight.Name = "leftButtonRight";
             this.leftButtonRight.Size = new System.Drawing.Size(49, 46);
-            this.leftButtonRight.TabIndex = 4;
+            this.leftButtonRight.TabIndex = 56;
             this.leftButtonRight.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.toolTip1.SetToolTip(this.leftButtonRight, "Previous Logical Record");
             this.leftButtonRight.UseVisualStyleBackColor = true;
@@ -300,7 +300,7 @@
             this.rightButtonRight.Location = new System.Drawing.Point(1159, 55);
             this.rightButtonRight.Name = "rightButtonRight";
             this.rightButtonRight.Size = new System.Drawing.Size(49, 46);
-            this.rightButtonRight.TabIndex = 5;
+            this.rightButtonRight.TabIndex = 57;
             this.rightButtonRight.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.toolTip1.SetToolTip(this.rightButtonRight, "Next Logical Record");
             this.rightButtonRight.UseVisualStyleBackColor = true;
@@ -312,7 +312,7 @@
             this.downButtonRight.Location = new System.Drawing.Point(1104, 109);
             this.downButtonRight.Name = "downButtonRight";
             this.downButtonRight.Size = new System.Drawing.Size(49, 46);
-            this.downButtonRight.TabIndex = 6;
+            this.downButtonRight.TabIndex = 59;
             this.downButtonRight.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.toolTip1.SetToolTip(this.downButtonRight, "Last Logical Record");
             this.downButtonRight.UseVisualStyleBackColor = true;
@@ -372,7 +372,7 @@
             this.button2.Location = new System.Drawing.Point(927, 33);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 35);
-            this.button2.TabIndex = 40;
+            this.button2.TabIndex = 54;
             this.button2.Text = "Redo last undid action.";
             this.toolTip1.SetToolTip(this.button2, "Redo last undid action.");
             this.button2.UseVisualStyleBackColor = true;
@@ -383,7 +383,7 @@
             this.button1.Location = new System.Drawing.Point(927, 74);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 34);
-            this.button1.TabIndex = 39;
+            this.button1.TabIndex = 55;
             this.button1.Text = "Undo";
             this.toolTip1.SetToolTip(this.button1, "Undo last action.");
             this.button1.UseVisualStyleBackColor = true;
@@ -415,7 +415,7 @@
             this.ZButton.Location = new System.Drawing.Point(813, 68);
             this.ZButton.Name = "ZButton";
             this.ZButton.Size = new System.Drawing.Size(27, 23);
-            this.ZButton.TabIndex = 36;
+            this.ZButton.TabIndex = 51;
             this.ZButton.Text = "Z";
             this.toolTip1.SetToolTip(this.ZButton, "Go to the first logical record whose primary user last name begins with \'Z\'.");
             this.ZButton.UseVisualStyleBackColor = true;
@@ -425,7 +425,7 @@
             this.YButton.Location = new System.Drawing.Point(780, 68);
             this.YButton.Name = "YButton";
             this.YButton.Size = new System.Drawing.Size(27, 23);
-            this.YButton.TabIndex = 35;
+            this.YButton.TabIndex = 50;
             this.YButton.Text = "Y";
             this.toolTip1.SetToolTip(this.YButton, "Go to the first logical record whose primary user last name begins with \'Y\'.");
             this.YButton.UseVisualStyleBackColor = true;
@@ -435,7 +435,7 @@
             this.XButton.Location = new System.Drawing.Point(747, 68);
             this.XButton.Name = "XButton";
             this.XButton.Size = new System.Drawing.Size(27, 23);
-            this.XButton.TabIndex = 34;
+            this.XButton.TabIndex = 49;
             this.XButton.Text = "X";
             this.toolTip1.SetToolTip(this.XButton, "Go to the first logical record whose primary user last name begins with \'X\'.");
             this.XButton.UseVisualStyleBackColor = true;
@@ -445,7 +445,7 @@
             this.WButton.Location = new System.Drawing.Point(714, 68);
             this.WButton.Name = "WButton";
             this.WButton.Size = new System.Drawing.Size(27, 23);
-            this.WButton.TabIndex = 33;
+            this.WButton.TabIndex = 48;
             this.WButton.Text = "W";
             this.toolTip1.SetToolTip(this.WButton, "Go to the first logical record whose primary user last name begins with \'W\'.");
             this.WButton.UseVisualStyleBackColor = true;
@@ -455,7 +455,7 @@
             this.VButton.Location = new System.Drawing.Point(681, 68);
             this.VButton.Name = "VButton";
             this.VButton.Size = new System.Drawing.Size(27, 23);
-            this.VButton.TabIndex = 32;
+            this.VButton.TabIndex = 47;
             this.VButton.Text = "V";
             this.toolTip1.SetToolTip(this.VButton, "Go to the first logical record whose primary user last name begins with \'V\'.");
             this.VButton.UseVisualStyleBackColor = true;
@@ -465,7 +465,7 @@
             this.UButton.Location = new System.Drawing.Point(648, 68);
             this.UButton.Name = "UButton";
             this.UButton.Size = new System.Drawing.Size(27, 23);
-            this.UButton.TabIndex = 31;
+            this.UButton.TabIndex = 46;
             this.UButton.Text = "U";
             this.toolTip1.SetToolTip(this.UButton, "Go to the first logical record whose primary user last name begins with \'U\'.");
             this.UButton.UseVisualStyleBackColor = true;
@@ -475,7 +475,7 @@
             this.TButton.Location = new System.Drawing.Point(615, 68);
             this.TButton.Name = "TButton";
             this.TButton.Size = new System.Drawing.Size(27, 23);
-            this.TButton.TabIndex = 30;
+            this.TButton.TabIndex = 45;
             this.TButton.Text = "T";
             this.toolTip1.SetToolTip(this.TButton, "Go to the first logical record whose primary user last name begins with \'T\'.");
             this.TButton.UseVisualStyleBackColor = true;
@@ -485,7 +485,7 @@
             this.SButton.Location = new System.Drawing.Point(582, 68);
             this.SButton.Name = "SButton";
             this.SButton.Size = new System.Drawing.Size(27, 23);
-            this.SButton.TabIndex = 29;
+            this.SButton.TabIndex = 44;
             this.SButton.Text = "S";
             this.toolTip1.SetToolTip(this.SButton, "Go to the first logical record whose primary user last name begins with \'S\'.");
             this.SButton.UseVisualStyleBackColor = true;
@@ -495,7 +495,7 @@
             this.RButton.Location = new System.Drawing.Point(549, 68);
             this.RButton.Name = "RButton";
             this.RButton.Size = new System.Drawing.Size(27, 23);
-            this.RButton.TabIndex = 28;
+            this.RButton.TabIndex = 43;
             this.RButton.Text = "R";
             this.toolTip1.SetToolTip(this.RButton, "Go to the first logical record whose primary user last name begins with \'R\'.");
             this.RButton.UseVisualStyleBackColor = true;
@@ -505,7 +505,7 @@
             this.QButton.Location = new System.Drawing.Point(516, 68);
             this.QButton.Name = "QButton";
             this.QButton.Size = new System.Drawing.Size(27, 23);
-            this.QButton.TabIndex = 27;
+            this.QButton.TabIndex = 42;
             this.QButton.Text = "Q";
             this.toolTip1.SetToolTip(this.QButton, "Go to the first logical record whose primary user last name begins with \'Q\'.");
             this.QButton.UseVisualStyleBackColor = true;
@@ -515,7 +515,7 @@
             this.PButton.Location = new System.Drawing.Point(483, 68);
             this.PButton.Name = "PButton";
             this.PButton.Size = new System.Drawing.Size(27, 23);
-            this.PButton.TabIndex = 26;
+            this.PButton.TabIndex = 41;
             this.PButton.Text = "P";
             this.toolTip1.SetToolTip(this.PButton, "Go to the first logical record whose primary user last name begins with \'P\'.");
             this.PButton.UseVisualStyleBackColor = true;
@@ -525,7 +525,7 @@
             this.OButton.Location = new System.Drawing.Point(450, 68);
             this.OButton.Name = "OButton";
             this.OButton.Size = new System.Drawing.Size(27, 23);
-            this.OButton.TabIndex = 25;
+            this.OButton.TabIndex = 40;
             this.OButton.Text = "O";
             this.toolTip1.SetToolTip(this.OButton, "Go to the first logical record whose primary user last name begins with \'O\'.");
             this.OButton.UseVisualStyleBackColor = true;
@@ -535,7 +535,7 @@
             this.NButton.Location = new System.Drawing.Point(846, 39);
             this.NButton.Name = "NButton";
             this.NButton.Size = new System.Drawing.Size(27, 23);
-            this.NButton.TabIndex = 24;
+            this.NButton.TabIndex = 39;
             this.NButton.Text = "N";
             this.toolTip1.SetToolTip(this.NButton, "Go to the first logical record whose primary user last name begins with \'N\'.");
             this.NButton.UseVisualStyleBackColor = true;
@@ -683,7 +683,7 @@
             this.selectFilterBox.Location = new System.Drawing.Point(703, 110);
             this.selectFilterBox.Name = "selectFilterBox";
             this.selectFilterBox.Size = new System.Drawing.Size(190, 27);
-            this.selectFilterBox.TabIndex = 10;
+            this.selectFilterBox.TabIndex = 53;
             this.toolTip1.SetToolTip(this.selectFilterBox, "Filter to only show records that match selection.");
             this.selectFilterBox.SelectedIndexChanged += new System.EventHandler(this.selectFilterBox_SelectedIndexChanged);
             // 
@@ -702,15 +702,15 @@
             this.orderByBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.orderByBox.FormattingEnabled = true;
             this.orderByBox.Items.AddRange(new object[] {
+            "Category",
             "Name",
-            "Vendor",
             "Reorder Priority",
             "SKU",
-            "Category"});
+            "Vendor"});
             this.orderByBox.Location = new System.Drawing.Point(415, 107);
             this.orderByBox.Name = "orderByBox";
             this.orderByBox.Size = new System.Drawing.Size(190, 27);
-            this.orderByBox.TabIndex = 8;
+            this.orderByBox.TabIndex = 52;
             this.toolTip1.SetToolTip(this.orderByBox, "Logically orders records by selection");
             this.orderByBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -732,7 +732,7 @@
             this.leftButtonLeft.Location = new System.Drawing.Point(6, 55);
             this.leftButtonLeft.Name = "leftButtonLeft";
             this.leftButtonLeft.Size = new System.Drawing.Size(49, 46);
-            this.leftButtonLeft.TabIndex = 20;
+            this.leftButtonLeft.TabIndex = 19;
             this.leftButtonLeft.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.toolTip1.SetToolTip(this.leftButtonLeft, "Previous Logical Record");
             this.leftButtonLeft.UseVisualStyleBackColor = true;
@@ -757,7 +757,7 @@
             this.upButtonLeft.Location = new System.Drawing.Point(60, 3);
             this.upButtonLeft.Name = "upButtonLeft";
             this.upButtonLeft.Size = new System.Drawing.Size(49, 46);
-            this.upButtonLeft.TabIndex = 19;
+            this.upButtonLeft.TabIndex = 21;
             this.upButtonLeft.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.toolTip1.SetToolTip(this.upButtonLeft, "First Logical Record");
             this.upButtonLeft.UseVisualStyleBackColor = true;
@@ -769,7 +769,7 @@
             this.rightButtonLeft.Location = new System.Drawing.Point(115, 55);
             this.rightButtonLeft.Name = "rightButtonLeft";
             this.rightButtonLeft.Size = new System.Drawing.Size(49, 46);
-            this.rightButtonLeft.TabIndex = 21;
+            this.rightButtonLeft.TabIndex = 20;
             this.rightButtonLeft.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.toolTip1.SetToolTip(this.rightButtonLeft, "Next Logical Record");
             this.rightButtonLeft.UseVisualStyleBackColor = true;
