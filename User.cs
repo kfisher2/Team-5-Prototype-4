@@ -29,9 +29,9 @@ namespace LeaseToBuy
             cancelButton.Visible = false;
 
             if (checkBox1.Checked)
-                button8.Visible = true;
+                btnEmployeeInformation.Visible = true;
             else
-                button8.Visible = false;
+                btnEmployeeInformation.Visible = false;
 
             if (!Testing)
             {
@@ -432,9 +432,9 @@ namespace LeaseToBuy
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked)
-                button8.Visible = true;
+                btnEmployeeInformation.Visible = true;
             else
-                button8.Visible = false;
+                btnEmployeeInformation.Visible = false;
 
         }
 
@@ -448,7 +448,7 @@ namespace LeaseToBuy
             NormalMode();
         }
 
-        private void button12_Click(object sender, EventArgs e)
+        private void DeleteButton_Click(object sender, EventArgs e)
         {
             PrimaryTabPanel.SelectTab(0);
             AddMode();
@@ -713,6 +713,18 @@ namespace LeaseToBuy
             checkBox2.Checked = true;
             label34.Text = "16482";
             label46.Text = "3248";
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

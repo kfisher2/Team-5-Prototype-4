@@ -52,7 +52,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnAddMode = new System.Windows.Forms.Button();
             this.btnEditMode = new System.Windows.Forms.Button();
             this.btnNormalMode = new System.Windows.Forms.Button();
             this.ZButton = new System.Windows.Forms.Button();
@@ -89,6 +88,7 @@
             this.downButtonLeft = new System.Windows.Forms.Button();
             this.upButtonLeft = new System.Windows.Forms.Button();
             this.rightButtonLeft = new System.Windows.Forms.Button();
+            this.btnAddMode = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.General = new System.Windows.Forms.TabPage();
             this.btnGoToVendor = new System.Windows.Forms.Button();
@@ -131,15 +131,15 @@
             this.PrimaryTabPanel = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridItems = new System.Windows.Forms.DataGridView();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.cancelButton = new System.Windows.Forms.Button();
             this.itemID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.transactionId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.status = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.serialNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.notes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.cancelButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.General.SuspendLayout();
@@ -369,7 +369,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 35);
             this.button2.TabIndex = 40;
-            this.button2.Text = "Redo";
+            this.button2.Text = "Redo last undid action.";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -380,17 +380,8 @@
             this.button1.Size = new System.Drawing.Size(75, 34);
             this.button1.TabIndex = 39;
             this.button1.Text = "Undo";
+            this.toolTip1.SetToolTip(this.button1, "Undo last action.");
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // btnAddMode
-            // 
-            this.btnAddMode.Location = new System.Drawing.Point(0, 22);
-            this.btnAddMode.Name = "btnAddMode";
-            this.btnAddMode.Size = new System.Drawing.Size(129, 36);
-            this.btnAddMode.TabIndex = 38;
-            this.btnAddMode.Text = "Add Item";
-            this.btnAddMode.UseVisualStyleBackColor = true;
-            this.btnAddMode.Click += new System.EventHandler(this.btnAddMode_Click);
             // 
             // btnEditMode
             // 
@@ -399,6 +390,7 @@
             this.btnEditMode.Size = new System.Drawing.Size(129, 36);
             this.btnEditMode.TabIndex = 37;
             this.btnEditMode.Text = "Edit Mode";
+            this.toolTip1.SetToolTip(this.btnEditMode, "Change to Edit Mode.");
             this.btnEditMode.UseVisualStyleBackColor = true;
             this.btnEditMode.Click += new System.EventHandler(this.btnEditMode_Click);
             // 
@@ -409,6 +401,7 @@
             this.btnNormalMode.Size = new System.Drawing.Size(129, 36);
             this.btnNormalMode.TabIndex = 10;
             this.btnNormalMode.Text = "Normal Mode";
+            this.toolTip1.SetToolTip(this.btnNormalMode, "Change to Normal Mode.");
             this.btnNormalMode.UseVisualStyleBackColor = true;
             this.btnNormalMode.Click += new System.EventHandler(this.NormalMode_Click);
             // 
@@ -774,6 +767,17 @@
             this.toolTip1.SetToolTip(this.rightButtonLeft, "Next Logical Record");
             this.rightButtonLeft.UseVisualStyleBackColor = true;
             // 
+            // btnAddMode
+            // 
+            this.btnAddMode.Location = new System.Drawing.Point(0, 22);
+            this.btnAddMode.Name = "btnAddMode";
+            this.btnAddMode.Size = new System.Drawing.Size(129, 36);
+            this.btnAddMode.TabIndex = 38;
+            this.btnAddMode.Text = "Add Item";
+            this.toolTip1.SetToolTip(this.btnAddMode, "Change to Add Mode.");
+            this.btnAddMode.UseVisualStyleBackColor = true;
+            this.btnAddMode.Click += new System.EventHandler(this.btnAddMode_Click);
+            // 
             // toolTip1
             // 
             this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
@@ -812,6 +816,7 @@
             this.btnGoToVendor.Size = new System.Drawing.Size(162, 23);
             this.btnGoToVendor.TabIndex = 62;
             this.btnGoToVendor.Text = "Go To Vendor";
+            this.toolTip1.SetToolTip(this.btnGoToVendor, "View the vender\'s info.");
             this.btnGoToVendor.UseVisualStyleBackColor = true;
             // 
             // textVendorID
@@ -872,6 +877,7 @@
             this.comboPriority.Name = "comboPriority";
             this.comboPriority.Size = new System.Drawing.Size(121, 27);
             this.comboPriority.TabIndex = 59;
+            this.toolTip1.SetToolTip(this.comboPriority, "Select the priority of when to reorder this product.");
             // 
             // label7
             // 
@@ -1137,6 +1143,7 @@
             this.comboCategory.Name = "comboCategory";
             this.comboCategory.Size = new System.Drawing.Size(162, 27);
             this.comboCategory.TabIndex = 47;
+            this.toolTip1.SetToolTip(this.comboCategory, "Select a catagory tag for this item.");
             this.comboCategory.SelectedIndexChanged += new System.EventHandler(this.comboCategory_SelectedIndexChanged);
             // 
             // label30
@@ -1204,32 +1211,6 @@
             this.dataGridItems.TabIndex = 0;
             this.dataGridItems.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridItems_CellContentClick);
             // 
-            // itemID
-            // 
-            this.itemID.HeaderText = "Item ID";
-            this.itemID.Name = "itemID";
-            this.itemID.ReadOnly = true;
-            // 
-            // transactionId
-            // 
-            this.transactionId.HeaderText = "Transaction ID";
-            this.transactionId.Name = "transactionId";
-            // 
-            // status
-            // 
-            this.status.HeaderText = "Status";
-            this.status.Name = "status";
-            // 
-            // serialNo
-            // 
-            this.serialNo.HeaderText = "Serial Number";
-            this.serialNo.Name = "serialNo";
-            // 
-            // notes
-            // 
-            this.notes.HeaderText = "Notes";
-            this.notes.Name = "notes";
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -1266,8 +1247,40 @@
             this.cancelButton.Size = new System.Drawing.Size(78, 36);
             this.cancelButton.TabIndex = 41;
             this.cancelButton.Text = "Cancel";
+            this.toolTip1.SetToolTip(this.cancelButton, "Do not save this new item.");
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
+            // 
+            // itemID
+            // 
+            this.itemID.HeaderText = "Item ID";
+            this.itemID.Name = "itemID";
+            this.itemID.ReadOnly = true;
+            // 
+            // transactionId
+            // 
+            this.transactionId.HeaderText = "Transaction ID";
+            this.transactionId.Name = "transactionId";
+            // 
+            // status
+            // 
+            this.status.HeaderText = "Status";
+            this.status.Items.AddRange(new object[] {
+            "In Store",
+            "Checked out",
+            "On Order"});
+            this.status.Name = "status";
+            this.status.ToolTipText = "The status of this item.";
+            // 
+            // serialNo
+            // 
+            this.serialNo.HeaderText = "Serial Number";
+            this.serialNo.Name = "serialNo";
+            // 
+            // notes
+            // 
+            this.notes.HeaderText = "Notes";
+            this.notes.Name = "notes";
             // 
             // Inventory
             // 
@@ -1412,11 +1425,6 @@
         private System.Windows.Forms.Button btnGoToVendor;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataGridView dataGridItems;
-        private System.Windows.Forms.DataGridViewTextBoxColumn itemID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn transactionId;
-        private System.Windows.Forms.DataGridViewComboBoxColumn status;
-        private System.Windows.Forms.DataGridViewTextBoxColumn serialNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn notes;
         private System.Windows.Forms.ToolStripMenuItem purchaseOrdersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem stockReportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salesToolStripMenuItem;
@@ -1424,5 +1432,10 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button cancelButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn transactionId;
+        private System.Windows.Forms.DataGridViewComboBoxColumn status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn serialNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn notes;
     }
 }

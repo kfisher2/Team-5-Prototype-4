@@ -56,7 +56,7 @@ namespace LeaseToBuy
             vendorForm.Show();
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void menuStripInventory_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }
