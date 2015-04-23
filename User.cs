@@ -18,6 +18,8 @@ namespace LeaseToBuy
         CreditCards credit = null;
         String stuff = "";
 
+
+
         public User()
         {
             InitializeComponent();
@@ -37,6 +39,40 @@ namespace LeaseToBuy
                 //btnEditMode.Visible = false;
                 //btnNormalMode.Visible = false;
             }
+
+
+            txtFirst.Text = "Zane";
+            txtLast.Text = "Foster";
+            txtStreet1.Text = "1 Trinity Place";
+            txtStreet2.Text = "#655";
+            txtCity.Text = "San Antonio";
+            textBillCity.Text = "San Antonio";
+            textBillSt1.Text = "1 Trinity Place";
+            textBillSt2.Text = "#655";
+            textBillZip.Text = "78212";
+            textBillState.Text = "Texas";
+            comboGenAcctType.Text = "Corporate";
+            maskedTextGenAccessed.Text = "02/19/2015";
+            maskedTextGenCreated.Text = "05/29/2010";
+            textGeneralNotes.Text = "Zane is a valued customer.";
+            comboBox1.SelectedIndex = 43;
+            textBox1.Text = "78212";
+            textBox6.Text = textBillSt1.Text;
+            textBox7.Text = textBillSt2.Text;
+            textBox8.Text = textBillCity.Text;
+            comboBox3.SelectedIndex = 43;
+            textBox9.Text = textBox1.Text;
+            checkBox1.Checked = true;
+            comboBox2.SelectedIndex = 43;
+            textBox14.Text = "7538432";
+            maskedTextBox2.Text = "8324562178";
+            maskedTextBox3.Text = "8329824388";
+            maskedTextBox1.Text = "04081988";
+            textBox2.Text = "zfoster@gmail.com";
+            checkBox2.Checked = true;
+            label34.Text = "10309";
+            label46.Text = "3819";
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -86,6 +122,23 @@ namespace LeaseToBuy
             maskedTextGenAccessed.Text = "02/19/2015";
             maskedTextGenCreated.Text = "05/29/2010";
             textGeneralNotes.Text = "Zane is a valued customer.";
+            comboBox1.SelectedIndex = 43;
+            textBox1.Text = "78212";
+            textBox6.Text = textBillSt1.Text;
+            textBox7.Text = textBillSt2.Text;
+            textBox8.Text = textBillCity.Text;
+            comboBox3.SelectedIndex = 43;
+            textBox9.Text = textBox1.Text;
+            checkBox1.Checked = true;
+            comboBox2.SelectedIndex = 43;
+            textBox14.Text = "7538432";
+            maskedTextBox2.Text = "8324562178";
+            maskedTextBox3.Text = "8329824388";
+            maskedTextBox1.Text = "04081988";
+            textBox2.Text = "zfoster@gmail.com";
+            checkBox2.Checked = true;
+            label34.Text = "10309";
+            label46.Text = "3819";
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -125,6 +178,23 @@ namespace LeaseToBuy
                 comboGenAcctType.Text = "";
                 textGeneralNotes.Text = "";
                 this.BackColor = Color.SteelBlue;
+                comboBox1.SelectedIndex = 0;
+                textBox1.Text = "";
+                textBox6.Text = textBillSt1.Text;
+                textBox7.Text = textBillSt2.Text;
+                textBox8.Text = textBillCity.Text;
+                comboBox3.SelectedIndex = 0;
+                textBox9.Text = textBox1.Text;
+                checkBox1.Checked = false;
+                comboBox2.SelectedIndex = 0;
+                textBox14.Text = "";
+                maskedTextBox2.Text = "";
+                maskedTextBox3.Text = "";
+                maskedTextBox1.Text = "";
+                textBox2.Text = "";
+                checkBox2.Checked = false;
+                label34.Text = "";
+                label46.Text = "";
             }
 
         }
@@ -167,7 +237,7 @@ namespace LeaseToBuy
             else
             {
                 this.BackColor = Color.Firebrick;
-                btnEditMode.Text = "Save";
+                /*btnEditMode.Text = "Save";
                 txtFirst.Text = "Zane";
                 txtLast.Text = "Foster";
                 txtStreet1.Text = "1 Trinity Place";
@@ -182,7 +252,7 @@ namespace LeaseToBuy
                 maskedTextGenAccessed.Text = "02/19/2015";
                 maskedTextGenCreated.Text = "05/29/2010";
                 textGeneralNotes.Text = "Zane is a valued customer.";
-                this.BackColor = Color.Firebrick;
+                this.BackColor = Color.Firebrick;*/
             }
         }
 
@@ -259,6 +329,8 @@ namespace LeaseToBuy
         private void User_Load(object sender, EventArgs e)
         {
 
+            dataGridView2.Rows.Add("15846", "Alice", "Box", "alicethegreat@gmail.com","8325875241", "8329752145");
+            dataGridView2.Rows.Add("17322", "Lil' Nathan", "Cox", "", "", "");
         }
 
         private void label18_Click(object sender, EventArgs e)
@@ -377,21 +449,39 @@ namespace LeaseToBuy
         private void button12_Click(object sender, EventArgs e)
         {
             PrimaryTabPanel.SelectTab(0);
-            NormalMode();
-            txtFirst.Text = "Zane";
-            txtLast.Text = "Foster";
-            txtStreet1.Text = "1 Trinity Place";
-            txtStreet2.Text = "#655";
+            AddMode();
+            //This is the "split" button
+            txtFirst.Text = "Alice";
+            txtLast.Text = "Box";
+            txtStreet1.Text = "190 Kings Ct";
+            txtStreet2.Text = "";
             txtCity.Text = "San Antonio";
             textBillCity.Text = "San Antonio";
-            textBillSt1.Text = "1 Trinity Place";
-            textBillSt2.Text = "#655";
+            textBillSt1.Text = txtStreet1.Text;
+            textBillSt2.Text = txtStreet2.Text;
             textBillZip.Text = "78212";
             textBillState.Text = "Texas";
-            comboGenAcctType.Text = "Corporate";
-            maskedTextGenAccessed.Text = "02/19/2015";
-            maskedTextGenCreated.Text = "05/29/2010";
-            textGeneralNotes.Text = "Zane is a valued customer.";
+            comboGenAcctType.Text = "Personal";
+            maskedTextGenAccessed.Text = "05/05/2015";
+            maskedTextGenCreated.Text = "05/05/2015";
+            textGeneralNotes.Text = "";
+            comboBox1.SelectedIndex = 43;
+            textBox1.Text = textBillZip.Text;
+            textBox6.Text = textBillSt1.Text;
+            textBox7.Text = textBillSt2.Text;
+            textBox8.Text = textBillCity.Text;
+            comboBox3.SelectedIndex = 43;
+            textBox9.Text = textBox1.Text;
+            checkBox1.Checked = false;
+            comboBox2.SelectedIndex = 43;
+            textBox14.Text = "9875418";
+            maskedTextBox2.Text = "8325875241";
+            maskedTextBox3.Text = "8329752145";
+            maskedTextBox1.Text = "10221983";
+            textBox2.Text = "alicethegreat@gmail.com";
+            checkBox2.Checked = true;
+            label34.Text = "15846";
+            label46.Text = "8405";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -410,6 +500,217 @@ namespace LeaseToBuy
             MessageBox.Show("Opening Skype...");
         }
 
+        private void leftButtonLeft_Click(object sender, EventArgs e)
+        {
+            txtFirst.Text = "Corey";
+            txtLast.Text = "Fisher";
+            txtStreet1.Text = "1 Trinity Place";
+            txtStreet2.Text = "#130";
+            txtCity.Text = "San Antonio";
+            textBillCity.Text = "San Antonio";
+            textBillSt1.Text = "1 Trinity Place";
+            textBillSt2.Text = "#130";
+            textBillZip.Text = "78212";
+            textBillState.Text = "Texas";
+            comboGenAcctType.Text = "Corporate";
+            maskedTextGenAccessed.Text = "02/19/2015";
+            maskedTextGenCreated.Text = "05/29/2010";
+            textGeneralNotes.Text = "Corey is available. /Ladies/.";
+            comboBox1.SelectedIndex = 43;
+            textBox1.Text = "78212";
+            textBox6.Text = textBillSt1.Text;
+            textBox7.Text = textBillSt2.Text;
+            textBox8.Text = textBillCity.Text;
+            comboBox3.SelectedIndex = 43;
+            textBox9.Text = textBox1.Text;
+            checkBox1.Checked = true;
+            comboBox2.SelectedIndex = 43;
+            textBox14.Text = "6342891";
+            maskedTextBox2.Text = "4364322890";
+            maskedTextBox3.Text = "8023889255";
+            maskedTextBox1.Text = "03051993";
+            textBox2.Text = "cfisher@trinity.edu";
+            checkBox2.Checked = true;
+            label34.Text = "13264";
+            label46.Text = "1024";
+        }
 
+        private void leftButtonRight_Click(object sender, EventArgs e)
+        {
+
+            txtFirst.Text = "Corey";
+            txtLast.Text = "Fisher";
+            txtStreet1.Text = "1 Trinity Place";
+            txtStreet2.Text = "#130";
+            txtCity.Text = "San Antonio";
+            textBillCity.Text = "San Antonio";
+            textBillSt1.Text = "1 Trinity Place";
+            textBillSt2.Text = "#130";
+            textBillZip.Text = "78212";
+            textBillState.Text = "Texas";
+            comboGenAcctType.Text = "Corporate";
+            maskedTextGenAccessed.Text = "02/19/2015";
+            maskedTextGenCreated.Text = "05/29/2010";
+            textGeneralNotes.Text = "Corey is available. /Ladies/.";
+            comboBox1.SelectedIndex = 43;
+            textBox1.Text = "78212";
+            textBox6.Text = textBillSt1.Text;
+            textBox7.Text = textBillSt2.Text;
+            textBox8.Text = textBillCity.Text;
+            comboBox3.SelectedIndex = 43;
+            textBox9.Text = textBox1.Text;
+            checkBox1.Checked = true;
+            comboBox2.SelectedIndex = 43;
+            textBox14.Text = "6342891";
+            maskedTextBox2.Text = "4364322890";
+            maskedTextBox3.Text = "8023889255";
+            maskedTextBox1.Text = "03051993";
+            textBox2.Text = "cfisher@trinity.edu";
+            checkBox2.Checked = true;
+            label34.Text = "13264";
+            label46.Text = "1024";
+        }
+
+        private void rightButtonLeft_Click(object sender, EventArgs e)
+        {
+            txtFirst.Text = "Bob";
+            txtLast.Text = "Cox";
+            txtStreet1.Text = "190 Kings Ct";
+            txtStreet2.Text = "";
+            txtCity.Text = "San Antonio";
+            textBillCity.Text = "San Antonio";
+            textBillSt1.Text = txtStreet1.Text;
+            textBillSt2.Text = txtStreet2.Text;
+            textBillZip.Text = "78212";
+            textBillState.Text = "Texas";
+            comboGenAcctType.Text = "Family";
+            maskedTextGenAccessed.Text = "05/04/2015";
+            maskedTextGenCreated.Text = "05/02/2015";
+            textGeneralNotes.Text = "Nice guy, wife and kids.";
+            comboBox1.SelectedIndex = 43;
+            textBox1.Text = textBillZip.Text;
+            textBox6.Text = textBillSt1.Text;
+            textBox7.Text = textBillSt2.Text;
+            textBox8.Text = textBillCity.Text;
+            comboBox3.SelectedIndex = 43;
+            textBox9.Text = textBox1.Text;
+            checkBox1.Checked = false;
+            comboBox2.SelectedIndex = 43;
+            textBox14.Text = "5217562";
+            maskedTextBox2.Text = "8324193275";
+            maskedTextBox3.Text = "8321608364";
+            maskedTextBox1.Text = "02171973";
+            textBox2.Text = "cox.bob@hotmail.com";
+            checkBox2.Checked = true;
+            label34.Text = "16482";
+            label46.Text = "3248";
+        }
+
+        private void rightButtonRight_Click(object sender, EventArgs e)
+        {
+            txtFirst.Text = "Bob";
+            txtLast.Text = "Cox";
+            txtStreet1.Text = "190 Kings Ct";
+            txtStreet2.Text = "";
+            txtCity.Text = "San Antonio";
+            textBillCity.Text = "San Antonio";
+            textBillSt1.Text = txtStreet1.Text;
+            textBillSt2.Text = txtStreet2.Text;
+            textBillZip.Text = "78212";
+            textBillState.Text = "Texas";
+            comboGenAcctType.Text = "Family";
+            maskedTextGenAccessed.Text = "05/04/2015";
+            maskedTextGenCreated.Text = "05/02/2015";
+            textGeneralNotes.Text = "Nice guy, wife and kids.";
+            comboBox1.SelectedIndex = 43;
+            textBox1.Text = textBillZip.Text;
+            textBox6.Text = textBillSt1.Text;
+            textBox7.Text = textBillSt2.Text;
+            textBox8.Text = textBillCity.Text;
+            comboBox3.SelectedIndex = 43;
+            textBox9.Text = textBox1.Text;
+            checkBox1.Checked = false;
+            comboBox2.SelectedIndex = 43;
+            textBox14.Text = "5217562";
+            maskedTextBox2.Text = "8324193275";
+            maskedTextBox3.Text = "8321608364";
+            maskedTextBox1.Text = "02171973";
+            textBox2.Text = "cox.bob@hotmail.com";
+            checkBox2.Checked = true;
+            label34.Text = "16482";
+            label46.Text = "3248";
+        }
+
+        private void CButton_Click(object sender, EventArgs e)
+        {
+            txtFirst.Text = "Rock";
+            txtLast.Text = "Candy";
+            txtStreet1.Text = "270 Gumdrop Lane";
+            txtStreet2.Text = "";
+            txtCity.Text = "Lalaland";
+            textBillCity.Text = txtCity.Text;
+            textBillSt1.Text = txtStreet1.Text;
+            textBillSt2.Text = txtStreet2.Text;
+            textBillZip.Text = "94093";
+            textBillState.Text = "Florida";
+            comboGenAcctType.Text = "Family";
+            maskedTextGenAccessed.Text = "02/04/2010";
+            maskedTextGenCreated.Text = "03/07/2014";
+            textGeneralNotes.Text = "Sweet and innocent and probably delicious. I haven't taken a bite to check.";
+            comboBox1.SelectedIndex = 10;
+            textBox1.Text = textBillZip.Text;
+            textBox6.Text = textBillSt1.Text;
+            textBox7.Text = textBillSt2.Text;
+            textBox8.Text = textBillCity.Text;
+            comboBox3.SelectedIndex = 10;
+            textBox9.Text = textBox1.Text;
+            checkBox1.Checked = false;
+            comboBox2.SelectedIndex = 10;
+            textBox14.Text = "5879954";
+            maskedTextBox2.Text = "9752497952";
+            maskedTextBox3.Text = "4572015772";
+            maskedTextBox1.Text = "09021945";
+            textBox2.Text = "lalilulelo@yahoo.com";
+            checkBox2.Checked = true;
+            label34.Text = "11111";
+            label46.Text = "6166";
+
+        }
+
+        private void rightButtonRight_Click_1(object sender, EventArgs e)
+        {
+
+            txtFirst.Text = "Bob";
+            txtLast.Text = "Cox";
+            txtStreet1.Text = "190 Kings Ct";
+            txtStreet2.Text = "";
+            txtCity.Text = "San Antonio";
+            textBillCity.Text = "San Antonio";
+            textBillSt1.Text = txtStreet1.Text;
+            textBillSt2.Text = txtStreet2.Text;
+            textBillZip.Text = "78212";
+            textBillState.Text = "Texas";
+            comboGenAcctType.Text = "Family";
+            maskedTextGenAccessed.Text = "05/04/2015";
+            maskedTextGenCreated.Text = "05/02/2015";
+            textGeneralNotes.Text = "Nice guy, wife and kids.";
+            comboBox1.SelectedIndex = 43;
+            textBox1.Text = textBillZip.Text;
+            textBox6.Text = textBillSt1.Text;
+            textBox7.Text = textBillSt2.Text;
+            textBox8.Text = textBillCity.Text;
+            comboBox3.SelectedIndex = 43;
+            textBox9.Text = textBox1.Text;
+            checkBox1.Checked = false;
+            comboBox2.SelectedIndex = 43;
+            textBox14.Text = "5217562";
+            maskedTextBox2.Text = "8324193275";
+            maskedTextBox3.Text = "8321608364";
+            maskedTextBox1.Text = "02171973";
+            textBox2.Text = "cox.bob@hotmail.com";
+            checkBox2.Checked = true;
+            label34.Text = "16482";
+            label46.Text = "3248";
+        }
     }
 }

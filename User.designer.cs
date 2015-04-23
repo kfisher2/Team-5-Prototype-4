@@ -108,7 +108,6 @@
             this.label34 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.txtLast = new System.Windows.Forms.TextBox();
             this.txtFirst = new System.Windows.Forms.TextBox();
@@ -129,6 +128,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
             this.Purchases = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Item = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -136,8 +138,6 @@
             this.AmountPaid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GotoItem = new System.Windows.Forms.DataGridViewButtonColumn();
             this.ExtendedContacts = new System.Windows.Forms.TabPage();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.First = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -154,6 +154,7 @@
             this.DeleteUser = new System.Windows.Forms.DataGridViewButtonColumn();
             this.UndeleteUser = new System.Windows.Forms.DataGridViewButtonColumn();
             this.AddUser = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Split = new System.Windows.Forms.DataGridViewButtonColumn();
             this.PrimaryUser = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label18 = new System.Windows.Forms.Label();
@@ -194,8 +195,9 @@
             this.label21 = new System.Windows.Forms.Label();
             this.maskedTextGenAccessed = new System.Windows.Forms.MaskedTextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.Split = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -359,6 +361,7 @@
             this.leftButtonRight.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.toolTip1.SetToolTip(this.leftButtonRight, "Previous Logical Record");
             this.leftButtonRight.UseVisualStyleBackColor = true;
+            this.leftButtonRight.Click += new System.EventHandler(this.leftButtonRight_Click);
             // 
             // rightButtonRight
             // 
@@ -371,6 +374,7 @@
             this.rightButtonRight.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.toolTip1.SetToolTip(this.rightButtonRight, "Next Logical Record");
             this.rightButtonRight.UseVisualStyleBackColor = true;
+            this.rightButtonRight.Click += new System.EventHandler(this.rightButtonRight_Click_1);
             // 
             // downButtonRight
             // 
@@ -748,6 +752,7 @@
             this.CButton.Text = "C";
             this.toolTip1.SetToolTip(this.CButton, "Go to the first logical record whose primary user last name begins with \'C\'.");
             this.CButton.UseVisualStyleBackColor = true;
+            this.CButton.Click += new System.EventHandler(this.CButton_Click);
             // 
             // BButton
             // 
@@ -839,6 +844,7 @@
             this.leftButtonLeft.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.toolTip1.SetToolTip(this.leftButtonLeft, "Previous Logical Record");
             this.leftButtonLeft.UseVisualStyleBackColor = true;
+            this.leftButtonLeft.Click += new System.EventHandler(this.leftButtonLeft_Click);
             // 
             // downButtonLeft
             // 
@@ -875,6 +881,7 @@
             this.rightButtonLeft.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.toolTip1.SetToolTip(this.rightButtonLeft, "Next Logical Record");
             this.rightButtonLeft.UseVisualStyleBackColor = true;
+            this.rightButtonLeft.Click += new System.EventHandler(this.rightButtonLeft_Click);
             // 
             // toolTip1
             // 
@@ -896,7 +903,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(243, 24);
+            this.button3.Location = new System.Drawing.Point(243, 35);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(108, 27);
             this.button3.TabIndex = 12;
@@ -908,7 +915,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(243, 55);
+            this.button4.Location = new System.Drawing.Point(243, 66);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(52, 27);
             this.button4.TabIndex = 13;
@@ -919,7 +926,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(294, 55);
+            this.button5.Location = new System.Drawing.Point(294, 66);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(57, 27);
             this.button5.TabIndex = 14;
@@ -929,7 +936,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(244, 111);
+            this.button6.Location = new System.Drawing.Point(244, 122);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(107, 26);
             this.button6.TabIndex = 15;
@@ -985,7 +992,7 @@
             // maskedTextBox3
             // 
             this.maskedTextBox3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox3.Location = new System.Drawing.Point(120, 56);
+            this.maskedTextBox3.Location = new System.Drawing.Point(120, 67);
             this.maskedTextBox3.Mask = "(999) 000-0000";
             this.maskedTextBox3.Name = "maskedTextBox3";
             this.maskedTextBox3.Size = new System.Drawing.Size(117, 26);
@@ -995,7 +1002,7 @@
             // maskedTextBox2
             // 
             this.maskedTextBox2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox2.Location = new System.Drawing.Point(120, 25);
+            this.maskedTextBox2.Location = new System.Drawing.Point(120, 36);
             this.maskedTextBox2.Mask = "(999) 000-0000";
             this.maskedTextBox2.Name = "maskedTextBox2";
             this.maskedTextBox2.Size = new System.Drawing.Size(117, 26);
@@ -1005,7 +1012,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(23, 111);
+            this.textBox2.Location = new System.Drawing.Point(23, 122);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(214, 26);
             this.textBox2.TabIndex = 9;
@@ -1041,23 +1048,12 @@
             this.label29.Text = "DL State";
             this.toolTip1.SetToolTip(this.label29, "State of issue for driver\'s license");
             // 
-            // comboBox4
-            // 
-            this.comboBox4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(101, 80);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 26);
-            this.comboBox4.TabIndex = 3;
-            this.toolTip1.SetToolTip(this.comboBox4, "State of issue for driver\'s license");
-            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
-            // 
             // textBox14
             // 
             this.textBox14.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox14.Location = new System.Drawing.Point(483, 80);
             this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(202, 26);
+            this.textBox14.Size = new System.Drawing.Size(207, 26);
             this.textBox14.TabIndex = 4;
             this.toolTip1.SetToolTip(this.textBox14, "Driver\'s license number");
             // 
@@ -1066,7 +1062,7 @@
             this.txtLast.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLast.Location = new System.Drawing.Point(483, 39);
             this.txtLast.Name = "txtLast";
-            this.txtLast.Size = new System.Drawing.Size(251, 26);
+            this.txtLast.Size = new System.Drawing.Size(207, 26);
             this.txtLast.TabIndex = 2;
             this.toolTip1.SetToolTip(this.txtLast, "Last Name");
             // 
@@ -1094,7 +1090,7 @@
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(94, 25);
+            this.textBox6.Location = new System.Drawing.Point(85, 39);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(272, 26);
             this.textBox6.TabIndex = 9;
@@ -1103,7 +1099,7 @@
             // textBox7
             // 
             this.textBox7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(94, 57);
+            this.textBox7.Location = new System.Drawing.Point(85, 71);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(272, 26);
             this.textBox7.TabIndex = 5;
@@ -1112,7 +1108,7 @@
             // textBox8
             // 
             this.textBox8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(94, 89);
+            this.textBox8.Location = new System.Drawing.Point(85, 103);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(272, 26);
             this.textBox8.TabIndex = 7;
@@ -1125,6 +1121,7 @@
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.IntegralHeight = false;
             this.comboBox3.Items.AddRange(new object[] {
+            "Select state...",
             "Alabama",
             "Alaska",
             "Arizona",
@@ -1143,7 +1140,6 @@
             "Iowa",
             "Kansas",
             "Kentucky",
-            "Louisiana",
             "Maine",
             "Maryland",
             "Massachusetts",
@@ -1176,7 +1172,7 @@
             "West Virginia",
             "Wisconsin",
             "Wyoming"});
-            this.comboBox3.Location = new System.Drawing.Point(94, 121);
+            this.comboBox3.Location = new System.Drawing.Point(85, 135);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 26);
             this.comboBox3.TabIndex = 12;
@@ -1185,7 +1181,7 @@
             // textBox9
             // 
             this.textBox9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(266, 121);
+            this.textBox9.Location = new System.Drawing.Point(257, 135);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(100, 26);
             this.textBox9.TabIndex = 13;
@@ -1215,7 +1211,7 @@
             // txtStreet1
             // 
             this.txtStreet1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStreet1.Location = new System.Drawing.Point(94, 25);
+            this.txtStreet1.Location = new System.Drawing.Point(94, 39);
             this.txtStreet1.Name = "txtStreet1";
             this.txtStreet1.Size = new System.Drawing.Size(272, 26);
             this.txtStreet1.TabIndex = 6;
@@ -1225,7 +1221,7 @@
             // txtStreet2
             // 
             this.txtStreet2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStreet2.Location = new System.Drawing.Point(94, 57);
+            this.txtStreet2.Location = new System.Drawing.Point(94, 71);
             this.txtStreet2.Name = "txtStreet2";
             this.txtStreet2.Size = new System.Drawing.Size(272, 26);
             this.txtStreet2.TabIndex = 7;
@@ -1235,7 +1231,7 @@
             // txtCity
             // 
             this.txtCity.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCity.Location = new System.Drawing.Point(94, 89);
+            this.txtCity.Location = new System.Drawing.Point(94, 103);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(272, 26);
             this.txtCity.TabIndex = 8;
@@ -1249,6 +1245,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.IntegralHeight = false;
             this.comboBox1.Items.AddRange(new object[] {
+            "Select state...",
             "Alabama",
             "Alaska",
             "Arizona",
@@ -1268,7 +1265,6 @@
             "Kansas",
             "Kentucky",
             "Louisiana",
-            "Maine",
             "Maryland",
             "Massachusetts",
             "Michigan",
@@ -1300,7 +1296,7 @@
             "West Virginia",
             "Wisconsin",
             "Wyoming"});
-            this.comboBox1.Location = new System.Drawing.Point(94, 121);
+            this.comboBox1.Location = new System.Drawing.Point(94, 135);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 26);
             this.comboBox1.TabIndex = 12;
@@ -1310,7 +1306,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(266, 121);
+            this.textBox1.Location = new System.Drawing.Point(266, 135);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 26);
             this.textBox1.TabIndex = 13;
@@ -1360,6 +1356,39 @@
             this.label46.TabIndex = 9;
             this.label46.Text = "3819";
             this.toolTip1.SetToolTip(this.label46, "ID of this account");
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.Transparent;
+            this.button11.Location = new System.Drawing.Point(480, 71);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(72, 22);
+            this.button11.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.button11, "If the user is an employee, their employee information.");
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.Transparent;
+            this.button10.Location = new System.Drawing.Point(552, 71);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(70, 22);
+            this.button10.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.button10, "This user\'s credit cards.");
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.Transparent;
+            this.button12.Location = new System.Drawing.Point(1126, 71);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(70, 22);
+            this.button12.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.button12, "Creates a new account for this user.");
+            this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // Purchases
             // 
@@ -1422,28 +1451,6 @@
             this.ExtendedContacts.Size = new System.Drawing.Size(1204, 423);
             this.ExtendedContacts.TabIndex = 1;
             this.ExtendedContacts.Text = "Extended Contacts";
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.Transparent;
-            this.button11.Location = new System.Drawing.Point(480, 71);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(72, 22);
-            this.button11.TabIndex = 3;
-            this.toolTip1.SetToolTip(this.button11, "If the user is an employee, their employee information.");
-            this.button11.UseVisualStyleBackColor = false;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.Transparent;
-            this.button10.Location = new System.Drawing.Point(552, 71);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(70, 22);
-            this.button10.TabIndex = 2;
-            this.toolTip1.SetToolTip(this.button10, "This user\'s credit cards.");
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // dataGridView2
             // 
@@ -1555,9 +1562,16 @@
             this.AddUser.Name = "AddUser";
             this.AddUser.ToolTipText = "Add a new user to the account.";
             // 
+            // Split
+            // 
+            this.Split.HeaderText = "Split";
+            this.Split.Name = "Split";
+            // 
             // PrimaryUser
             // 
             this.PrimaryUser.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.PrimaryUser.Controls.Add(this.comboBox2);
+            this.PrimaryUser.Controls.Add(this.button13);
             this.PrimaryUser.Controls.Add(this.button9);
             this.PrimaryUser.Controls.Add(this.button8);
             this.PrimaryUser.Controls.Add(this.checkBox1);
@@ -1565,7 +1579,6 @@
             this.PrimaryUser.Controls.Add(this.label34);
             this.PrimaryUser.Controls.Add(this.label40);
             this.PrimaryUser.Controls.Add(this.label29);
-            this.PrimaryUser.Controls.Add(this.comboBox4);
             this.PrimaryUser.Controls.Add(this.textBox14);
             this.PrimaryUser.Controls.Add(this.txtLast);
             this.PrimaryUser.Controls.Add(this.txtFirst);
@@ -1599,7 +1612,7 @@
             this.groupBox5.Controls.Add(this.label43);
             this.groupBox5.Location = new System.Drawing.Point(822, 196);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(376, 158);
+            this.groupBox5.Size = new System.Drawing.Size(376, 167);
             this.groupBox5.TabIndex = 31;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Contact Info";
@@ -1607,7 +1620,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(62, 89);
+            this.label18.Location = new System.Drawing.Point(62, 100);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(51, 19);
             this.label18.TabIndex = 2;
@@ -1617,7 +1630,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(5, 28);
+            this.label22.Location = new System.Drawing.Point(5, 39);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(108, 19);
             this.label22.TabIndex = 4;
@@ -1626,7 +1639,7 @@
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(21, 59);
+            this.label43.Location = new System.Drawing.Point(21, 70);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(92, 19);
             this.label43.TabIndex = 6;
@@ -1634,6 +1647,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.checkBox2);
             this.groupBox3.Controls.Add(this.textBox6);
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.label14);
@@ -1646,7 +1660,7 @@
             this.groupBox3.Controls.Add(this.textBox9);
             this.groupBox3.Location = new System.Drawing.Point(430, 196);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(376, 158);
+            this.groupBox3.Size = new System.Drawing.Size(376, 167);
             this.groupBox3.TabIndex = 30;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Shipping Address";
@@ -1654,7 +1668,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(16, 25);
+            this.label13.Location = new System.Drawing.Point(7, 39);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(67, 19);
             this.label13.TabIndex = 2;
@@ -1663,7 +1677,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(16, 60);
+            this.label14.Location = new System.Drawing.Point(7, 74);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(67, 19);
             this.label14.TabIndex = 4;
@@ -1672,7 +1686,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(44, 92);
+            this.label15.Location = new System.Drawing.Point(35, 106);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(39, 19);
             this.label15.TabIndex = 6;
@@ -1681,7 +1695,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(35, 124);
+            this.label16.Location = new System.Drawing.Point(26, 138);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(48, 19);
             this.label16.TabIndex = 10;
@@ -1690,7 +1704,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(228, 124);
+            this.label17.Location = new System.Drawing.Point(219, 138);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(32, 19);
             this.label17.TabIndex = 11;
@@ -1710,7 +1724,7 @@
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Location = new System.Drawing.Point(35, 196);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(376, 158);
+            this.groupBox1.Size = new System.Drawing.Size(376, 167);
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Personal Address";
@@ -1718,7 +1732,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 25);
+            this.label2.Location = new System.Drawing.Point(16, 39);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 19);
             this.label2.TabIndex = 2;
@@ -1727,7 +1741,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 60);
+            this.label3.Location = new System.Drawing.Point(16, 74);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 19);
             this.label3.TabIndex = 4;
@@ -1737,7 +1751,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(44, 92);
+            this.label4.Location = new System.Drawing.Point(44, 106);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 19);
             this.label4.TabIndex = 6;
@@ -1747,7 +1761,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(35, 124);
+            this.label6.Location = new System.Drawing.Point(35, 138);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(48, 19);
             this.label6.TabIndex = 10;
@@ -1757,7 +1771,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(228, 124);
+            this.label7.Location = new System.Drawing.Point(228, 138);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(32, 19);
             this.label7.TabIndex = 11;
@@ -2053,21 +2067,88 @@
             this.label20.Text = "Last Accessed";
             this.label20.Click += new System.EventHandler(this.label20_Click_1);
             // 
-            // Split
+            // button13
             // 
-            this.Split.HeaderText = "Split";
-            this.Split.Name = "Split";
+            this.button13.Location = new System.Drawing.Point(594, 124);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(96, 26);
+            this.button13.TabIndex = 53;
+            this.button13.Text = "New Sale";
+            this.button13.UseVisualStyleBackColor = true;
             // 
-            // button12
+            // comboBox2
             // 
-            this.button12.BackColor = System.Drawing.Color.Transparent;
-            this.button12.Location = new System.Drawing.Point(1126, 71);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(70, 22);
-            this.button12.TabIndex = 4;
-            this.toolTip1.SetToolTip(this.button12, "Creates a new account for this user.");
-            this.button12.UseVisualStyleBackColor = false;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
+            this.comboBox2.DropDownHeight = 120;
+            this.comboBox2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.IntegralHeight = false;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Select state...",
+            "Alabama",
+            "Alaska",
+            "Arizona",
+            "Arkansas",
+            "California",
+            "Colorado",
+            "Connecticut",
+            "Delaware",
+            "District Of Columbia",
+            "Florida",
+            "Georgia",
+            "Hawaii",
+            "Idaho",
+            "Illinois",
+            "Indiana",
+            "Iowa",
+            "Kansas",
+            "Kentucky",
+            "Louisiana",
+            "Maine",
+            "Massachusetts",
+            "Michigan",
+            "Minnesota",
+            "Mississippi",
+            "Missouri",
+            "Montana",
+            "Nebraska",
+            "Nevada",
+            "New Hampshire",
+            "New Jersey",
+            "New Mexico",
+            "New York",
+            "North Carolina",
+            "North Dakota",
+            "Ohio",
+            "Oklahoma",
+            "Oregon",
+            "Pennsylvania",
+            "Rhode Island",
+            "South Carolina",
+            "South Dakota",
+            "Tennessee",
+            "Texas",
+            "Utah",
+            "Vermont",
+            "Virginia",
+            "Washington",
+            "West Virginia",
+            "Wisconsin",
+            "Wyoming"});
+            this.comboBox2.Location = new System.Drawing.Point(101, 77);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 26);
+            this.comboBox2.TabIndex = 14;
+            this.toolTip1.SetToolTip(this.comboBox2, "State that issued the user\'s drivers license.");
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(151, 10);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(143, 23);
+            this.checkBox2.TabIndex = 14;
+            this.checkBox2.Text = "Same as billing";
+            this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // User
             // 
@@ -2223,7 +2304,6 @@
         private System.Windows.Forms.MaskedTextBox maskedTextGenAccessed;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label34;
@@ -2285,5 +2365,8 @@
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.DataGridViewButtonColumn Split;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.CheckBox checkBox2;
     }
 }
