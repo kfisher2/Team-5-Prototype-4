@@ -57,12 +57,6 @@
     <Compile Include="Email.Designer.cs">
       <DependentUpon>Email.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmailConfirmation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EmailConfirmation.Designer.cs">
-      <DependentUpon>EmailConfirmation.cs</DependentUpon>
-    </Compile>
     <Compile Include="EmployeeInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,9 +124,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Email.resx">
       <DependentUpon>Email.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EmailConfirmation.resx">
-      <DependentUpon>EmailConfirmation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeInfo.resx">
       <DependentUpon>EmployeeInfo.cs</DependentUpon>

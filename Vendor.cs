@@ -14,6 +14,7 @@ namespace LeaseToBuy
     {
         bool Testing = false;
         Email emailForm = null;
+        Undelete undeleteForm = null;
 
         public Vendor()
         {
@@ -51,7 +52,7 @@ namespace LeaseToBuy
 
         }
 
-        void NormalMode()
+        void NormalText()
         {
             textShipStreet1.Text = "123 Midnight Dr";
             textShipStreet2.Text = "Suite 102";
@@ -74,6 +75,11 @@ namespace LeaseToBuy
             txtContactPhone2.Text = "281-555-7000";
             txtContactFax.Text = "281-555-7770";
             textVendorURL.Text = "haloware.wordpress.com";
+        }
+
+        void NormalMode()
+        {
+            NormalText();
             this.BackColor = Color.SeaGreen;
         }
 
@@ -336,6 +342,45 @@ namespace LeaseToBuy
             cancelButton.Visible = false;
             panel1.Enabled = true;
             NormalMode();
+        }
+
+        private void undeleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            undeleteForm = new Undelete();
+            undeleteForm.Show();
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NormalMode();
+            NormalText();
+            MessageBox.Show("Delete Successful");
+        }
+
+        private void cancelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnEditMode.Text = "Edit Mode";
+            btnAddMode.Text = "Add Vendor";
+            btnAddMode.ForeColor = Color.Black;
+            cancelButton.Visible = false;
+            panel1.Enabled = true;
+            NormalMode();
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnEditMode.Text = "Edit Mode";
+            this.BackColor = Color.SeaGreen;
+            btnAddMode.Text = "Add Order";
+            btnAddMode.ForeColor = Color.Black;
+            cancelButton.Visible = false;
+            panel1.Enabled = true;
+            this.BackColor = Color.SeaGreen;
+        }
+
+        private void addToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddMode();
         }
     }
 }

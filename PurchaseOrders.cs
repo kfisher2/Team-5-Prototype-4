@@ -14,6 +14,7 @@ namespace LeaseToBuy
     {
         bool Testing = false;
         Vendor vendorForm = null;
+        Undelete undeleteForm = null;
 
         public PurchaseOrders()
         {
@@ -78,9 +79,8 @@ namespace LeaseToBuy
 
         }
 
-        private void NormalMode_Click(object sender, EventArgs e)
+        void NormalText()
         {
-            NormalMode();
             vendorID.Text = "10389";
             vendorName.Text = "Haloware Inc.";
             vendorContactName.Text = "Jordan Myers";
@@ -92,6 +92,13 @@ namespace LeaseToBuy
             shipSt2.Text = "Docking Station C";
             shipState.Text = "Texas";
             shipZip.Text = "78704";
+        }
+
+        private void NormalMode_Click(object sender, EventArgs e)
+        {
+            NormalMode();
+            NormalText();
+
 
 
         }
@@ -103,42 +110,36 @@ namespace LeaseToBuy
 
         void AddMode()
         {
-            this.BackColor = Color.SteelBlue;
-            vendorID.Text = "";
-            vendorName.Text = "";
-            vendorContactName.Text = "";
-            vendorContactPhone.Text = "";
-            vendorURL.Text = "";
-            shipName.Text = "";
-            shipCity.Text = "";
-            shipSt1.Text = "";
-            shipSt2.Text = "";
-            shipState.Text = "";
-            shipZip.Text = "";
-            btnOpenVendor.Visible = false;
-            vendorLogo.Visible = false;
-            lbVendorContactName.Visible = false;
-            lbVendorContactPhone.Visible = false;
-            lbVendorName.Visible = false;
-            lbVendorURL.Visible = false;
-            vendorContactPhone.Visible = false;
-            btnFindVendor.Visible = true;
-
-        }
-
-        private void btnAddMode_Click(object sender, EventArgs e)
-        {
             if (btnAddMode.Text == "Save")
             {
                 btnAddMode.Text = "Add Order";
-                btnAddMode.ForeColor = Color.MidnightBlue;
+                btnAddMode.ForeColor = Color.Black;
                 cancelButton.Visible = false;
                 panel1.Enabled = true;
                 NormalMode();
             }
             else
             {
-                AddMode();
+                this.BackColor = Color.SteelBlue;
+                vendorID.Text = "";
+                vendorName.Text = "";
+                vendorContactName.Text = "";
+                vendorContactPhone.Text = "";
+                vendorURL.Text = "";
+                shipName.Text = "";
+                shipCity.Text = "";
+                shipSt1.Text = "";
+                shipSt2.Text = "";
+                shipState.Text = "";
+                shipZip.Text = "";
+                btnOpenVendor.Visible = false;
+                vendorLogo.Visible = false;
+                lbVendorContactName.Visible = false;
+                lbVendorContactPhone.Visible = false;
+                lbVendorName.Visible = false;
+                lbVendorURL.Visible = false;
+                vendorContactPhone.Visible = false;
+                btnFindVendor.Visible = true;
                 btnAddMode.Text = "Save";
                 btnAddMode.ForeColor = Color.MidnightBlue;
                 cancelButton.ForeColor = Color.MidnightBlue; ;
@@ -154,6 +155,12 @@ namespace LeaseToBuy
                 checkBoxRecieved.Enabled = true;
             }
 
+        }
+
+        private void btnAddMode_Click(object sender, EventArgs e)
+        {
+
+            AddMode();
         }
 
         private void closeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -387,6 +394,59 @@ namespace LeaseToBuy
             vendorContactPhone.Visible = true;
             btnFindVendor.Visible = false;
             NormalMode();
+        }
+
+        private void reportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void locationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cancelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel1.Enabled = true;
+            btnAddMode.Text = "Add Order";
+            btnAddMode.ForeColor = Color.Black;
+            cancelButton.ForeColor = Color.Black;
+            cancelButton.Visible = false;
+            NormalMode();
+            this.BackColor = Color.SeaGreen;
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnEditMode.Text = "Edit Mode";
+            this.BackColor = Color.SeaGreen;
+            checkBoxSent.Enabled = false;
+            checkBoxRecieved.Enabled = false;
+            btnAddMode.Text = "Add Order";
+            btnAddMode.ForeColor = Color.Black;
+            cancelButton.Visible = false;
+            panel1.Enabled = true;
+            NormalMode();
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NormalMode();
+            NormalText();
+            MessageBox.Show("Delete Successful");
+
+        }
+
+        private void undeleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            undeleteForm = new Undelete();
+            undeleteForm.Show();
+        }
+
+        private void addToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddMode();
         }
     }
 }

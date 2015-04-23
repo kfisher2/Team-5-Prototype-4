@@ -12,7 +12,7 @@ namespace LeaseToBuy
 {
     public partial class Email : Form
     {
-        EmailConfirmation emailConfirm = null;
+     
         public Email()
         {
             InitializeComponent();
@@ -25,10 +25,9 @@ namespace LeaseToBuy
 
         private void sendBtn_Click(object sender, EventArgs e)
         {
-            emailConfirm = new EmailConfirmation();
-            emailConfirm.MdiParent = this.MdiParent;
+            
             this.Close();
-            emailConfirm.Show();
+            MessageBox.Show("The e-mail to Jordan Myers was sent!");
         }
     }
 }

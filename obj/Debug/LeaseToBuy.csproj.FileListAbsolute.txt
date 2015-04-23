@@ -220,7 +220,6 @@ C:\Users\kfisher2\Desktop\Team-5-Prototype-4\bin\Debug\LeaseToBuy.pdb
 C:\Users\kfisher2\Desktop\Team-5-Prototype-4\obj\Debug\LeaseToBuy.csprojResolveAssemblyReference.cache
 C:\Users\kfisher2\Desktop\Team-5-Prototype-4\obj\Debug\LeaseToBuy.CreditCards.resources
 C:\Users\kfisher2\Desktop\Team-5-Prototype-4\obj\Debug\LeaseToBuy.Email.resources
-C:\Users\kfisher2\Desktop\Team-5-Prototype-4\obj\Debug\LeaseToBuy.EmailConfirmation.resources
 C:\Users\kfisher2\Desktop\Team-5-Prototype-4\obj\Debug\LeaseToBuy.EmployeeInfo.resources
 C:\Users\kfisher2\Desktop\Team-5-Prototype-4\obj\Debug\LeaseToBuy.Login.resources
 C:\Users\kfisher2\Desktop\Team-5-Prototype-4\obj\Debug\LeaseToBuy.MainWindow.resources
