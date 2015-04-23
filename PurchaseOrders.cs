@@ -491,5 +491,10 @@ namespace LeaseToBuy
             MessageBox.Show("Your order has been placed with Haloware Inc. The expected shipping time from this vendor is 5-7 business days.");
             checkBoxSent.Checked = true;
         }
+
+        private void shipName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -37,7 +37,7 @@
             this.cancelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.undeleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripTextBox();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -95,12 +95,31 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.Purchases = new System.Windows.Forms.TabPage();
+            this.groupBoxSelect = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.addtoorder = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Item = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemDescrip = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UnitCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Category = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Style = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.BusinessContact = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.textContactNotes = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.txtContactFax = new System.Windows.Forms.MaskedTextBox();
+            this.txtContactPhone2 = new System.Windows.Forms.MaskedTextBox();
+            this.txtContactPhone1 = new System.Windows.Forms.MaskedTextBox();
             this.pictureBoxContact = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtContactPosition = new System.Windows.Forms.TextBox();
@@ -115,6 +134,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.PrimaryTabPanel = new System.Windows.Forms.TabControl();
             this.General = new System.Windows.Forms.TabPage();
+            this.labelCompanyName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -155,29 +175,10 @@
             this.label23 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cancelButton = new System.Windows.Forms.Button();
-            this.groupBoxSelect = new System.Windows.Forms.GroupBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.labelCompanyName = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtContactPhone1 = new System.Windows.Forms.MaskedTextBox();
-            this.txtContactPhone2 = new System.Windows.Forms.MaskedTextBox();
-            this.txtContactFax = new System.Windows.Forms.MaskedTextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.addtoorder = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Item = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ItemDescrip = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UnitCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Category = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Style = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.Purchases.SuspendLayout();
+            this.groupBoxSelect.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.BusinessContact.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -190,7 +191,6 @@
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.groupBoxSelect.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -210,7 +210,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.ShowItemToolTips = true;
-            this.menuStrip1.Size = new System.Drawing.Size(1236, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1236, 27);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.Visible = false;
@@ -218,49 +218,49 @@
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(41, 23);
             this.addToolStripMenuItem.Text = "Add";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 23);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(43, 23);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // cancelToolStripMenuItem
             // 
             this.cancelToolStripMenuItem.Name = "cancelToolStripMenuItem";
-            this.cancelToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.cancelToolStripMenuItem.Size = new System.Drawing.Size(55, 23);
             this.cancelToolStripMenuItem.Text = "Cancel";
             this.cancelToolStripMenuItem.Click += new System.EventHandler(this.cancelToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(52, 23);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // undeleteToolStripMenuItem
             // 
             this.undeleteToolStripMenuItem.Name = "undeleteToolStripMenuItem";
-            this.undeleteToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.undeleteToolStripMenuItem.Size = new System.Drawing.Size(66, 23);
             this.undeleteToolStripMenuItem.Text = "Undelete";
             this.undeleteToolStripMenuItem.Click += new System.EventHandler(this.undeleteToolStripMenuItem_Click);
             // 
             // searchToolStripMenuItem
             // 
             this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
-            this.searchToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(54, 23);
             this.searchToolStripMenuItem.Text = "Search";
             // 
             // reportsToolStripMenuItem
@@ -271,7 +271,7 @@
             this.locationToolStripMenuItem,
             this.toolStripMenuItem2});
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
-            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(59, 23);
             this.reportsToolStripMenuItem.Text = "Reports";
             // 
             // salesToolStripMenuItem
@@ -301,20 +301,20 @@
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(139, 20);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(139, 23);
             this.toolStripMenuItem1.Text = "===============";
             // 
             // minimizeToolStripMenuItem
             // 
             this.minimizeToolStripMenuItem.Name = "minimizeToolStripMenuItem";
-            this.minimizeToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.minimizeToolStripMenuItem.Size = new System.Drawing.Size(68, 23);
             this.minimizeToolStripMenuItem.Text = "Minimize";
             this.minimizeToolStripMenuItem.Click += new System.EventHandler(this.minimizeToolStripMenuItem_Click);
             // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(48, 23);
             this.closeToolStripMenuItem.Text = "Close";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
@@ -878,6 +878,16 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(425, 283);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(67, 26);
+            this.button4.TabIndex = 30;
+            this.button4.Text = "Fax";
+            this.toolTip1.SetToolTip(this.button4, "Opens your computer\'s default email program to send the user an email.");
+            this.button4.UseVisualStyleBackColor = true;
+            // 
             // Purchases
             // 
             this.Purchases.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -891,6 +901,90 @@
             this.Purchases.Size = new System.Drawing.Size(1204, 423);
             this.Purchases.TabIndex = 5;
             this.Purchases.Text = "Vendor Product List";
+            // 
+            // groupBoxSelect
+            // 
+            this.groupBoxSelect.Controls.Add(this.textBox1);
+            this.groupBoxSelect.Controls.Add(this.label24);
+            this.groupBoxSelect.Controls.Add(this.label28);
+            this.groupBoxSelect.Controls.Add(this.comboBox2);
+            this.groupBoxSelect.Controls.Add(this.label27);
+            this.groupBoxSelect.Controls.Add(this.comboBox1);
+            this.groupBoxSelect.Location = new System.Drawing.Point(39, 365);
+            this.groupBoxSelect.Name = "groupBoxSelect";
+            this.groupBoxSelect.Size = new System.Drawing.Size(789, 52);
+            this.groupBoxSelect.TabIndex = 3;
+            this.groupBoxSelect.TabStop = false;
+            this.groupBoxSelect.Text = "Select";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(641, 18);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(126, 26);
+            this.textBox1.TabIndex = 5;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(574, 22);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(61, 19);
+            this.label24.TabIndex = 4;
+            this.label24.Text = "Price <";
+            this.label24.Click += new System.EventHandler(this.label24_Click_1);
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(314, 22);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(47, 19);
+            this.label28.TabIndex = 3;
+            this.label28.Text = "Style";
+            this.label28.Click += new System.EventHandler(this.label28_Click);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Headphones",
+            "Keyboard",
+            "Mouse",
+            "Laptop",
+            "Desktop",
+            "Graphics Card",
+            "Processor"});
+            this.comboBox2.Location = new System.Drawing.Point(366, 19);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(188, 27);
+            this.comboBox2.TabIndex = 2;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(16, 22);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(79, 19);
+            this.label27.TabIndex = 1;
+            this.label27.Text = "Category";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Automotive",
+            "Books",
+            "Electronics",
+            "Furniture",
+            "Kitchen",
+            "Luggage & Travel",
+            "Movies & TV",
+            "Office Supplies"});
+            this.comboBox1.Location = new System.Drawing.Point(101, 18);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(188, 27);
+            this.comboBox1.TabIndex = 0;
             // 
             // dataGridView1
             // 
@@ -910,6 +1004,75 @@
             this.dataGridView1.Size = new System.Drawing.Size(1192, 353);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // addtoorder
+            // 
+            this.addtoorder.FillWeight = 8F;
+            this.addtoorder.HeaderText = "Add";
+            this.addtoorder.Name = "addtoorder";
+            // 
+            // Qty
+            // 
+            this.Qty.FillWeight = 8F;
+            this.Qty.HeaderText = "Qty";
+            this.Qty.Name = "Qty";
+            // 
+            // Item
+            // 
+            this.Item.FillWeight = 12F;
+            this.Item.HeaderText = "ItemID";
+            this.Item.Name = "Item";
+            // 
+            // ItemName
+            // 
+            this.ItemName.FillWeight = 20.72758F;
+            this.ItemName.HeaderText = "Name";
+            this.ItemName.Name = "ItemName";
+            // 
+            // ItemDescrip
+            // 
+            this.ItemDescrip.FillWeight = 20.72758F;
+            this.ItemDescrip.HeaderText = "Description";
+            this.ItemDescrip.Name = "ItemDescrip";
+            // 
+            // UnitCost
+            // 
+            this.UnitCost.FillWeight = 15F;
+            this.UnitCost.HeaderText = "Price";
+            this.UnitCost.Name = "UnitCost";
+            // 
+            // Category
+            // 
+            this.Category.FillWeight = 17F;
+            this.Category.HeaderText = "Category";
+            this.Category.Items.AddRange(new object[] {
+            "Automotive",
+            "Books",
+            "Electronics",
+            "Furniture",
+            "Kitchen",
+            "Luggage & Travel",
+            "Movies & TV",
+            "Office Supplies"});
+            this.Category.Name = "Category";
+            this.Category.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Category.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // Style
+            // 
+            this.Style.FillWeight = 17F;
+            this.Style.HeaderText = "Style";
+            this.Style.Items.AddRange(new object[] {
+            "Headphones",
+            "Keyboard",
+            "Mouse",
+            "Laptop",
+            "Desktop",
+            "Graphics Card",
+            "Processor"});
+            this.Style.Name = "Style";
+            this.Style.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Style.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // BusinessContact
             // 
@@ -969,6 +1132,36 @@
             this.groupBox5.TabIndex = 24;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Contact Info";
+            // 
+            // txtContactFax
+            // 
+            this.txtContactFax.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContactFax.Location = new System.Drawing.Point(119, 313);
+            this.txtContactFax.Mask = "(999) 000-0000";
+            this.txtContactFax.Name = "txtContactFax";
+            this.txtContactFax.Size = new System.Drawing.Size(140, 26);
+            this.txtContactFax.TabIndex = 29;
+            this.txtContactFax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtContactPhone2
+            // 
+            this.txtContactPhone2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContactPhone2.Location = new System.Drawing.Point(119, 271);
+            this.txtContactPhone2.Mask = "(999) 000-0000";
+            this.txtContactPhone2.Name = "txtContactPhone2";
+            this.txtContactPhone2.Size = new System.Drawing.Size(140, 26);
+            this.txtContactPhone2.TabIndex = 28;
+            this.txtContactPhone2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtContactPhone1
+            // 
+            this.txtContactPhone1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContactPhone1.Location = new System.Drawing.Point(119, 223);
+            this.txtContactPhone1.Mask = "(999) 000-0000";
+            this.txtContactPhone1.Name = "txtContactPhone1";
+            this.txtContactPhone1.Size = new System.Drawing.Size(140, 26);
+            this.txtContactPhone1.TabIndex = 27;
+            this.txtContactPhone1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBoxContact
             // 
@@ -1102,6 +1295,17 @@
             this.General.Size = new System.Drawing.Size(1204, 423);
             this.General.TabIndex = 7;
             this.General.Text = "General";
+            // 
+            // labelCompanyName
+            // 
+            this.labelCompanyName.AutoSize = true;
+            this.labelCompanyName.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCompanyName.Location = new System.Drawing.Point(270, 33);
+            this.labelCompanyName.Name = "labelCompanyName";
+            this.labelCompanyName.Size = new System.Drawing.Size(193, 32);
+            this.labelCompanyName.TabIndex = 76;
+            this.labelCompanyName.Text = "Haloware Inc.";
+            this.labelCompanyName.Click += new System.EventHandler(this.labelCompanyName_Click);
             // 
             // pictureBox1
             // 
@@ -1620,210 +1824,6 @@
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
-            // groupBoxSelect
-            // 
-            this.groupBoxSelect.Controls.Add(this.textBox1);
-            this.groupBoxSelect.Controls.Add(this.label24);
-            this.groupBoxSelect.Controls.Add(this.label28);
-            this.groupBoxSelect.Controls.Add(this.comboBox2);
-            this.groupBoxSelect.Controls.Add(this.label27);
-            this.groupBoxSelect.Controls.Add(this.comboBox1);
-            this.groupBoxSelect.Location = new System.Drawing.Point(39, 365);
-            this.groupBoxSelect.Name = "groupBoxSelect";
-            this.groupBoxSelect.Size = new System.Drawing.Size(789, 52);
-            this.groupBoxSelect.TabIndex = 3;
-            this.groupBoxSelect.TabStop = false;
-            this.groupBoxSelect.Text = "Select";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(16, 22);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(79, 19);
-            this.label27.TabIndex = 1;
-            this.label27.Text = "Category";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Automotive",
-            "Books",
-            "Electronics",
-            "Furniture",
-            "Kitchen",
-            "Luggage & Travel",
-            "Movies & TV",
-            "Office Supplies"});
-            this.comboBox1.Location = new System.Drawing.Point(101, 18);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(188, 27);
-            this.comboBox1.TabIndex = 0;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(314, 22);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(47, 19);
-            this.label28.TabIndex = 3;
-            this.label28.Text = "Style";
-            this.label28.Click += new System.EventHandler(this.label28_Click);
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Headphones",
-            "Keyboard",
-            "Mouse",
-            "Laptop",
-            "Desktop",
-            "Graphics Card",
-            "Processor"});
-            this.comboBox2.Location = new System.Drawing.Point(366, 19);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(188, 27);
-            this.comboBox2.TabIndex = 2;
-            // 
-            // labelCompanyName
-            // 
-            this.labelCompanyName.AutoSize = true;
-            this.labelCompanyName.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCompanyName.Location = new System.Drawing.Point(270, 33);
-            this.labelCompanyName.Name = "labelCompanyName";
-            this.labelCompanyName.Size = new System.Drawing.Size(193, 32);
-            this.labelCompanyName.TabIndex = 76;
-            this.labelCompanyName.Text = "Haloware Inc.";
-            this.labelCompanyName.Click += new System.EventHandler(this.labelCompanyName_Click);
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(574, 22);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(61, 19);
-            this.label24.TabIndex = 4;
-            this.label24.Text = "Price <";
-            this.label24.Click += new System.EventHandler(this.label24_Click_1);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(641, 18);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(126, 26);
-            this.textBox1.TabIndex = 5;
-            // 
-            // txtContactPhone1
-            // 
-            this.txtContactPhone1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContactPhone1.Location = new System.Drawing.Point(119, 223);
-            this.txtContactPhone1.Mask = "(999) 000-0000";
-            this.txtContactPhone1.Name = "txtContactPhone1";
-            this.txtContactPhone1.Size = new System.Drawing.Size(140, 26);
-            this.txtContactPhone1.TabIndex = 27;
-            this.txtContactPhone1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtContactPhone2
-            // 
-            this.txtContactPhone2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContactPhone2.Location = new System.Drawing.Point(119, 271);
-            this.txtContactPhone2.Mask = "(999) 000-0000";
-            this.txtContactPhone2.Name = "txtContactPhone2";
-            this.txtContactPhone2.Size = new System.Drawing.Size(140, 26);
-            this.txtContactPhone2.TabIndex = 28;
-            this.txtContactPhone2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtContactFax
-            // 
-            this.txtContactFax.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContactFax.Location = new System.Drawing.Point(119, 313);
-            this.txtContactFax.Mask = "(999) 000-0000";
-            this.txtContactFax.Name = "txtContactFax";
-            this.txtContactFax.Size = new System.Drawing.Size(140, 26);
-            this.txtContactFax.TabIndex = 29;
-            this.txtContactFax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(425, 283);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(67, 26);
-            this.button4.TabIndex = 30;
-            this.button4.Text = "Fax";
-            this.toolTip1.SetToolTip(this.button4, "Opens your computer\'s default email program to send the user an email.");
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // addtoorder
-            // 
-            this.addtoorder.FillWeight = 8F;
-            this.addtoorder.HeaderText = "Add";
-            this.addtoorder.Name = "addtoorder";
-            // 
-            // Qty
-            // 
-            this.Qty.FillWeight = 8F;
-            this.Qty.HeaderText = "Qty";
-            this.Qty.Name = "Qty";
-            // 
-            // Item
-            // 
-            this.Item.FillWeight = 12F;
-            this.Item.HeaderText = "ItemID";
-            this.Item.Name = "Item";
-            // 
-            // ItemName
-            // 
-            this.ItemName.FillWeight = 20.72758F;
-            this.ItemName.HeaderText = "Name";
-            this.ItemName.Name = "ItemName";
-            // 
-            // ItemDescrip
-            // 
-            this.ItemDescrip.FillWeight = 20.72758F;
-            this.ItemDescrip.HeaderText = "Description";
-            this.ItemDescrip.Name = "ItemDescrip";
-            // 
-            // UnitCost
-            // 
-            this.UnitCost.FillWeight = 15F;
-            this.UnitCost.HeaderText = "Price";
-            this.UnitCost.Name = "UnitCost";
-            // 
-            // Category
-            // 
-            this.Category.FillWeight = 17F;
-            this.Category.HeaderText = "Category";
-            this.Category.Items.AddRange(new object[] {
-            "Automotive",
-            "Books",
-            "Electronics",
-            "Furniture",
-            "Kitchen",
-            "Luggage & Travel",
-            "Movies & TV",
-            "Office Supplies"});
-            this.Category.Name = "Category";
-            this.Category.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Category.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Style
-            // 
-            this.Style.FillWeight = 17F;
-            this.Style.HeaderText = "Style";
-            this.Style.Items.AddRange(new object[] {
-            "Headphones",
-            "Keyboard",
-            "Mouse",
-            "Laptop",
-            "Desktop",
-            "Graphics Card",
-            "Processor"});
-            this.Style.Name = "Style";
-            this.Style.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Style.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
             // Vendor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
@@ -1849,6 +1849,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.Purchases.ResumeLayout(false);
+            this.groupBoxSelect.ResumeLayout(false);
+            this.groupBoxSelect.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.BusinessContact.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
@@ -1867,8 +1869,6 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.groupBoxSelect.ResumeLayout(false);
-            this.groupBoxSelect.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1883,7 +1883,6 @@
         private System.Windows.Forms.ToolStripMenuItem cancelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem undeleteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem minimizeToolStripMenuItem;
@@ -2021,5 +2020,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn UnitCost;
         private System.Windows.Forms.DataGridViewComboBoxColumn Category;
         private System.Windows.Forms.DataGridViewComboBoxColumn Style;
+        private System.Windows.Forms.ToolStripTextBox searchToolStripMenuItem;
     }
 }

@@ -30,10 +30,5 @@ namespace LeaseToBuy
             this.Close();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            textUsername.Text = "THicks";
-            textPass.Text = "*****";
-        }
     }
 }

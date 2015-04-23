@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.textUsername = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.textPass = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -66,6 +67,7 @@
             this.button2.Size = new System.Drawing.Size(264, 32);
             this.button2.TabIndex = 3;
             this.button2.Text = "Forgot Password";
+            this.toolTip1.SetToolTip(this.button2, "Recover password.");
             this.button2.UseVisualStyleBackColor = true;
             // 
             // textUsername
@@ -84,20 +86,9 @@
             this.button3.Size = new System.Drawing.Size(264, 32);
             this.button3.TabIndex = 6;
             this.button3.Text = "Login";
+            this.toolTip1.SetToolTip(this.button3, "Login using current user information.");
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(32, 177);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(5);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(180, 22);
-            this.radioButton1.TabIndex = 7;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Remember Username";
-            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // textPass
             // 
@@ -108,18 +99,15 @@
             this.textPass.Size = new System.Drawing.Size(175, 26);
             this.textPass.TabIndex = 5;
             // 
-            // button4
+            // checkBox1
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.ForeColor = System.Drawing.Color.Transparent;
-            this.button4.Location = new System.Drawing.Point(394, 329);
-            this.button4.Margin = new System.Windows.Forms.Padding(5);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(30, 32);
-            this.button4.TabIndex = 8;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Visible = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(37, 177);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(181, 22);
+            this.checkBox1.TabIndex = 8;
+            this.checkBox1.Text = "Remember Username";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // Login
             // 
@@ -127,8 +115,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(320, 221);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.textPass);
             this.Controls.Add(this.textUsername);
@@ -153,8 +140,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textUsername;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.TextBox textPass;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

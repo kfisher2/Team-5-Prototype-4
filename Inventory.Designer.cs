@@ -37,7 +37,7 @@
             this.cancelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.undeleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripTextBox();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.purchaseOrdersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stockReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -90,14 +90,16 @@
             this.rightButtonLeft = new System.Windows.Forms.Button();
             this.btnAddMode = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.General = new System.Windows.Forms.TabPage();
             this.btnGoToVendor = new System.Windows.Forms.Button();
+            this.comboPriority = new System.Windows.Forms.ComboBox();
+            this.comboCategory = new System.Windows.Forms.ComboBox();
+            this.cancelButton = new System.Windows.Forms.Button();
+            this.General = new System.Windows.Forms.TabPage();
             this.textVendorID = new System.Windows.Forms.TextBox();
             this.textModelNo = new System.Windows.Forms.TextBox();
             this.textSKU = new System.Windows.Forms.TextBox();
             this.txtItemName = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.comboPriority = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -124,22 +126,20 @@
             this.textLength = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.textHeight = new System.Windows.Forms.TextBox();
-            this.comboCategory = new System.Windows.Forms.ComboBox();
             this.label30 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.textBoxNotes = new System.Windows.Forms.TextBox();
             this.PrimaryTabPanel = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridItems = new System.Windows.Forms.DataGridView();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.cancelButton = new System.Windows.Forms.Button();
             this.itemID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.transactionId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.status = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.serialNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.notes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.General.SuspendLayout();
@@ -169,7 +169,7 @@
             this.closeToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1236, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1236, 27);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.Visible = false;
@@ -177,44 +177,48 @@
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(41, 23);
             this.addToolStripMenuItem.Text = "Add";
+            this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 23);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(43, 23);
             this.saveToolStripMenuItem.Text = "Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // cancelToolStripMenuItem
             // 
             this.cancelToolStripMenuItem.Name = "cancelToolStripMenuItem";
-            this.cancelToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.cancelToolStripMenuItem.Size = new System.Drawing.Size(55, 23);
             this.cancelToolStripMenuItem.Text = "Cancel";
+            this.cancelToolStripMenuItem.Click += new System.EventHandler(this.cancelToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(52, 23);
             this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // undeleteToolStripMenuItem
             // 
             this.undeleteToolStripMenuItem.Name = "undeleteToolStripMenuItem";
-            this.undeleteToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.undeleteToolStripMenuItem.Size = new System.Drawing.Size(66, 23);
             this.undeleteToolStripMenuItem.Text = "Undelete";
             // 
             // searchToolStripMenuItem
             // 
             this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
-            this.searchToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(54, 23);
             this.searchToolStripMenuItem.Text = "Search";
             // 
             // reportsToolStripMenuItem
@@ -224,7 +228,7 @@
             this.stockReportToolStripMenuItem,
             this.salesToolStripMenuItem});
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
-            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(59, 23);
             this.reportsToolStripMenuItem.Text = "Reports";
             // 
             // purchaseOrdersToolStripMenuItem
@@ -248,20 +252,20 @@
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(139, 20);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(139, 23);
             this.toolStripMenuItem1.Text = "===============";
             // 
             // minimizeToolStripMenuItem
             // 
             this.minimizeToolStripMenuItem.Name = "minimizeToolStripMenuItem";
-            this.minimizeToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.minimizeToolStripMenuItem.Size = new System.Drawing.Size(68, 23);
             this.minimizeToolStripMenuItem.Text = "Minimize";
             this.minimizeToolStripMenuItem.Click += new System.EventHandler(this.minimizeToolStripMenuItem_Click);
             // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(48, 23);
             this.closeToolStripMenuItem.Text = "Close";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
@@ -370,6 +374,7 @@
             this.button2.Size = new System.Drawing.Size(75, 35);
             this.button2.TabIndex = 40;
             this.button2.Text = "Redo last undid action.";
+            this.toolTip1.SetToolTip(this.button2, "Redo last undid action.");
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -388,7 +393,7 @@
             this.btnEditMode.Location = new System.Drawing.Point(189, 102);
             this.btnEditMode.Name = "btnEditMode";
             this.btnEditMode.Size = new System.Drawing.Size(129, 36);
-            this.btnEditMode.TabIndex = 37;
+            this.btnEditMode.TabIndex = 25;
             this.btnEditMode.Text = "Edit Mode";
             this.toolTip1.SetToolTip(this.btnEditMode, "Change to Edit Mode.");
             this.btnEditMode.UseVisualStyleBackColor = true;
@@ -399,7 +404,7 @@
             this.btnNormalMode.Location = new System.Drawing.Point(189, 60);
             this.btnNormalMode.Name = "btnNormalMode";
             this.btnNormalMode.Size = new System.Drawing.Size(129, 36);
-            this.btnNormalMode.TabIndex = 10;
+            this.btnNormalMode.TabIndex = 24;
             this.btnNormalMode.Text = "Normal Mode";
             this.toolTip1.SetToolTip(this.btnNormalMode, "Change to Normal Mode.");
             this.btnNormalMode.UseVisualStyleBackColor = true;
@@ -540,7 +545,7 @@
             this.MButton.Location = new System.Drawing.Point(813, 39);
             this.MButton.Name = "MButton";
             this.MButton.Size = new System.Drawing.Size(27, 23);
-            this.MButton.TabIndex = 23;
+            this.MButton.TabIndex = 38;
             this.MButton.Text = "M";
             this.toolTip1.SetToolTip(this.MButton, "Go to the first logical record whose primary user last name begins with \'M\'.");
             this.MButton.UseVisualStyleBackColor = true;
@@ -550,7 +555,7 @@
             this.LButton.Location = new System.Drawing.Point(780, 39);
             this.LButton.Name = "LButton";
             this.LButton.Size = new System.Drawing.Size(27, 23);
-            this.LButton.TabIndex = 22;
+            this.LButton.TabIndex = 37;
             this.LButton.Text = "L";
             this.toolTip1.SetToolTip(this.LButton, "Go to the first logical record whose primary user last name begins with \'L\'.");
             this.LButton.UseVisualStyleBackColor = true;
@@ -560,7 +565,7 @@
             this.KButton.Location = new System.Drawing.Point(747, 39);
             this.KButton.Name = "KButton";
             this.KButton.Size = new System.Drawing.Size(27, 23);
-            this.KButton.TabIndex = 21;
+            this.KButton.TabIndex = 36;
             this.KButton.Text = "K";
             this.toolTip1.SetToolTip(this.KButton, "Go to the first logical record whose primary user last name begins with \'K\'.");
             this.KButton.UseVisualStyleBackColor = true;
@@ -570,7 +575,7 @@
             this.JButton.Location = new System.Drawing.Point(714, 39);
             this.JButton.Name = "JButton";
             this.JButton.Size = new System.Drawing.Size(27, 23);
-            this.JButton.TabIndex = 20;
+            this.JButton.TabIndex = 35;
             this.JButton.Text = "J";
             this.toolTip1.SetToolTip(this.JButton, "Go to the first logical record whose primary user last name begins with \'J\'.");
             this.JButton.UseVisualStyleBackColor = true;
@@ -580,7 +585,7 @@
             this.IButton.Location = new System.Drawing.Point(681, 39);
             this.IButton.Name = "IButton";
             this.IButton.Size = new System.Drawing.Size(27, 23);
-            this.IButton.TabIndex = 19;
+            this.IButton.TabIndex = 34;
             this.IButton.Text = "I";
             this.toolTip1.SetToolTip(this.IButton, "Go to the first logical record whose primary user last name begins with \'I\'.");
             this.IButton.UseVisualStyleBackColor = true;
@@ -590,7 +595,7 @@
             this.HButton.Location = new System.Drawing.Point(648, 39);
             this.HButton.Name = "HButton";
             this.HButton.Size = new System.Drawing.Size(27, 23);
-            this.HButton.TabIndex = 18;
+            this.HButton.TabIndex = 33;
             this.HButton.Text = "H";
             this.toolTip1.SetToolTip(this.HButton, "Go to the first logical record whose primary user last name begins with \'H\'.");
             this.HButton.UseVisualStyleBackColor = true;
@@ -600,7 +605,7 @@
             this.GButton.Location = new System.Drawing.Point(615, 39);
             this.GButton.Name = "GButton";
             this.GButton.Size = new System.Drawing.Size(27, 23);
-            this.GButton.TabIndex = 17;
+            this.GButton.TabIndex = 32;
             this.GButton.Text = "G";
             this.toolTip1.SetToolTip(this.GButton, "Go to the first logical record whose primary user last name begins with \'G\'.");
             this.GButton.UseVisualStyleBackColor = true;
@@ -610,7 +615,7 @@
             this.FButton.Location = new System.Drawing.Point(582, 39);
             this.FButton.Name = "FButton";
             this.FButton.Size = new System.Drawing.Size(27, 23);
-            this.FButton.TabIndex = 16;
+            this.FButton.TabIndex = 31;
             this.FButton.Text = "F";
             this.toolTip1.SetToolTip(this.FButton, "Go to the first logical record whose primary user last name begins with \'F\'.");
             this.FButton.UseVisualStyleBackColor = true;
@@ -620,7 +625,7 @@
             this.EButton.Location = new System.Drawing.Point(549, 39);
             this.EButton.Name = "EButton";
             this.EButton.Size = new System.Drawing.Size(27, 23);
-            this.EButton.TabIndex = 15;
+            this.EButton.TabIndex = 30;
             this.EButton.Text = "E";
             this.toolTip1.SetToolTip(this.EButton, "Go to the first logical record whose primary user last name begins with \'E\'.");
             this.EButton.UseVisualStyleBackColor = true;
@@ -630,7 +635,7 @@
             this.DButton.Location = new System.Drawing.Point(516, 39);
             this.DButton.Name = "DButton";
             this.DButton.Size = new System.Drawing.Size(27, 23);
-            this.DButton.TabIndex = 14;
+            this.DButton.TabIndex = 29;
             this.DButton.Text = "D";
             this.toolTip1.SetToolTip(this.DButton, "Go to the first logical record whose primary user last name begins with \'D\'.");
             this.DButton.UseVisualStyleBackColor = true;
@@ -640,7 +645,7 @@
             this.CButton.Location = new System.Drawing.Point(483, 39);
             this.CButton.Name = "CButton";
             this.CButton.Size = new System.Drawing.Size(27, 23);
-            this.CButton.TabIndex = 13;
+            this.CButton.TabIndex = 28;
             this.CButton.Text = "C";
             this.toolTip1.SetToolTip(this.CButton, "Go to the first logical record whose primary user last name begins with \'C\'.");
             this.CButton.UseVisualStyleBackColor = true;
@@ -650,7 +655,7 @@
             this.BButton.Location = new System.Drawing.Point(450, 39);
             this.BButton.Name = "BButton";
             this.BButton.Size = new System.Drawing.Size(27, 23);
-            this.BButton.TabIndex = 12;
+            this.BButton.TabIndex = 27;
             this.BButton.Text = "B";
             this.toolTip1.SetToolTip(this.BButton, "Go to the first logical record whose primary user last name begins with \'B\'.");
             this.BButton.UseVisualStyleBackColor = true;
@@ -714,10 +719,11 @@
             this.AButton.Location = new System.Drawing.Point(417, 39);
             this.AButton.Name = "AButton";
             this.AButton.Size = new System.Drawing.Size(27, 23);
-            this.AButton.TabIndex = 7;
+            this.AButton.TabIndex = 26;
             this.AButton.Text = "A";
             this.toolTip1.SetToolTip(this.AButton, "Go to the first logical record whose primary user last name begins with \'A\'.");
             this.AButton.UseVisualStyleBackColor = true;
+            this.AButton.Click += new System.EventHandler(this.AButton_Click);
             // 
             // leftButtonLeft
             // 
@@ -726,10 +732,11 @@
             this.leftButtonLeft.Location = new System.Drawing.Point(6, 55);
             this.leftButtonLeft.Name = "leftButtonLeft";
             this.leftButtonLeft.Size = new System.Drawing.Size(49, 46);
-            this.leftButtonLeft.TabIndex = 4;
+            this.leftButtonLeft.TabIndex = 20;
             this.leftButtonLeft.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.toolTip1.SetToolTip(this.leftButtonLeft, "Previous Logical Record");
             this.leftButtonLeft.UseVisualStyleBackColor = true;
+            this.leftButtonLeft.Click += new System.EventHandler(this.leftButtonLeft_Click);
             // 
             // downButtonLeft
             // 
@@ -738,7 +745,7 @@
             this.downButtonLeft.Location = new System.Drawing.Point(60, 109);
             this.downButtonLeft.Name = "downButtonLeft";
             this.downButtonLeft.Size = new System.Drawing.Size(49, 46);
-            this.downButtonLeft.TabIndex = 6;
+            this.downButtonLeft.TabIndex = 22;
             this.downButtonLeft.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.toolTip1.SetToolTip(this.downButtonLeft, "Last Logical Record");
             this.downButtonLeft.UseVisualStyleBackColor = true;
@@ -750,7 +757,7 @@
             this.upButtonLeft.Location = new System.Drawing.Point(60, 3);
             this.upButtonLeft.Name = "upButtonLeft";
             this.upButtonLeft.Size = new System.Drawing.Size(49, 46);
-            this.upButtonLeft.TabIndex = 3;
+            this.upButtonLeft.TabIndex = 19;
             this.upButtonLeft.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.toolTip1.SetToolTip(this.upButtonLeft, "First Logical Record");
             this.upButtonLeft.UseVisualStyleBackColor = true;
@@ -762,7 +769,7 @@
             this.rightButtonLeft.Location = new System.Drawing.Point(115, 55);
             this.rightButtonLeft.Name = "rightButtonLeft";
             this.rightButtonLeft.Size = new System.Drawing.Size(49, 46);
-            this.rightButtonLeft.TabIndex = 5;
+            this.rightButtonLeft.TabIndex = 21;
             this.rightButtonLeft.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.toolTip1.SetToolTip(this.rightButtonLeft, "Next Logical Record");
             this.rightButtonLeft.UseVisualStyleBackColor = true;
@@ -772,7 +779,7 @@
             this.btnAddMode.Location = new System.Drawing.Point(0, 22);
             this.btnAddMode.Name = "btnAddMode";
             this.btnAddMode.Size = new System.Drawing.Size(129, 36);
-            this.btnAddMode.TabIndex = 38;
+            this.btnAddMode.TabIndex = 23;
             this.btnAddMode.Text = "Add Item";
             this.toolTip1.SetToolTip(this.btnAddMode, "Change to Add Mode.");
             this.btnAddMode.UseVisualStyleBackColor = true;
@@ -781,6 +788,59 @@
             // toolTip1
             // 
             this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
+            // 
+            // btnGoToVendor
+            // 
+            this.btnGoToVendor.Location = new System.Drawing.Point(168, 275);
+            this.btnGoToVendor.Name = "btnGoToVendor";
+            this.btnGoToVendor.Size = new System.Drawing.Size(162, 23);
+            this.btnGoToVendor.TabIndex = 6;
+            this.btnGoToVendor.Text = "Go To Vendor";
+            this.toolTip1.SetToolTip(this.btnGoToVendor, "View the vender\'s info.");
+            this.btnGoToVendor.UseVisualStyleBackColor = true;
+            // 
+            // comboPriority
+            // 
+            this.comboPriority.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboPriority.FormattingEnabled = true;
+            this.comboPriority.Items.AddRange(new object[] {
+            "High",
+            "Low",
+            "As Needed"});
+            this.comboPriority.Location = new System.Drawing.Point(168, 304);
+            this.comboPriority.Name = "comboPriority";
+            this.comboPriority.Size = new System.Drawing.Size(121, 27);
+            this.comboPriority.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.comboPriority, "Select the priority of when to reorder this product.");
+            // 
+            // comboCategory
+            // 
+            this.comboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboCategory.FormattingEnabled = true;
+            this.comboCategory.Items.AddRange(new object[] {
+            "Furniture",
+            "Electronics",
+            "Appliances",
+            "Computers",
+            "Home Entertainment",
+            "Other"});
+            this.comboCategory.Location = new System.Drawing.Point(168, 76);
+            this.comboCategory.Name = "comboCategory";
+            this.comboCategory.Size = new System.Drawing.Size(162, 27);
+            this.comboCategory.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.comboCategory, "Select a catagory tag for this item.");
+            this.comboCategory.SelectedIndexChanged += new System.EventHandler(this.comboCategory_SelectedIndexChanged);
+            // 
+            // cancelButton
+            // 
+            this.cancelButton.Location = new System.Drawing.Point(135, 22);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(78, 36);
+            this.cancelButton.TabIndex = 100;
+            this.cancelButton.Text = "Cancel";
+            this.toolTip1.SetToolTip(this.cancelButton, "Do not save this new item.");
+            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // General
             // 
@@ -809,16 +869,6 @@
             this.General.Text = "Product Info";
             this.General.Click += new System.EventHandler(this.General_Click);
             // 
-            // btnGoToVendor
-            // 
-            this.btnGoToVendor.Location = new System.Drawing.Point(168, 275);
-            this.btnGoToVendor.Name = "btnGoToVendor";
-            this.btnGoToVendor.Size = new System.Drawing.Size(162, 23);
-            this.btnGoToVendor.TabIndex = 62;
-            this.btnGoToVendor.Text = "Go To Vendor";
-            this.toolTip1.SetToolTip(this.btnGoToVendor, "View the vender\'s info.");
-            this.btnGoToVendor.UseVisualStyleBackColor = true;
-            // 
             // textVendorID
             // 
             this.textVendorID.BackColor = System.Drawing.Color.White;
@@ -826,7 +876,7 @@
             this.textVendorID.Location = new System.Drawing.Point(168, 243);
             this.textVendorID.Name = "textVendorID";
             this.textVendorID.Size = new System.Drawing.Size(162, 26);
-            this.textVendorID.TabIndex = 61;
+            this.textVendorID.TabIndex = 5;
             // 
             // textModelNo
             // 
@@ -835,7 +885,7 @@
             this.textModelNo.Location = new System.Drawing.Point(168, 143);
             this.textModelNo.Name = "textModelNo";
             this.textModelNo.Size = new System.Drawing.Size(162, 26);
-            this.textModelNo.TabIndex = 57;
+            this.textModelNo.TabIndex = 4;
             // 
             // textSKU
             // 
@@ -844,7 +894,7 @@
             this.textSKU.Location = new System.Drawing.Point(168, 110);
             this.textSKU.Name = "textSKU";
             this.textSKU.Size = new System.Drawing.Size(162, 26);
-            this.textSKU.TabIndex = 55;
+            this.textSKU.TabIndex = 3;
             this.textSKU.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // txtItemName
@@ -854,7 +904,7 @@
             this.txtItemName.Location = new System.Drawing.Point(168, 43);
             this.txtItemName.Name = "txtItemName";
             this.txtItemName.Size = new System.Drawing.Size(162, 26);
-            this.txtItemName.TabIndex = 53;
+            this.txtItemName.TabIndex = 1;
             // 
             // label11
             // 
@@ -864,20 +914,6 @@
             this.label11.Size = new System.Drawing.Size(84, 19);
             this.label11.TabIndex = 60;
             this.label11.Text = "Vendor ID";
-            // 
-            // comboPriority
-            // 
-            this.comboPriority.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboPriority.FormattingEnabled = true;
-            this.comboPriority.Items.AddRange(new object[] {
-            "High",
-            "Low",
-            "As Needed"});
-            this.comboPriority.Location = new System.Drawing.Point(168, 304);
-            this.comboPriority.Name = "comboPriority";
-            this.comboPriority.Size = new System.Drawing.Size(121, 27);
-            this.comboPriority.TabIndex = 59;
-            this.toolTip1.SetToolTip(this.comboPriority, "Select the priority of when to reorder this product.");
             // 
             // label7
             // 
@@ -924,7 +960,7 @@
             this.textBoxDescription.Multiline = true;
             this.textBoxDescription.Name = "textBoxDescription";
             this.textBoxDescription.Size = new System.Drawing.Size(432, 127);
-            this.textBoxDescription.TabIndex = 43;
+            this.textBoxDescription.TabIndex = 17;
             // 
             // label1
             // 
@@ -969,7 +1005,7 @@
             this.textUnitPrice.Location = new System.Drawing.Point(163, 157);
             this.textUnitPrice.Name = "textUnitPrice";
             this.textUnitPrice.Size = new System.Drawing.Size(201, 26);
-            this.textUnitPrice.TabIndex = 13;
+            this.textUnitPrice.TabIndex = 16;
             // 
             // label3
             // 
@@ -987,7 +1023,7 @@
             this.textqtyPerUnit.Location = new System.Drawing.Point(163, 125);
             this.textqtyPerUnit.Name = "textqtyPerUnit";
             this.textqtyPerUnit.Size = new System.Drawing.Size(201, 26);
-            this.textqtyPerUnit.TabIndex = 11;
+            this.textqtyPerUnit.TabIndex = 15;
             this.textqtyPerUnit.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textUnitsInStock
@@ -996,7 +1032,7 @@
             this.textUnitsInStock.Location = new System.Drawing.Point(163, 25);
             this.textUnitsInStock.Name = "textUnitsInStock";
             this.textUnitsInStock.Size = new System.Drawing.Size(203, 26);
-            this.textUnitsInStock.TabIndex = 9;
+            this.textUnitsInStock.TabIndex = 12;
             // 
             // label13
             // 
@@ -1022,7 +1058,7 @@
             this.textUnitsOnOrder.Location = new System.Drawing.Point(163, 59);
             this.textUnitsOnOrder.Name = "textUnitsOnOrder";
             this.textUnitsOnOrder.Size = new System.Drawing.Size(203, 26);
-            this.textUnitsOnOrder.TabIndex = 5;
+            this.textUnitsOnOrder.TabIndex = 13;
             // 
             // label15
             // 
@@ -1039,7 +1075,7 @@
             this.textminUnits.Location = new System.Drawing.Point(163, 91);
             this.textminUnits.Name = "textminUnits";
             this.textminUnits.Size = new System.Drawing.Size(201, 26);
-            this.textminUnits.TabIndex = 7;
+            this.textminUnits.TabIndex = 14;
             // 
             // groupBox2
             // 
@@ -1081,7 +1117,7 @@
             this.textWidth.Location = new System.Drawing.Point(92, 25);
             this.textWidth.Name = "textWidth";
             this.textWidth.Size = new System.Drawing.Size(272, 26);
-            this.textWidth.TabIndex = 9;
+            this.textWidth.TabIndex = 8;
             this.textWidth.TextChanged += new System.EventHandler(this.textBillSt1_TextChanged);
             // 
             // label8
@@ -1108,7 +1144,7 @@
             this.textLength.Location = new System.Drawing.Point(92, 56);
             this.textLength.Name = "textLength";
             this.textLength.Size = new System.Drawing.Size(272, 26);
-            this.textLength.TabIndex = 5;
+            this.textLength.TabIndex = 9;
             // 
             // label10
             // 
@@ -1126,25 +1162,7 @@
             this.textHeight.Location = new System.Drawing.Point(92, 85);
             this.textHeight.Name = "textHeight";
             this.textHeight.Size = new System.Drawing.Size(272, 26);
-            this.textHeight.TabIndex = 7;
-            // 
-            // comboCategory
-            // 
-            this.comboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboCategory.FormattingEnabled = true;
-            this.comboCategory.Items.AddRange(new object[] {
-            "Furniture",
-            "Electronics",
-            "Appliances",
-            "Computers",
-            "Home Entertainment",
-            "Other"});
-            this.comboCategory.Location = new System.Drawing.Point(168, 76);
-            this.comboCategory.Name = "comboCategory";
-            this.comboCategory.Size = new System.Drawing.Size(162, 27);
-            this.comboCategory.TabIndex = 47;
-            this.toolTip1.SetToolTip(this.comboCategory, "Select a catagory tag for this item.");
-            this.comboCategory.SelectedIndexChanged += new System.EventHandler(this.comboCategory_SelectedIndexChanged);
+            this.textHeight.TabIndex = 10;
             // 
             // label30
             // 
@@ -1172,7 +1190,7 @@
             this.textBoxNotes.Multiline = true;
             this.textBoxNotes.Name = "textBoxNotes";
             this.textBoxNotes.Size = new System.Drawing.Size(432, 126);
-            this.textBoxNotes.TabIndex = 43;
+            this.textBoxNotes.TabIndex = 18;
             // 
             // PrimaryTabPanel
             // 
@@ -1211,46 +1229,6 @@
             this.dataGridItems.TabIndex = 0;
             this.dataGridItems.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridItems_CellContentClick);
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(1009, 9);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(116, 24);
-            this.label12.TabIndex = 8;
-            this.label12.Text = "Product ID";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(1129, 9);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(70, 24);
-            this.label16.TabIndex = 9;
-            this.label16.Text = "29371";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.cancelButton);
-            this.panel2.Controls.Add(this.btnAddMode);
-            this.panel2.Location = new System.Drawing.Point(204, 484);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(222, 58);
-            this.panel2.TabIndex = 41;
-            // 
-            // cancelButton
-            // 
-            this.cancelButton.Location = new System.Drawing.Point(135, 22);
-            this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(78, 36);
-            this.cancelButton.TabIndex = 41;
-            this.cancelButton.Text = "Cancel";
-            this.toolTip1.SetToolTip(this.cancelButton, "Do not save this new item.");
-            this.cancelButton.UseVisualStyleBackColor = true;
-            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
-            // 
             // itemID
             // 
             this.itemID.HeaderText = "Item ID";
@@ -1281,6 +1259,35 @@
             // 
             this.notes.HeaderText = "Notes";
             this.notes.Name = "notes";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(1009, 9);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(116, 24);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "Product ID";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(1129, 9);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(70, 24);
+            this.label16.TabIndex = 9;
+            this.label16.Text = "29371";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.cancelButton);
+            this.panel2.Controls.Add(this.btnAddMode);
+            this.panel2.Location = new System.Drawing.Point(204, 484);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(222, 58);
+            this.panel2.TabIndex = 41;
             // 
             // Inventory
             // 
@@ -1334,7 +1341,6 @@
         private System.Windows.Forms.ToolStripMenuItem cancelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem undeleteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem minimizeToolStripMenuItem;
@@ -1437,5 +1443,6 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn status;
         private System.Windows.Forms.DataGridViewTextBoxColumn serialNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn notes;
+        private System.Windows.Forms.ToolStripTextBox searchToolStripMenuItem;
     }
 }

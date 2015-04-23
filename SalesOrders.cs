@@ -14,6 +14,7 @@ namespace LeaseToBuy
     {
         bool Testing = false;
         User userForm = null;
+        Receipt receiptForm = null;
         UndeleteSale undeleteForm = null;
 
         public SalesOrders()
@@ -436,6 +437,46 @@ namespace LeaseToBuy
         {
             undeleteForm = new UndeleteSale();
             undeleteForm.Show();
+        }
+
+        private void addToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddMode();
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnEditMode.Text = "Edit Mode";
+            this.BackColor = Color.SeaGreen;
+        }
+
+        private void cancelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnEditMode.Text = "Edit Mode";
+            btnAddMode.Text = "Add Vendor";
+            btnAddMode.ForeColor = Color.Black;
+            cancelButton.Visible = false;
+            panel1.Enabled = true;
+
+            NormalMode();
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NormalMode();
+
+            MessageBox.Show("Delete Successful");
+        }
+
+        private void upButtonLeft_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGenerateReceipt_Click(object sender, EventArgs e)
+        {
+            receiptForm = new Receipt();
+            receiptForm.Show();
         }
     }
 }

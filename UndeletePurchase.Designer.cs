@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnUndelete = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.UndeleteVID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UndeleteVName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UndeleteVDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UndeleteDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnUndelete = new System.Windows.Forms.Button();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,6 +54,26 @@
             this.dataGridView1.Size = new System.Drawing.Size(402, 166);
             this.dataGridView1.TabIndex = 14;
             // 
+            // UndeleteVID
+            // 
+            this.UndeleteVID.HeaderText = "Vendor ID";
+            this.UndeleteVID.Name = "UndeleteVID";
+            // 
+            // UndeleteVName
+            // 
+            this.UndeleteVName.HeaderText = "Name";
+            this.UndeleteVName.Name = "UndeleteVName";
+            // 
+            // UndeleteVDate
+            // 
+            this.UndeleteVDate.HeaderText = "Date Created";
+            this.UndeleteVDate.Name = "UndeleteVDate";
+            // 
+            // UndeleteDate
+            // 
+            this.UndeleteDate.HeaderText = "Date Deleted";
+            this.UndeleteDate.Name = "UndeleteDate";
+            // 
             // btnUndelete
             // 
             this.btnUndelete.Location = new System.Drawing.Point(7, 215);
@@ -62,15 +82,6 @@
             this.btnUndelete.TabIndex = 11;
             this.btnUndelete.Text = "Undelete";
             this.btnUndelete.UseVisualStyleBackColor = true;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(277, 182);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(132, 23);
-            this.btnSearch.TabIndex = 10;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // comboBox2
             // 
@@ -99,25 +110,13 @@
             this.comboBox1.TabIndex = 12;
             this.comboBox1.Text = "Filter by...";
             // 
-            // UndeleteVID
+            // textBox1
             // 
-            this.UndeleteVID.HeaderText = "Vendor ID";
-            this.UndeleteVID.Name = "UndeleteVID";
-            // 
-            // UndeleteVName
-            // 
-            this.UndeleteVName.HeaderText = "Name";
-            this.UndeleteVName.Name = "UndeleteVName";
-            // 
-            // UndeleteVDate
-            // 
-            this.UndeleteVDate.HeaderText = "Date Created";
-            this.UndeleteVDate.Name = "UndeleteVDate";
-            // 
-            // UndeleteDate
-            // 
-            this.UndeleteDate.HeaderText = "Date Deleted";
-            this.UndeleteDate.Name = "UndeleteDate";
+            this.textBox1.Location = new System.Drawing.Point(277, 185);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(132, 20);
+            this.textBox1.TabIndex = 15;
+            this.textBox1.Text = "Search";
             // 
             // UndeletePurchase
             // 
@@ -125,15 +124,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGreen;
             this.ClientSize = new System.Drawing.Size(420, 260);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnUndelete);
-            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Name = "UndeletePurchase";
             this.Text = "UndeletePurchase";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -141,12 +141,12 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnUndelete;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn UndeleteVID;
         private System.Windows.Forms.DataGridViewTextBoxColumn UndeleteVName;
         private System.Windows.Forms.DataGridViewTextBoxColumn UndeleteVDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn UndeleteDate;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

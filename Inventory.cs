@@ -323,5 +323,44 @@ namespace LeaseToBuy
             undeleteForm = new UndeleteInventory();
             undeleteForm.Show();
         }
+
+        private void addToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddMode();
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnAddMode.Text = "Add Vendor";
+            btnAddMode.ForeColor = Color.Black;
+            cancelButton.Visible = false;
+            panel1.Enabled = true;
+            this.BackColor = Color.SeaGreen;
+        }
+
+        private void cancelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnAddMode.Text = "Add Item";
+            btnAddMode.ForeColor = Color.Black;
+            cancelButton.Visible = false;
+            panel1.Enabled = true;
+            NormalMode();
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NormalMode();
+            MessageBox.Show("Delete Successful");
+        }
+
+        private void leftButtonLeft_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

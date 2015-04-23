@@ -37,11 +37,10 @@
             this.cancelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.undeleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripTextBox();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.locationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.minimizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -90,6 +89,15 @@
             this.rightButtonLeft = new System.Windows.Forms.Button();
             this.btnAddMode = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btnJumpToUser = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btnGenerateReceipt = new System.Windows.Forms.Button();
+            this.comboBoxStatus = new System.Windows.Forms.ComboBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.cancelButton = new System.Windows.Forms.Button();
             this.Items = new System.Windows.Forms.TabPage();
             this.lblName = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
@@ -109,15 +117,9 @@
             this.JumpToItem = new System.Windows.Forms.DataGridViewButtonColumn();
             this.PrimaryTabPanel = new System.Windows.Forms.TabControl();
             this.CustomerInfo = new System.Windows.Forms.TabPage();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.btnJumpToUser = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnGenerateReceipt = new System.Windows.Forms.Button();
-            this.comboBoxStatus = new System.Windows.Forms.ComboBox();
             this.txtSalesperson = new System.Windows.Forms.TextBox();
             this.txtDateOrdered = new System.Windows.Forms.TextBox();
             this.txtOrderNum = new System.Windows.Forms.TextBox();
@@ -143,7 +145,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.txtShippingStreet1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -182,7 +183,6 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cancelButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.Items.SuspendLayout();
@@ -190,6 +190,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.PrimaryTabPanel.SuspendLayout();
             this.CustomerInfo.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -216,7 +217,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.ShowItemToolTips = true;
-            this.menuStrip1.Size = new System.Drawing.Size(1236, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1236, 27);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.Visible = false;
@@ -224,92 +225,89 @@
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(41, 23);
             this.addToolStripMenuItem.Text = "Add";
+            this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 23);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(43, 23);
             this.saveToolStripMenuItem.Text = "Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // cancelToolStripMenuItem
             // 
             this.cancelToolStripMenuItem.Name = "cancelToolStripMenuItem";
-            this.cancelToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.cancelToolStripMenuItem.Size = new System.Drawing.Size(55, 23);
             this.cancelToolStripMenuItem.Text = "Cancel";
+            this.cancelToolStripMenuItem.Click += new System.EventHandler(this.cancelToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(52, 23);
             this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // undeleteToolStripMenuItem
             // 
             this.undeleteToolStripMenuItem.Name = "undeleteToolStripMenuItem";
-            this.undeleteToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.undeleteToolStripMenuItem.Size = new System.Drawing.Size(66, 23);
             this.undeleteToolStripMenuItem.Text = "Undelete";
             this.undeleteToolStripMenuItem.Click += new System.EventHandler(this.undeleteToolStripMenuItem_Click);
             // 
             // searchToolStripMenuItem
             // 
             this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
-            this.searchToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(54, 23);
             this.searchToolStripMenuItem.Text = "Search";
             // 
             // reportsToolStripMenuItem
             // 
             this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.salesToolStripMenuItem,
-            this.userListToolStripMenuItem,
-            this.locationToolStripMenuItem});
+            this.userListToolStripMenuItem});
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
-            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(59, 23);
             this.reportsToolStripMenuItem.Text = "Reports";
             // 
             // salesToolStripMenuItem
             // 
             this.salesToolStripMenuItem.Name = "salesToolStripMenuItem";
-            this.salesToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
-            this.salesToolStripMenuItem.Text = "Sales";
+            this.salesToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.salesToolStripMenuItem.Text = "Sales Report";
             // 
             // userListToolStripMenuItem
             // 
             this.userListToolStripMenuItem.Name = "userListToolStripMenuItem";
-            this.userListToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
-            this.userListToolStripMenuItem.Text = "User List";
-            // 
-            // locationToolStripMenuItem
-            // 
-            this.locationToolStripMenuItem.Name = "locationToolStripMenuItem";
-            this.locationToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
-            this.locationToolStripMenuItem.Text = "Location";
+            this.userListToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.userListToolStripMenuItem.Text = "Debt Report";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(139, 20);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(139, 23);
             this.toolStripMenuItem1.Text = "===============";
             // 
             // minimizeToolStripMenuItem
             // 
             this.minimizeToolStripMenuItem.Name = "minimizeToolStripMenuItem";
-            this.minimizeToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.minimizeToolStripMenuItem.Size = new System.Drawing.Size(68, 23);
             this.minimizeToolStripMenuItem.Text = "Minimize";
             this.minimizeToolStripMenuItem.Click += new System.EventHandler(this.minimizeToolStripMenuItem_Click);
             // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(48, 23);
             this.closeToolStripMenuItem.Text = "Close";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
@@ -405,7 +403,7 @@
             this.panel1.Controls.Add(this.rightButtonLeft);
             this.panel1.Controls.Add(this.upButtonRight);
             this.panel1.Controls.Add(this.rightButtonRight);
-            this.panel1.Location = new System.Drawing.Point(15, 488);
+            this.panel1.Location = new System.Drawing.Point(12, 459);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1212, 158);
             this.panel1.TabIndex = 7;
@@ -418,6 +416,7 @@
             this.button2.Size = new System.Drawing.Size(75, 35);
             this.button2.TabIndex = 40;
             this.button2.Text = "Redo";
+            this.toolTip1.SetToolTip(this.button2, "Redo last undid action.");
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -428,6 +427,7 @@
             this.button1.Size = new System.Drawing.Size(75, 34);
             this.button1.TabIndex = 39;
             this.button1.Text = "Undo";
+            this.toolTip1.SetToolTip(this.button1, "Undo last action.");
             this.button1.UseVisualStyleBackColor = true;
             // 
             // btnEditMode
@@ -437,6 +437,7 @@
             this.btnEditMode.Size = new System.Drawing.Size(129, 36);
             this.btnEditMode.TabIndex = 37;
             this.btnEditMode.Text = "Edit Mode";
+            this.toolTip1.SetToolTip(this.btnEditMode, "Change to edit mode.");
             this.btnEditMode.UseVisualStyleBackColor = true;
             this.btnEditMode.Click += new System.EventHandler(this.btnEditMode_Click);
             // 
@@ -447,6 +448,7 @@
             this.btnNormalMode.Size = new System.Drawing.Size(129, 36);
             this.btnNormalMode.TabIndex = 10;
             this.btnNormalMode.Text = "Normal Mode";
+            this.toolTip1.SetToolTip(this.btnNormalMode, "Change to normal mode.");
             this.btnNormalMode.UseVisualStyleBackColor = true;
             this.btnNormalMode.Click += new System.EventHandler(this.NormalMode_Click);
             // 
@@ -803,6 +805,7 @@
             this.upButtonLeft.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.toolTip1.SetToolTip(this.upButtonLeft, "First Logical Record");
             this.upButtonLeft.UseVisualStyleBackColor = true;
+            this.upButtonLeft.Click += new System.EventHandler(this.upButtonLeft_Click);
             // 
             // rightButtonLeft
             // 
@@ -823,12 +826,114 @@
             this.btnAddMode.Size = new System.Drawing.Size(129, 36);
             this.btnAddMode.TabIndex = 38;
             this.btnAddMode.Text = "Add Order";
+            this.toolTip1.SetToolTip(this.btnAddMode, "Change to add mode.");
             this.btnAddMode.UseVisualStyleBackColor = true;
             this.btnAddMode.Click += new System.EventHandler(this.btnAddMode_Click);
             // 
             // toolTip1
             // 
             this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
+            // 
+            // btnJumpToUser
+            // 
+            this.btnJumpToUser.Location = new System.Drawing.Point(8, 16);
+            this.btnJumpToUser.Name = "btnJumpToUser";
+            this.btnJumpToUser.Size = new System.Drawing.Size(129, 25);
+            this.btnJumpToUser.TabIndex = 89;
+            this.btnJumpToUser.Text = "View user";
+            this.toolTip1.SetToolTip(this.btnJumpToUser, "Jump to User.");
+            this.btnJumpToUser.UseVisualStyleBackColor = true;
+            this.btnJumpToUser.Click += new System.EventHandler(this.btnJumpToUser_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(8, 94);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(129, 25);
+            this.button4.TabIndex = 91;
+            this.button4.Text = "Add user";
+            this.toolTip1.SetToolTip(this.button4, "Create a new User.");
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(8, 55);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(129, 25);
+            this.button5.TabIndex = 92;
+            this.button5.Text = "Select user";
+            this.toolTip1.SetToolTip(this.button5, "Select a User from a list of Users.");
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(18, 78);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(157, 25);
+            this.button6.TabIndex = 93;
+            this.button6.Text = "Select Salesman";
+            this.toolTip1.SetToolTip(this.button6, "Select an employee form a list of employees.");
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(18, 35);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(157, 25);
+            this.button3.TabIndex = 90;
+            this.button3.Text = "View Salesman";
+            this.toolTip1.SetToolTip(this.button3, "Jump to this employees user information.");
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // btnGenerateReceipt
+            // 
+            this.btnGenerateReceipt.Location = new System.Drawing.Point(97, 356);
+            this.btnGenerateReceipt.Name = "btnGenerateReceipt";
+            this.btnGenerateReceipt.Size = new System.Drawing.Size(196, 30);
+            this.btnGenerateReceipt.TabIndex = 90;
+            this.btnGenerateReceipt.Text = "Generate Receipt";
+            this.toolTip1.SetToolTip(this.btnGenerateReceipt, "Print a receipt for the current Sale Order.");
+            this.btnGenerateReceipt.UseVisualStyleBackColor = true;
+            this.btnGenerateReceipt.Click += new System.EventHandler(this.btnGenerateReceipt_Click);
+            // 
+            // comboBoxStatus
+            // 
+            this.comboBoxStatus.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxStatus.FormattingEnabled = true;
+            this.comboBoxStatus.Items.AddRange(new object[] {
+            "Open",
+            "Shipped",
+            "Closed"});
+            this.comboBoxStatus.Location = new System.Drawing.Point(145, 121);
+            this.comboBoxStatus.Name = "comboBoxStatus";
+            this.comboBoxStatus.Size = new System.Drawing.Size(224, 26);
+            this.comboBoxStatus.TabIndex = 88;
+            this.toolTip1.SetToolTip(this.comboBoxStatus, "Status of the current order.");
+            this.comboBoxStatus.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(178, 13);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(185, 21);
+            this.checkBox1.TabIndex = 95;
+            this.checkBox1.Text = "Same as Billing Address";
+            this.toolTip1.SetToolTip(this.checkBox1, "Is the shipping address the same as the billing address?");
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // cancelButton
+            // 
+            this.cancelButton.Location = new System.Drawing.Point(141, 21);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(78, 36);
+            this.cancelButton.TabIndex = 42;
+            this.cancelButton.Text = "Cancel";
+            this.toolTip1.SetToolTip(this.cancelButton, "Do not save this new user.");
+            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // Items
             // 
@@ -843,7 +948,7 @@
             this.Items.Location = new System.Drawing.Point(4, 28);
             this.Items.Name = "Items";
             this.Items.Padding = new System.Windows.Forms.Padding(3);
-            this.Items.Size = new System.Drawing.Size(1204, 443);
+            this.Items.Size = new System.Drawing.Size(1204, 414);
             this.Items.TabIndex = 5;
             this.Items.Text = "Items";
             // 
@@ -887,7 +992,7 @@
             // 
             this.groupBoxSelect.Controls.Add(this.label24);
             this.groupBoxSelect.Controls.Add(this.comboBoxItemsCategory);
-            this.groupBoxSelect.Location = new System.Drawing.Point(6, 365);
+            this.groupBoxSelect.Location = new System.Drawing.Point(10, 350);
             this.groupBoxSelect.Name = "groupBoxSelect";
             this.groupBoxSelect.Size = new System.Drawing.Size(1176, 52);
             this.groupBoxSelect.TabIndex = 1;
@@ -940,7 +1045,7 @@
             this.JumpToItem});
             this.dataGridView1.Location = new System.Drawing.Point(6, 29);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1192, 330);
+            this.dataGridView1.Size = new System.Drawing.Size(1192, 315);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -984,6 +1089,7 @@
             this.JumpToItem.HeaderText = "Jump To Item";
             this.JumpToItem.Name = "JumpToItem";
             this.JumpToItem.Text = "Jump";
+            this.JumpToItem.ToolTipText = "Go to this items Inventory info page.";
             // 
             // PrimaryTabPanel
             // 
@@ -993,15 +1099,14 @@
             this.PrimaryTabPanel.Location = new System.Drawing.Point(12, 7);
             this.PrimaryTabPanel.Name = "PrimaryTabPanel";
             this.PrimaryTabPanel.SelectedIndex = 0;
-            this.PrimaryTabPanel.Size = new System.Drawing.Size(1212, 475);
+            this.PrimaryTabPanel.Size = new System.Drawing.Size(1212, 446);
             this.PrimaryTabPanel.TabIndex = 1;
             // 
             // CustomerInfo
             // 
             this.CustomerInfo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.CustomerInfo.Controls.Add(this.groupBox6);
             this.CustomerInfo.Controls.Add(this.groupBox5);
-            this.CustomerInfo.Controls.Add(this.button6);
-            this.CustomerInfo.Controls.Add(this.button3);
             this.CustomerInfo.Controls.Add(this.groupBox3);
             this.CustomerInfo.Controls.Add(this.txtContactName);
             this.CustomerInfo.Controls.Add(this.txtuserName);
@@ -1013,10 +1118,21 @@
             this.CustomerInfo.Controls.Add(this.groupBox2);
             this.CustomerInfo.Location = new System.Drawing.Point(4, 28);
             this.CustomerInfo.Name = "CustomerInfo";
-            this.CustomerInfo.Size = new System.Drawing.Size(1204, 443);
+            this.CustomerInfo.Size = new System.Drawing.Size(1204, 414);
             this.CustomerInfo.TabIndex = 7;
             this.CustomerInfo.Text = "General";
             this.CustomerInfo.Click += new System.EventHandler(this.CustomerInfo_Click);
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.button3);
+            this.groupBox6.Controls.Add(this.button6);
+            this.groupBox6.Location = new System.Drawing.Point(580, 17);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(200, 134);
+            this.groupBox6.TabIndex = 95;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Salesperson";
             // 
             // groupBox5
             // 
@@ -1030,52 +1146,6 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "User";
             this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
-            // 
-            // btnJumpToUser
-            // 
-            this.btnJumpToUser.Location = new System.Drawing.Point(8, 16);
-            this.btnJumpToUser.Name = "btnJumpToUser";
-            this.btnJumpToUser.Size = new System.Drawing.Size(129, 25);
-            this.btnJumpToUser.TabIndex = 89;
-            this.btnJumpToUser.Text = "View user";
-            this.btnJumpToUser.UseVisualStyleBackColor = true;
-            this.btnJumpToUser.Click += new System.EventHandler(this.btnJumpToUser_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(8, 94);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(129, 25);
-            this.button4.TabIndex = 91;
-            this.button4.Text = "Add user";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(8, 55);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(129, 25);
-            this.button5.TabIndex = 92;
-            this.button5.Text = "Select user";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(616, 96);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(157, 25);
-            this.button6.TabIndex = 93;
-            this.button6.Text = "Select Salesman";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(616, 68);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(157, 25);
-            this.button3.TabIndex = 90;
-            this.button3.Text = "View Salesman";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -1095,29 +1165,6 @@
             this.groupBox3.TabIndex = 88;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Order Info";
-            // 
-            // btnGenerateReceipt
-            // 
-            this.btnGenerateReceipt.Location = new System.Drawing.Point(97, 356);
-            this.btnGenerateReceipt.Name = "btnGenerateReceipt";
-            this.btnGenerateReceipt.Size = new System.Drawing.Size(196, 30);
-            this.btnGenerateReceipt.TabIndex = 90;
-            this.btnGenerateReceipt.Text = "Generate Receipt";
-            this.btnGenerateReceipt.UseVisualStyleBackColor = true;
-            // 
-            // comboBoxStatus
-            // 
-            this.comboBoxStatus.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxStatus.FormattingEnabled = true;
-            this.comboBoxStatus.Items.AddRange(new object[] {
-            "Open",
-            "Shipped",
-            "Closed"});
-            this.comboBoxStatus.Location = new System.Drawing.Point(145, 121);
-            this.comboBoxStatus.Name = "comboBoxStatus";
-            this.comboBoxStatus.Size = new System.Drawing.Size(224, 26);
-            this.comboBoxStatus.TabIndex = 88;
-            this.comboBoxStatus.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // txtSalesperson
             // 
@@ -1289,7 +1336,7 @@
             // txtContactName
             // 
             this.txtContactName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContactName.Location = new System.Drawing.Point(154, 134);
+            this.txtContactName.Location = new System.Drawing.Point(154, 127);
             this.txtContactName.Name = "txtContactName";
             this.txtContactName.Size = new System.Drawing.Size(241, 26);
             this.txtContactName.TabIndex = 14;
@@ -1298,7 +1345,7 @@
             // txtuserName
             // 
             this.txtuserName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtuserName.Location = new System.Drawing.Point(154, 38);
+            this.txtuserName.Location = new System.Drawing.Point(154, 31);
             this.txtuserName.Name = "txtuserName";
             this.txtuserName.Size = new System.Drawing.Size(241, 26);
             this.txtuserName.TabIndex = 15;
@@ -1307,7 +1354,7 @@
             // txtuserID
             // 
             this.txtuserID.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtuserID.Location = new System.Drawing.Point(154, 86);
+            this.txtuserID.Location = new System.Drawing.Point(154, 79);
             this.txtuserID.Name = "txtuserID";
             this.txtuserID.Size = new System.Drawing.Size(241, 26);
             this.txtuserID.TabIndex = 16;
@@ -1315,7 +1362,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(83, 85);
+            this.label13.Location = new System.Drawing.Point(83, 78);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(65, 19);
             this.label13.TabIndex = 79;
@@ -1325,7 +1372,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(31, 137);
+            this.label12.Location = new System.Drawing.Point(31, 130);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(117, 19);
             this.label12.TabIndex = 78;
@@ -1335,7 +1382,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(55, 42);
+            this.label11.Location = new System.Drawing.Point(55, 35);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(93, 19);
             this.label11.TabIndex = 77;
@@ -1357,22 +1404,10 @@
             this.groupBox1.Controls.Add(this.txtShippingZip);
             this.groupBox1.Location = new System.Drawing.Point(410, 188);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(376, 225);
+            this.groupBox1.Size = new System.Drawing.Size(376, 218);
             this.groupBox1.TabIndex = 75;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Shipping To";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(178, 13);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(185, 21);
-            this.checkBox1.TabIndex = 95;
-            this.checkBox1.Text = "Same as Billing Address";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // txtShippingStreet1
             // 
@@ -1385,7 +1420,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 38);
+            this.label2.Location = new System.Drawing.Point(26, 39);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 19);
             this.label2.TabIndex = 2;
@@ -1394,7 +1429,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 89);
+            this.label3.Location = new System.Drawing.Point(26, 88);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 19);
             this.label3.TabIndex = 4;
@@ -1403,7 +1438,7 @@
             // txtShippingStreet2
             // 
             this.txtShippingStreet2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtShippingStreet2.Location = new System.Drawing.Point(98, 86);
+            this.txtShippingStreet2.Location = new System.Drawing.Point(98, 84);
             this.txtShippingStreet2.Name = "txtShippingStreet2";
             this.txtShippingStreet2.Size = new System.Drawing.Size(272, 26);
             this.txtShippingStreet2.TabIndex = 5;
@@ -1411,7 +1446,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(54, 140);
+            this.label4.Location = new System.Drawing.Point(54, 137);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 19);
             this.label4.TabIndex = 6;
@@ -1420,7 +1455,7 @@
             // txtShippingCity
             // 
             this.txtShippingCity.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtShippingCity.Location = new System.Drawing.Point(98, 137);
+            this.txtShippingCity.Location = new System.Drawing.Point(98, 133);
             this.txtShippingCity.Name = "txtShippingCity";
             this.txtShippingCity.Size = new System.Drawing.Size(272, 26);
             this.txtShippingCity.TabIndex = 7;
@@ -1428,7 +1463,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(45, 191);
+            this.label5.Location = new System.Drawing.Point(45, 186);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 19);
             this.label5.TabIndex = 10;
@@ -1438,7 +1473,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(233, 191);
+            this.label6.Location = new System.Drawing.Point(233, 186);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(32, 19);
             this.label6.TabIndex = 11;
@@ -1499,7 +1534,7 @@
             "WV",
             "WI",
             "WY"});
-            this.comboBoxShippingState.Location = new System.Drawing.Point(99, 188);
+            this.comboBoxShippingState.Location = new System.Drawing.Point(99, 182);
             this.comboBoxShippingState.Name = "comboBoxShippingState";
             this.comboBoxShippingState.Size = new System.Drawing.Size(121, 26);
             this.comboBoxShippingState.TabIndex = 12;
@@ -1507,7 +1542,7 @@
             // txtShippingZip
             // 
             this.txtShippingZip.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtShippingZip.Location = new System.Drawing.Point(270, 188);
+            this.txtShippingZip.Location = new System.Drawing.Point(270, 182);
             this.txtShippingZip.Name = "txtShippingZip";
             this.txtShippingZip.Size = new System.Drawing.Size(100, 26);
             this.txtShippingZip.TabIndex = 13;
@@ -1526,7 +1561,7 @@
             this.groupBox2.Controls.Add(this.txtBillingZip);
             this.groupBox2.Location = new System.Drawing.Point(25, 188);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(376, 244);
+            this.groupBox2.Size = new System.Drawing.Size(376, 218);
             this.groupBox2.TabIndex = 76;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Billing To";
@@ -1534,7 +1569,7 @@
             // txtBillingStreet1
             // 
             this.txtBillingStreet1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBillingStreet1.Location = new System.Drawing.Point(98, 25);
+            this.txtBillingStreet1.Location = new System.Drawing.Point(98, 35);
             this.txtBillingStreet1.Name = "txtBillingStreet1";
             this.txtBillingStreet1.Size = new System.Drawing.Size(272, 26);
             this.txtBillingStreet1.TabIndex = 9;
@@ -1542,7 +1577,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 28);
+            this.label1.Location = new System.Drawing.Point(25, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 19);
             this.label1.TabIndex = 2;
@@ -1551,7 +1586,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(25, 93);
+            this.label7.Location = new System.Drawing.Point(25, 88);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(67, 19);
             this.label7.TabIndex = 4;
@@ -1560,7 +1595,7 @@
             // txtBillingStreet2
             // 
             this.txtBillingStreet2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBillingStreet2.Location = new System.Drawing.Point(98, 83);
+            this.txtBillingStreet2.Location = new System.Drawing.Point(98, 84);
             this.txtBillingStreet2.Name = "txtBillingStreet2";
             this.txtBillingStreet2.Size = new System.Drawing.Size(272, 26);
             this.txtBillingStreet2.TabIndex = 5;
@@ -1568,7 +1603,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(53, 153);
+            this.label8.Location = new System.Drawing.Point(53, 137);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(39, 19);
             this.label8.TabIndex = 6;
@@ -1577,7 +1612,7 @@
             // txtBillingCity
             // 
             this.txtBillingCity.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBillingCity.Location = new System.Drawing.Point(98, 141);
+            this.txtBillingCity.Location = new System.Drawing.Point(98, 133);
             this.txtBillingCity.Name = "txtBillingCity";
             this.txtBillingCity.Size = new System.Drawing.Size(272, 26);
             this.txtBillingCity.TabIndex = 7;
@@ -1585,7 +1620,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(45, 202);
+            this.label9.Location = new System.Drawing.Point(44, 186);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(48, 19);
             this.label9.TabIndex = 10;
@@ -1594,7 +1629,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(232, 203);
+            this.label10.Location = new System.Drawing.Point(232, 186);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(32, 19);
             this.label10.TabIndex = 11;
@@ -1655,7 +1690,7 @@
             "WV",
             "WI",
             "WY"});
-            this.comboBoxBillingState.Location = new System.Drawing.Point(98, 199);
+            this.comboBoxBillingState.Location = new System.Drawing.Point(98, 182);
             this.comboBoxBillingState.Name = "comboBoxBillingState";
             this.comboBoxBillingState.Size = new System.Drawing.Size(121, 26);
             this.comboBoxBillingState.TabIndex = 12;
@@ -1663,7 +1698,7 @@
             // txtBillingZip
             // 
             this.txtBillingZip.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBillingZip.Location = new System.Drawing.Point(270, 199);
+            this.txtBillingZip.Location = new System.Drawing.Point(270, 182);
             this.txtBillingZip.Name = "txtBillingZip";
             this.txtBillingZip.Size = new System.Drawing.Size(100, 26);
             this.txtBillingZip.TabIndex = 13;
@@ -1686,7 +1721,7 @@
             this.CardInfo.Controls.Add(this.label31);
             this.CardInfo.Location = new System.Drawing.Point(4, 28);
             this.CardInfo.Name = "CardInfo";
-            this.CardInfo.Size = new System.Drawing.Size(1204, 443);
+            this.CardInfo.Size = new System.Drawing.Size(1204, 414);
             this.CardInfo.TabIndex = 8;
             this.CardInfo.Text = "Card Info";
             // 
@@ -1829,27 +1864,17 @@
             // 
             this.panel2.Controls.Add(this.cancelButton);
             this.panel2.Controls.Add(this.btnAddMode);
-            this.panel2.Location = new System.Drawing.Point(204, 484);
+            this.panel2.Location = new System.Drawing.Point(202, 456);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(222, 57);
             this.panel2.TabIndex = 10;
-            // 
-            // cancelButton
-            // 
-            this.cancelButton.Location = new System.Drawing.Point(141, 21);
-            this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(78, 36);
-            this.cancelButton.TabIndex = 42;
-            this.cancelButton.Text = "Cancel";
-            this.cancelButton.UseVisualStyleBackColor = true;
-            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // SalesOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaGreen;
-            this.ClientSize = new System.Drawing.Size(1236, 658);
+            this.ClientSize = new System.Drawing.Size(1236, 627);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label28);
@@ -1876,6 +1901,7 @@
             this.PrimaryTabPanel.ResumeLayout(false);
             this.CustomerInfo.ResumeLayout(false);
             this.CustomerInfo.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
@@ -1902,7 +1928,6 @@
         private System.Windows.Forms.ToolStripMenuItem cancelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem undeleteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem minimizeToolStripMenuItem;
@@ -1954,7 +1979,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolStripMenuItem salesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem userListToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem locationToolStripMenuItem;
         private System.Windows.Forms.TabPage Items;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TabControl PrimaryTabPanel;
@@ -2017,14 +2041,6 @@
         private System.Windows.Forms.Button btnGenerateReceipt;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Item;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ItemName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SKU;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ModelNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UnitPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Qty;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Categorty;
-        private System.Windows.Forms.DataGridViewButtonColumn JumpToItem;
         private System.Windows.Forms.TextBox txtCardHolderName;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.TextBox txtCardType;
@@ -2048,5 +2064,15 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.ToolStripTextBox searchToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Item;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SKU;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ModelNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UnitPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Qty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Categorty;
+        private System.Windows.Forms.DataGridViewButtonColumn JumpToItem;
+        private System.Windows.Forms.GroupBox groupBox6;
     }
 }

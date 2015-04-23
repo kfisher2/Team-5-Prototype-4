@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeInfo));
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
@@ -42,6 +43,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxContact)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +53,7 @@
             this.textBox12.Location = new System.Drawing.Point(113, 71);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(100, 26);
-            this.textBox12.TabIndex = 13;
+            this.textBox12.TabIndex = 3;
             // 
             // label26
             // 
@@ -102,7 +104,7 @@
             this.comboBox1.Location = new System.Drawing.Point(113, 43);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(100, 21);
-            this.comboBox1.TabIndex = 16;
+            this.comboBox1.TabIndex = 2;
             // 
             // comboBox2
             // 
@@ -117,7 +119,7 @@
             this.comboBox2.Location = new System.Drawing.Point(113, 103);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(100, 21);
-            this.comboBox2.TabIndex = 17;
+            this.comboBox2.TabIndex = 4;
             // 
             // pictureBoxContact
             // 
@@ -135,8 +137,9 @@
             this.button1.Location = new System.Drawing.Point(2, 131);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 24);
-            this.button1.TabIndex = 25;
+            this.button1.TabIndex = 5;
             this.button1.Text = "Edit";
+            this.toolTip1.SetToolTip(this.button1, "Edit this users information.");
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
@@ -145,8 +148,9 @@
             this.button2.Location = new System.Drawing.Point(83, 131);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 24);
-            this.button2.TabIndex = 26;
+            this.button2.TabIndex = 6;
             this.button2.Text = "Save";
+            this.toolTip1.SetToolTip(this.button2, "Save current changes.");
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -156,8 +160,9 @@
             this.button3.Location = new System.Drawing.Point(267, 132);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 27;
+            this.button3.TabIndex = 8;
             this.button3.Text = "Close";
+            this.toolTip1.SetToolTip(this.button3, "Close window.");
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -167,8 +172,9 @@
             this.button4.Location = new System.Drawing.Point(164, 131);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(97, 24);
-            this.button4.TabIndex = 28;
+            this.button4.TabIndex = 7;
             this.button4.Text = "Login Info";
+            this.toolTip1.SetToolTip(this.button4, "Display login info for this user (admin only).");
             this.button4.UseVisualStyleBackColor = true;
             // 
             // maskedTextBox1
@@ -178,7 +184,7 @@
             this.maskedTextBox1.Mask = "000-00-0000";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(100, 26);
-            this.maskedTextBox1.TabIndex = 29;
+            this.maskedTextBox1.TabIndex = 1;
             // 
             // EmployeeInfo
             // 
@@ -223,5 +229,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

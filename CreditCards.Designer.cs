@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreditCards));
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
@@ -44,6 +45,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.leftButtonLeft = new System.Windows.Forms.Button();
             this.rightButtonLeft = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // textBox18
@@ -52,7 +54,7 @@
             this.textBox18.Location = new System.Drawing.Point(147, 6);
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(184, 26);
-            this.textBox18.TabIndex = 22;
+            this.textBox18.TabIndex = 1;
             // 
             // maskedTextBox4
             // 
@@ -61,7 +63,7 @@
             this.maskedTextBox4.Mask = "****-****-****-####";
             this.maskedTextBox4.Name = "maskedTextBox4";
             this.maskedTextBox4.Size = new System.Drawing.Size(131, 26);
-            this.maskedTextBox4.TabIndex = 13;
+            this.maskedTextBox4.TabIndex = 2;
             // 
             // label32
             // 
@@ -90,7 +92,7 @@
             this.maskedTextBox5.Mask = "#/##";
             this.maskedTextBox5.Name = "maskedTextBox5";
             this.maskedTextBox5.Size = new System.Drawing.Size(40, 26);
-            this.maskedTextBox5.TabIndex = 16;
+            this.maskedTextBox5.TabIndex = 3;
             // 
             // label37
             // 
@@ -108,7 +110,7 @@
             this.textBox16.Location = new System.Drawing.Point(147, 94);
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(100, 26);
-            this.textBox16.TabIndex = 18;
+            this.textBox16.TabIndex = 4;
             // 
             // label39
             // 
@@ -142,7 +144,7 @@
             this.comboBox1.Location = new System.Drawing.Point(147, 125);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(100, 27);
-            this.comboBox1.TabIndex = 24;
+            this.comboBox1.TabIndex = 5;
             // 
             // button3
             // 
@@ -150,8 +152,9 @@
             this.button3.Location = new System.Drawing.Point(130, 154);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 24);
-            this.button3.TabIndex = 30;
+            this.button3.TabIndex = 7;
             this.button3.Text = "Close";
+            this.toolTip1.SetToolTip(this.button3, "Close Window");
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -161,8 +164,9 @@
             this.button2.Location = new System.Drawing.Point(256, 155);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 29;
+            this.button2.TabIndex = 8;
             this.button2.Text = "Save";
+            this.toolTip1.SetToolTip(this.button2, "Save this Card");
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -172,8 +176,9 @@
             this.button1.Location = new System.Drawing.Point(5, 154);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 24);
-            this.button1.TabIndex = 28;
+            this.button1.TabIndex = 6;
             this.button1.Text = "Edit";
+            this.toolTip1.SetToolTip(this.button1, "Edit the Current Card");
             this.button1.UseVisualStyleBackColor = true;
             // 
             // leftButtonLeft
@@ -185,6 +190,7 @@
             this.leftButtonLeft.Size = new System.Drawing.Size(49, 46);
             this.leftButtonLeft.TabIndex = 31;
             this.leftButtonLeft.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.toolTip1.SetToolTip(this.leftButtonLeft, "Previous Card");
             this.leftButtonLeft.UseVisualStyleBackColor = true;
             // 
             // rightButtonLeft
@@ -196,6 +202,7 @@
             this.rightButtonLeft.Size = new System.Drawing.Size(49, 46);
             this.rightButtonLeft.TabIndex = 32;
             this.rightButtonLeft.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.toolTip1.SetToolTip(this.rightButtonLeft, "Next Card");
             this.rightButtonLeft.UseVisualStyleBackColor = true;
             this.rightButtonLeft.Click += new System.EventHandler(this.rightButtonLeft_Click);
             // 
@@ -245,6 +252,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button leftButtonLeft;
         private System.Windows.Forms.Button rightButtonLeft;
+        private System.Windows.Forms.ToolTip toolTip1;
 
     }
 }

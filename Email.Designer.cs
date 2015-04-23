@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.sendBtn = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -39,6 +40,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // textBox1
@@ -57,6 +59,7 @@
             this.sendBtn.Size = new System.Drawing.Size(74, 33);
             this.sendBtn.TabIndex = 12;
             this.sendBtn.Text = "Send";
+            this.toolTip1.SetToolTip(this.sendBtn, "Send email in current form.");
             this.sendBtn.UseVisualStyleBackColor = true;
             this.sendBtn.Click += new System.EventHandler(this.sendBtn_Click);
             // 
@@ -133,6 +136,7 @@
             this.button1.Size = new System.Drawing.Size(94, 33);
             this.button1.TabIndex = 11;
             this.button1.Text = "Preview";
+            this.toolTip1.SetToolTip(this.button1, "Opens a preview of the email to be sent.");
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
@@ -142,6 +146,7 @@
             this.button2.Size = new System.Drawing.Size(78, 33);
             this.button2.TabIndex = 13;
             this.button2.Text = "Cancel";
+            this.toolTip1.SetToolTip(this.button2, "Cancel the current message without sending.");
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -184,5 +189,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

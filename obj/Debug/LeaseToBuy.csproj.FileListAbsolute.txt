@@ -254,3 +254,29 @@ C:\Users\Zane_2\Desktop\Spring2015\Software Engineering\Github\Team-5-Prototype-
 C:\Users\Zane_2\Desktop\Spring2015\Software Engineering\Github\Team-5-Prototype-4\obj\Debug\LeaseToBuy.Vendor.resources
 C:\Users\Zane_2\Desktop\Spring2015\Software Engineering\Github\Team-5-Prototype-4\obj\Debug\LeaseToBuy.PurchaseOrders.resources
 C:\Users\Zane_2\Desktop\Spring2015\Software Engineering\Github\Team-5-Prototype-4\obj\Debug\LeaseToBuy.csproj.GenerateResource.Cache
+E:\01Doccuments\SoftwareEngin\Team-5-Prototype-4\bin\Debug\LeaseToBuy.exe.config
+E:\01Doccuments\SoftwareEngin\Team-5-Prototype-4\obj\Debug\LeaseToBuy.exe
+E:\01Doccuments\SoftwareEngin\Team-5-Prototype-4\obj\Debug\LeaseToBuy.pdb
+E:\01Doccuments\SoftwareEngin\Team-5-Prototype-4\bin\Debug\LeaseToBuy.exe
+E:\01Doccuments\SoftwareEngin\Team-5-Prototype-4\bin\Debug\LeaseToBuy.pdb
+E:\01Doccuments\SoftwareEngin\Team-5-Prototype-4\obj\Debug\LeaseToBuy.csprojResolveAssemblyReference.cache
+E:\01Doccuments\SoftwareEngin\Team-5-Prototype-4\obj\Debug\LeaseToBuy.CreditCards.resources
+E:\01Doccuments\SoftwareEngin\Team-5-Prototype-4\obj\Debug\LeaseToBuy.Email.resources
+E:\01Doccuments\SoftwareEngin\Team-5-Prototype-4\obj\Debug\LeaseToBuy.EmployeeInfo.resources
+E:\01Doccuments\SoftwareEngin\Team-5-Prototype-4\obj\Debug\LeaseToBuy.Login.resources
+E:\01Doccuments\SoftwareEngin\Team-5-Prototype-4\obj\Debug\LeaseToBuy.MainWindow.resources
+E:\01Doccuments\SoftwareEngin\Team-5-Prototype-4\obj\Debug\LeaseToBuy.MenuButtons.resources
+E:\01Doccuments\SoftwareEngin\Team-5-Prototype-4\obj\Debug\LeaseToBuy.Properties.Resources.resources
+E:\01Doccuments\SoftwareEngin\Team-5-Prototype-4\obj\Debug\LeaseToBuy.Inventory.resources
+E:\01Doccuments\SoftwareEngin\Team-5-Prototype-4\obj\Debug\LeaseToBuy.SalesOrders.resources
+E:\01Doccuments\SoftwareEngin\Team-5-Prototype-4\obj\Debug\LeaseToBuy.SearchVendor.resources
+E:\01Doccuments\SoftwareEngin\Team-5-Prototype-4\obj\Debug\LeaseToBuy.Undelete.resources
+E:\01Doccuments\SoftwareEngin\Team-5-Prototype-4\obj\Debug\LeaseToBuy.UndeleteInventory.resources
+E:\01Doccuments\SoftwareEngin\Team-5-Prototype-4\obj\Debug\LeaseToBuy.UndeletePurchase.resources
+E:\01Doccuments\SoftwareEngin\Team-5-Prototype-4\obj\Debug\LeaseToBuy.UndeleteSale.resources
+E:\01Doccuments\SoftwareEngin\Team-5-Prototype-4\obj\Debug\LeaseToBuy.UndeleteVendor.resources
+E:\01Doccuments\SoftwareEngin\Team-5-Prototype-4\obj\Debug\LeaseToBuy.User.resources
+E:\01Doccuments\SoftwareEngin\Team-5-Prototype-4\obj\Debug\LeaseToBuy.Vendor.resources
+E:\01Doccuments\SoftwareEngin\Team-5-Prototype-4\obj\Debug\LeaseToBuy.PurchaseOrders.resources
+E:\01Doccuments\SoftwareEngin\Team-5-Prototype-4\obj\Debug\LeaseToBuy.csproj.GenerateResource.Cache
+E:\01Doccuments\SoftwareEngin\Team-5-Prototype-4\obj\Debug\LeaseToBuy.Receipt.resources
